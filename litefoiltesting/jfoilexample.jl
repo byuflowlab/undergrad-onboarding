@@ -34,5 +34,5 @@ plot(xx,zz)
 show()
 
 figure()
-plot(aoa,cl,'o-')
+plot(aoa,cl,"-o")
 show()
