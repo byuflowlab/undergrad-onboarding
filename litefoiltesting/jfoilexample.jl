@@ -19,12 +19,12 @@ zz = vcat(zu[end:-1:1],zl)
 # # Real angle of attack sweep
 cl, cd, cdp, cm, converged = Xfoil.xfoilsweep(xx,zz,aoa,Re,mach=0.0,iter=100)
 # # Complex angle of attack sweep
-# cl, cd, cdp, cm, converged = Xfoil.xfoilsweep_cs(x,z,aoa,Re=1e6,Mach=0.0,maxiter=100)
+# cl, cd, cdp, cm, converged = Xfoil.xfoilsweep_cs(xx,zz,aoa,Re,mach=0.0,iter=100)
 # Real single run
 # Xfoil.setCoordinates(xx,zz)
 # cl, cd, cdp, cm, converged = Xfoil.solveAlpha(aoa,Re,mach=Mach,iter=maxiter)
 # # Complex single run
-# cl, cd, cdp, cm, converged = Xfoil.solveAlpha_cs(x,z,aoa,Re=1e6,Mach=0.0,maxiter=100)
+# cl, cd, cdp, cm, converged = Xfoil.solveAlpha_cs(aoa,Re,mach=Mach,iter=maxiter)
 
 println(cl)
 # --- Plot Stuff --- #
