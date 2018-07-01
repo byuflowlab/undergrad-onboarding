@@ -1,7 +1,7 @@
 workspace()
-a = [1, 2, 3]
+a = [1 2 3; 4 5 6]
 b = [4, 5, 6]
-c = zeros(1,3)
+c = zeros(b)
 
 
 

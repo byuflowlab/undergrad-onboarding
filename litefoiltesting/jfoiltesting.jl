@@ -3,6 +3,7 @@ import AirfoilParams
 #using PyPlot
 
 
+
 """
 Name: jfoiltesting
 Purpose: Create a set of data that I can compare with data from PyXlight to
@@ -20,22 +21,22 @@ Pycall itself.
 Re_exponent = [4, 8]
 Mach_array= [0.0, 0.8]
 maxiter = 10
-aoa = collect(linspace(-5,20,10))  #aoa must be a vector for xfoilsweep to work
+aoa_length = 10
+aoa = collect(linspace(-5,20,aoa_length))  #aoa must be a vector for xfoilsweep to work
+X = reshape(aoa,1,aoa_length)
 p1 = [0, 6]
 p2 = [2, 4]
 p3 = [5, 16]
 
 #Initializing Variables and Arrays
 count = 0
-P1 = []
-P2 = []
-P3 = []
+P = [0 0 0]
 MACH = []
 RE = []
-CL = []
-CD = []
-CDP = []
-CM = []
+CL = zeros(X)
+CD = zeros(X)
+CDP = zeros(X)
+CM = zeros(X)
 CONVERGED = []
 
 println("")
@@ -60,14 +61,17 @@ for i in 1:length(p1)
                     count += 1
                     Re = float(1 * 10^Re_exponent[m])
                     cl, cd, cdp, cm, converged = Xfoil.xfoilsweep(xx,zz,aoa,Re,mach=0.0,iter=10)
-                    append!(P1,p[1])
-                    append!(P2,p[2])
-                    append!(P3,p[3])
+                    if count == 1
+                        P = P + p
+                    else
+                        P = vcat(P,p)
+                    end
                     append!(MACH,Mach)
                     append!(RE,Re)
-                    print("[", P1[count], ",", P2[count], ",", P3[count], "]", " ")
+                    println("[", P[count,1], ", ", P[count,2], ", ",P[count,3],"]" )
                     println(RE[count], "  ", MACH[count], "  ", aoa, "  ", cl, "  ", cd, "  ", )
                     println(" ")
+                    #percent_done = count/()
                 end
             end
         end
