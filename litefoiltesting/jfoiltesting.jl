@@ -42,9 +42,9 @@ p3 = [5, 16]
 
 ## Setting parameters for data analysis ##
 error_tol = 5 #written in percent. Will notify if regions have error greater than error_tol
-show_max = 1    #for all show vars, if 1, will print said data to screen
-show_min = 1
-show_avg = 1
+show_totmax = 0    #for all show vars, if 1, will print said data to screen
+show_totmin = 0
+show_totavg = 0
 show_time = 1
 
 #Initializing Variables and Arrays
@@ -238,18 +238,44 @@ println(" ")
 
 #Determine Convergence overlap and difference
 conv_comp = (2*CONVERGEDpy)-CONVERGEDj
-conv_both = find(conv_comp .== 1)
-conv_j = find(conv_comp .== -1)
-conv_py = find(conv_comp .== 2)
-conv_none = find(conv_comp .== 0)
+conv_both = find(conv_comp .== 1) #linear indices of where they both converged
+conv_py = find(CONVERGEDpy .== 1) #linear indices where python converged
+conv_j = find(CONVERGEDj .== 1) #linear indices where julia converged
+conv_jpy = find(conv_comp .== -1) # linear indices of where julia converged but python didn't
+conv_pyj = find(conv_comp .== 2) #linear indices of where python converged but julia didn't
+conv_none = find(conv_comp .== 0) #linear indices of where niether converged
 
-"""
+
+#Calculate Percent converged
+percent_convboth = 100*length(conv_both)/length(conv_comp) #Percent where both converged
+percent_convpy = 100*length(conv_py)/length(CONVERGEDpy) #percent python converged
+percent_convj = 100*length(conv_j)/length(CONVERGEDj) #percent julia converged
+percent_convpyj = 100*length(conv_pyj)/length(conv_comp) #% where python converged, julia didn't
+percent_convjpy = 100*length(conv_jpy)/length(conv_comp) #% where julia converged, python didn't
+
+
+#Calculate error where both programs converged
+clerrorconv = abs.(100*(CLpy[conv_both]-CLj[conv_both])./(CLpy[conv_both]))
+cderrorconv = abs.(100*(CDpy[conv_both]-CDj[conv_both])./(CDpy[conv_both]))
+cmerrorconv = abs.(100*(CMpy[conv_both]-CMj[conv_both])./(CMpy[conv_both]))
+
+#Find converged extreme error
+clerrorconv_max = findmax(clerrorconv)
+cderrorconv_max = findmax(cderrorconv)
+cmerrorconv_max = findmax(cmerrorconv)
+
+#Find converged average error
+clconvavg_error = sum(clerrorconv)/length(clerrorconv)
+cdconvavg_error = sum(cderrorconv)/length(cderrorconv)
+cmconvavg_error = sum(cmerrorconv)/length(cmerrorconv)
+
+
 #calulate total error
-xerror = 100*(Xpy - Xj)./Xpy
-zerror = 100*(Zpy - Zj)./Zpy
-clerror = 100*(CLpy-CLj)./CLpy
-cderror = 100*(CDpy-CDj)./CDpy
-cmerror = 100*(CMpy-CMj)./CMpy
+xerror = abs.(100*(Xpy - Xj)./Xpy)
+zerror = abs.(100*(Zpy - Zj)./Zpy)
+clerror = abs.(100*(CLpy-CLj)./CLpy)
+cderror = abs.(100*(CDpy-CDj)./CDpy)
+cmerror = abs.(100*(CMpy-CMj)./CMpy)
 
 #Error extrema
 xerror_max = findmax(xerror)
@@ -281,15 +307,16 @@ zavg_error = zavg_error/length(zerror)
 clavg_error = clavg_error/length(clerror)
 cdavg_error = cdavg_error/length(cderror)
 cmavg_error = cmavg_error/length(cmerror)
-"""
+
 
 #time analysis
 time_ratio = julia_time/python_time
 time_diff = julia_time - python_time
 
 #Print outcomes
-if show_max == 1
-    println("Max error: ")
+
+if show_totmax == 1
+    println("Total Max errors: ")
     #if xerror_max[1] >= error_tol
     println("   ", "x error: ", xerror_max, "%")
     #end
@@ -301,8 +328,8 @@ if show_max == 1
     println("   ", "cm error: ", cmerror_max, "%")
     println(" ")
 end
-if show_min == 1
-    println("Min error: ")
+if show_totmin == 1
+    println("Total Min errors: ")
     println("   ", "x error: ", xerror_min, "%")
     println("   ", "z error: ", zerror_min, "%")
     println("   ", "cl error: ", clerror_min, "%")
@@ -310,8 +337,8 @@ if show_min == 1
     println("   ", "cm error: ", cmerror_min, "%")
     println(" ")
 end
-if show_avg == 1
-    println("Avg error: ")
+if show_totavg == 1
+    println("Total Avg errors: ")
     println("   ", "x error: ", xavg_error, "%")
     println("   ", "z error: ", zavg_error, "%")
     println("   ", "cl error: ", clavg_error, "%")
@@ -319,6 +346,8 @@ if show_avg == 1
     println("   ", "cm error: ", cmavg_error, "%")
     println(" ")
 end
+
+
 if show_time == 1
     println("Time ratio: ", time_ratio, " (Julia/Python)")
     println("Time diff: ", time_diff, " (Julia-Python)")
