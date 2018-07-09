@@ -148,7 +148,7 @@ def naca_label(mc, cl, mt):
     if int(mc)/mc == 1 and int(cl)/cl == 1 and int(mt)/mt == 1:
         return 'NACA '+str(mc)+str(cl)+str(mt)
     else:
-        return ' '
+        return 'Non-standard'
 
 
 #This runs the app
