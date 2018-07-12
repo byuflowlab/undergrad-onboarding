@@ -31,9 +31,10 @@ Mach_array= [0.0, 0.1] #Got a warning/error sourced from Xfoil saying
 iterations = 20     #This is the number of iterations that Xfoil goes through to calc
 per_maint = false    #Percussive Maintenance.
 aoa_length = 10     #determines the number of entries in aoa array
-x_length= 100       #Julia is automatically set at 100, and can't change without
+x_length= 123       #Julia is automatically set at 100, and can't change without
 #changing source code. This is half the number of points entered into Xfoil for the
 #shape of the wing.
+pane = 140 #number of panels julia uses, python should be auto set to 140
 aoa = collect(linspace(-5,20,aoa_length))  #aoa must be a vector for xfoilsweep to work
 X = reshape(aoa,1,aoa_length)
 p1 = [0, 6]
@@ -42,10 +43,13 @@ p3 = [5, 16]
 
 ## Setting parameters for data analysis ##
 error_tol = 5 #written in percent. Will notify if regions have error greater than error_tol
-show_totmax = 0    #for all show vars, if 1, will print said data to screen
+show_totmax = 0   #for all show vars, if 1, will print said data to screen
 show_totmin = 0
 show_totavg = 0
 show_time = 1
+show_conv = 1
+show_converror = 1
+show_convmin = 1
 
 #Initializing Variables and Arrays
 count = 0
@@ -103,7 +107,7 @@ for i in 1:length(p1)
                     Re = float(1 * 10^Re_exponent[m])
 
                     #Run xfoil
-                    cl, cd, cdp, cm, converged = Xfoil.xfoilsweep(xx,zz,aoa,Re,mach=Mach,iter=iterations,npan=140,percussive_maintenance=per_maint)
+                    cl, cd, cdp, cm, converged = Xfoil.xfoilsweep(xx,zz,aoa,Re,mach=Mach,iter=iterations,npan=pane,percussive_maintenance=per_maint)
                     # xx & zz are the shape of the airfoil, created earlier -- differences shown below
                     #aoa is the array of angle of attacks -- the code puts the exact same array in both calls
                     #Re is the current Reynolds number -- both calls receive same vars
@@ -263,31 +267,48 @@ cmerrorconv = abs.(100*(CMpy[conv_both]-CMj[conv_both])./(CMpy[conv_both]))
 clerrorconv_max = findmax(clerrorconv)
 cderrorconv_max = findmax(cderrorconv)
 cmerrorconv_max = findmax(cmerrorconv)
+clerrorconv_min = findmin(clerrorconv)
+cderrorconv_min = findmin(cderrorconv)
+cmerrorconv_min = findmin(cmerrorconv)
 
 #Find converged average error
 clconvavg_error = sum(clerrorconv)/length(clerrorconv)
 cdconvavg_error = sum(cderrorconv)/length(cderrorconv)
 cmconvavg_error = sum(cmerrorconv)/length(cmerrorconv)
 
+#finding indicies
+clmaxidx = conv_both[clerrorconv_max[2]]            #linear index
+clmaxidxn = convert(Int,floor(clmaxidx/32+1))       #column number
+clmaxidxm = convert(Int, clmaxidx-((clmaxidxn-1)*32))  #row number
+clminidx = conv_both[clerrorconv_min[2]]
+clminidxn = convert(Int, floor(clminidx/32+1))
+clminidxm = convert(Int, clminidx-((clminidxn-1)*32))
+cdmaxidx = conv_both[cderrorconv_max[2]]
+cdminidx = conv_both[cderrorconv_min[2]]
+cmmaxidx = conv_both[cmerrorconv_max[2]]
+cmminidx = conv_both[cmerrorconv_min[2]]
+
+
+
 
 #calulate total error
-xerror = abs.(100*(Xpy - Xj)./Xpy)
-zerror = abs.(100*(Zpy - Zj)./Zpy)
-clerror = abs.(100*(CLpy-CLj)./CLpy)
-cderror = abs.(100*(CDpy-CDj)./CDpy)
-cmerror = abs.(100*(CMpy-CMj)./CMpy)
+xerror = round(abs.(100*(Xpy - Xj)./Xpy),5)
+zerror = round(abs.(100*(Zpy - Zj)./Zpy),5)
+clerror = round(abs.(100*(CLpy-CLj)./CLpy),5)
+cderror = round(abs.(100*(CDpy-CDj)./CDpy),5)
+cmerror = round(abs.(100*(CMpy-CMj)./CMpy),5)
 
 #Error extrema
-xerror_max = findmax(xerror)
-xerror_min = findmin(xerror)
-zerror_max = findmax(zerror)
-zerror_min = findmin(zerror)
-clerror_max = findmax(clerror)
-clerror_min = findmin(clerror)
-cderror_max = findmax(cderror)
-cderror_min = findmin(cderror)
-cmerror_max = findmax(cmerror)
-cmerror_min = findmin(cmerror)
+xerror_max = findmax(abs(xerror))
+xerror_min = findmin(abs(xerror))
+zerror_max = findmax(abs(zerror))
+zerror_min = findmin(abs(zerror))
+clerror_max = findmax(abs(clerror))
+clerror_min = findmin(abs(clerror))
+cderror_max = findmax(abs(cderror))
+cderror_min = findmin(abs(cderror))
+cmerror_max = findmax(abs(cmerror))
+cmerror_min = findmin(abs(cmerror))
 
 #Calculate average error
 xavg_error = 0.0
@@ -310,10 +331,49 @@ cmavg_error = cmavg_error/length(cmerror)
 
 
 #time analysis
-time_ratio = julia_time/python_time
-time_diff = julia_time - python_time
+time_ratio = round(julia_time/python_time,5)
+time_diff = round(julia_time - python_time,5)
 
 #Print outcomes
+if show_conv ==1
+    println("Converged Percents:")
+    println("  ")
+    println("   Both converged:              ", percent_convboth, "%")
+    println("   Python converged:            ", percent_convpy, "%")
+    println("   Julia converged:             ", percent_convj, "%")
+    println("   Python converged, not Julia: ", percent_convpyj, "%")
+    println("   Julia converged, not Python: ", percent_convjpy, "%")
+    println("   ")
+    println("   ")
+end
+
+if show_converror == 1
+    println("Converged Comparison: ")
+    println("  ")
+    println("   ", "cl average error:  ", round(clconvavg_error,4), "%")
+    println("   ", "cl max error:      ", round(clerrorconv_max[1],4), "%")
+    println("      Python CL:      ", round(CLpy[clmaxidx],8))
+    println("      Julia CL:       ", round(CLj[clmaxidx],8))
+    print("         Alfa = ", round(aoa[clmaxidxn],5), "     Re = ", REj[clmaxidxm])
+    println("     Mach = ", MACHj[clmaxidxm], "     NACA P = ", Pj[clmaxidxm,:])
+    println("         Pane = ", pane, "         Perc maint = ", per_maint, "     Iterations = ", iterations)
+    if show_convmin == 1
+        println("   ", "cl min error:      ", round(clerrorconv_min[1],4), "%")
+        println("      Python CL:      ", round(CLpy[clminidx],8))
+        println("      Julia CL:       ", round(CLj[clminidx],8))
+        print("         Alfa = ", round(aoa[clminidxn],5), "     Re = ", REj[clminidxm])
+        println("     Mach = ", MACHj[clminidxm], "     NACA P = ", Pj[clminidxm,:])
+        println("         Pane = ", pane, "          Perc main = ", per_maint,"     Iterations = ", iterations )
+    end
+    println(" ")
+    println("   ", "cd average error: ", cdconvavg_error, "%")
+    println("   ", "cd max:     ", cderrorconv_max[1], "%")
+    if show_convmin == 1
+        println("   ", "cd min:     ", cderrorconv_min[1], "%")
+    end
+    println(" ")
+    println("   ", "cm average: ", cmconvavg_error)
+end
 
 if show_totmax == 1
     println("Total Max errors: ")
