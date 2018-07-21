@@ -30,7 +30,7 @@ Mach_array= [0.0] #Got a warning/error sourced from Xfoil saying
 #CPCALC Local speed too fast, (Or something like that) when Mach == 0.8
 iterations = 20     #This is the number of iterations that Xfoil goes through to calc
 per_maint = false    #Percussive Maintenance.
-aoa_length = 10     #determines the number of entries in aoa array
+aoa_length = 1000     #determines the number of entries in aoa array
 x_length= 123       #Julia is automatically set at 100, and can't change without
 #changing source code. This is half the number of points entered into Xfoil for the
 #shape of the wing.
@@ -548,11 +548,13 @@ if runsweep == 1
     cdavg_error = 0.0
     cmavg_error = 0.0
     for i in 1:length(clerror)
-        xavg_error += xerror[i]
-        zavg_error += zerror[i]
         clavg_error += clerror[i]
         cdavg_error += cderror[i]
         cmavg_error += cmerror[i]
+    end
+    for j in 1:length(xerror)
+        xavg_error += xerror[j]
+        zavg_error += zerror[j]
     end
     xavg_error = xavg_error/length(xerror)
     zavg_error = zavg_error/length(zerror)
@@ -631,7 +633,7 @@ end
 
 #Print outcomes
 if length(conv_both) == 0
-    println("No Swept data converged")
+    println("No Swept data converged at common indicies")
     println(" ")
     show_converror = 0
 end
@@ -761,7 +763,7 @@ if runsingle == 1
     end
 
     if length(conv_boths) == 0
-        println("No Single application data converged")
+        println("No Single application data converged at common points")
         println(" ")
         show_converrors = 0
     end
