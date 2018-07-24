@@ -39,9 +39,9 @@ x_length= 123       #Julia is automatically set at 100, and can't change without
 pane = 140 #number of panels julia uses, python should be auto set to 140
 aoa = collect(linspace(-2,10,aoa_length))  #aoa must be a vector for xfoilsweep to work
 X = reshape(aoa,1,aoa_length)
-p1 = [2]
+p1 = [6]
 p2 = [4]
-p3 = [12]
+p3 = [09]
 
 ## Setting parameters for data analysis ##
 error_tol = 5 #written in percent. Will notify if regions have error greater than error_tol
@@ -854,12 +854,12 @@ if length(p1) == 1 && length(p2) == 1 && length(p3) == 1
     CLj = reshape(CLj, 100)
     title = "NACA "*string(p1[1])*string(p2[1])*string(p3[1])
     text = "Average Relative Error: "*string(round.(clavg_error,5))*"%"
-    plt.plot(aoa, CLpy,"b-")
-    plt.plot(aoa, CLj,"g--")
+    plt.plot(aoa, CLpy,linewidth=3,"k-")
+    plt.plot(aoa, CLj,linewidth=2, color=(.95,.6,0),"--")
     plt.legend(["Python Data", "Julia Data"])
     plt.xlabel("Angle of Attack")
     plt.ylabel("CL Swept values")
-    plt.text(1,.1,text)
+    plt.text(2,.1,text)
     plt.title(title)
     plt.show()
 end
