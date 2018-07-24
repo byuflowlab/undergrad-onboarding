@@ -5,6 +5,8 @@ using PyCall
 @pyimport pyfoil
 @pyimport numpy as np
 @pyimport af
+@pyimport matplotlib.pyplot as plt
+
 
 
 """
@@ -30,7 +32,7 @@ Mach_array= [0.0] #Got a warning/error sourced from Xfoil saying
 #CPCALC Local speed too fast, (Or something like that) when Mach == 0.8
 iterations = 20     #This is the number of iterations that Xfoil goes through to calc
 per_maint = false    #Percussive Maintenance.
-aoa_length = 1000     #determines the number of entries in aoa array
+aoa_length = 100     #determines the number of entries in aoa array
 x_length= 123       #Julia is automatically set at 100, and can't change without
 #changing source code. This is half the number of points entered into Xfoil for the
 #shape of the wing.
@@ -43,7 +45,7 @@ p3 = [12]
 
 ## Setting parameters for data analysis ##
 error_tol = 5 #written in percent. Will notify if regions have error greater than error_tol
-show_totmax = 0   #for all show vars, if 1, will print said data to screen
+show_totmax = 0  #for all show vars, if 1, will print said data to screen
 show_totmin = 0
 show_totavg = 0
 show_time = 0
@@ -53,7 +55,7 @@ show_converror = 1
 show_converrors = 1
 show_convmax = 0
 show_convmin = 0
-show_rms = 1
+show_rms = 0
 rerunmax = 1
 runsingle = 1
 runsweep = 1
@@ -843,4 +845,21 @@ if show_time == 1
         runtime_unit = " hr"
     end
     println(" Total Run time: ",runtime , runtime_unit)
+end
+
+
+#Plot
+if length(p1) == 1 && length(p2) == 1 && length(p3) == 1
+    CLpy = reshape(CLpy,100)
+    CLj = reshape(CLj, 100)
+    title = "NACA "*string(p1[1])*string(p2[1])*string(p3[1])
+    text = "Average Relative Error: "*string(round.(clavg_error,5))*"%"
+    plt.plot(aoa, CLpy,"b-")
+    plt.plot(aoa, CLj,"g--")
+    plt.legend(["Python Data", "Julia Data"])
+    plt.xlabel("Angle of Attack")
+    plt.ylabel("CL Swept values")
+    plt.text(1,.1,text)
+    plt.title(title)
+    plt.show()
 end
