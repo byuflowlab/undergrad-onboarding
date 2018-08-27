@@ -27,35 +27,35 @@ for me. Not a normal part of pyXlight, may consider using other file.
 
 
 ## Setting Parameters for data collection ##
-Re_exponent = [6]    #This is the exponent of the reynolds number. It creates an appropriate array below.
+Re_exponent = [6, 8]    #This is the exponent of the reynolds number. It creates an appropriate array below.
 Mach_array= [0.0] #Got a warning/error sourced from Xfoil saying
 #CPCALC Local speed too fast, (Or something like that) when Mach == 0.8
 iterations = 20     #This is the number of iterations that Xfoil goes through to calc
-per_maint = false    #Percussive Maintenance.
-aoa_length = 100     #determines the number of entries in aoa array
+per_maint = true    #Percussive Maintenance.
+aoa_length = 20     #determines the number of entries in aoa array
 x_length= 123       #Julia is automatically set at 100, and can't change without
 #changing source code. This is half the number of points entered into Xfoil for the
 #shape of the wing.
 pane = 140 #number of panels julia uses, python should be auto set to 140
 aoa = collect(linspace(-2,10,aoa_length))  #aoa must be a vector for xfoilsweep to work
 X = reshape(aoa,1,aoa_length)
-p1 = [6]
-p2 = [4]
-p3 = [09]
+p1 = [0, 2, 8]
+p2 = [0, 4]
+p3 = [6, 12]
 
 ## Setting parameters for data analysis ##
 error_tol = 5 #written in percent. Will notify if regions have error greater than error_tol
-show_totmax = 0  #for all show vars, if 1, will print said data to screen
-show_totmin = 0
-show_totavg = 0
-show_time = 0
+show_totmax = 1  #for all show vars, if 1, will print said data to screen
+show_totmin = 1
+show_totavg = 1
+show_time = 1
 show_conv = 1
 show_convs = 1
 show_converror = 1
 show_converrors = 1
-show_convmax = 0
-show_convmin = 0
-show_rms = 0
+show_convmax = 1
+show_convmin = 1
+show_rms = 1
 rerunmax = 1
 runsingle = 1
 runsweep = 1
@@ -225,7 +225,7 @@ if runsweep == 1
                         cl = reshape(cl,1,length(cl))
                         cd = reshape(cd,1,length(cd))
                         cm = reshape(cm,1,length(cm))
-                        converged = reshape(converged,1,length(converged))
+                        converged = reshape(-(converged-1),1,length(converged))
                         if count == 1   #reseting the initial values to actual
                             Xpy += xtemp
                             Zpy += ztemp
@@ -378,7 +378,7 @@ if runsingle == 1
                         tempcl = reshape(tempcl,1,aoa_length)
                         tempcd = reshape(tempcd,1,aoa_length)
                         tempcm = reshape(tempcm,1,aoa_length)
-                        tempconverged = reshape(tempconverged, 1, aoa_length)
+                        tempconverged = reshape(-(tempconverged-1), 1, aoa_length)
 
                         if count == 1   #reseting the initial values to actual
                             CLpy_s += tempcl
@@ -588,17 +588,20 @@ if runsingle == 1
     percent_convjpys = 100*length(conv_jpys)/length(conv_comps) #% where julia converged, python didn't
 
 
-    #Calculate percent error where both programs converged
-    clerrorconvs = abs.(100*(CLpy_s[conv_boths]-CLj_s[conv_boths])./(CLpy_s[conv_boths]))
-    cderrorconvs = abs.(100*(CDpy_s[conv_boths]-CDj_s[conv_boths])./(CDpy_s[conv_boths]))
-    cmerrorconvs = abs.(100*(CMpy_s[conv_boths]-CMj_s[conv_boths])./(CMpy_s[conv_boths]))
 
-    #Calculate % RMS error
-    clrmsconvs = sqrt(sum((1-CLj_s[conv_boths]./CLpy_s[conv_boths]).^2)/length(conv_boths))
-    cdrmsconvs = sqrt(sum((1-CDj_s[conv_boths]./CDpy_s[conv_boths]).^2)/length(conv_boths))
-    cmrmsconvs = sqrt(sum((1-CMj_s[conv_boths]./CMpy_s[conv_boths]).^2)/length(conv_boths))
 
     if length(conv_boths) != 0
+
+        #Calculate percent error where both programs converged
+        clerrorconvs = abs.(100*(CLpy_s[conv_boths]-CLj_s[conv_boths])./(CLpy_s[conv_boths]))
+        cderrorconvs = abs.(100*(CDpy_s[conv_boths]-CDj_s[conv_boths])./(CDpy_s[conv_boths]))
+        cmerrorconvs = abs.(100*(CMpy_s[conv_boths]-CMj_s[conv_boths])./(CMpy_s[conv_boths]))
+
+        #Calculate % RMS error
+        clrmsconvs = sqrt(sum((1-CLj_s[conv_boths]./CLpy_s[conv_boths]).^2)/length(conv_boths))
+        cdrmsconvs = sqrt(sum((1-CDj_s[conv_boths]./CDpy_s[conv_boths]).^2)/length(conv_boths))
+        cmrmsconvs = sqrt(sum((1-CMj_s[conv_boths]./CMpy_s[conv_boths]).^2)/length(conv_boths))
+
         #Find converged extreme error
         clerrorconv_maxs = findmax(clerrorconvs)
         cderrorconv_maxs = findmax(cderrorconvs)
@@ -755,7 +758,7 @@ if runsingle == 1
         println("   ")
     end
 
-    if show_rms == 1
+    if show_rms == 1 & length(conv_boths)!= 0
         println("Single Run Converged RMS: ")
         println("Cl RMS: ", round.(clrmsconvs,5))
         println("Cd RMS: ", round.(cdrmsconvs,5))
@@ -802,7 +805,7 @@ if runsingle == 1
         println(" ")
         println("   ", "cm average: ", cmconvavg_errors)
     end
-
+"""
     if show_totmax == 1
         println("Single Run Total Max errors: ")
         println("   ", "cl error: ", clerror_maxs, "%")
@@ -824,7 +827,7 @@ if runsingle == 1
         println("   ", "cm error: ", cmavg_errors, "%")
         println(" ")
     end
-
+"""
 
     if show_time == 1
         println("Single Run Time data")
@@ -838,10 +841,10 @@ if show_time == 1
     runtime = julia_time + julias_time + python_time + pythons_time
     runtime_unit = " sec"
     if runtime >= 120 && runtime < 3600
-        runtime = runtime/60
+        runtime = round.(runtime/60,5)
         runtime_unit = " min"
     elseif runtime >= 3600
-        runtime = runtime/3600
+        runtime = round.(runtime/3600,5)
         runtime_unit = " hr"
     end
     println(" Total Run time: ",runtime , runtime_unit)
@@ -850,16 +853,30 @@ end
 
 #Plot
 if length(p1) == 1 && length(p2) == 1 && length(p3) == 1
-    CLpy = reshape(CLpy,100)
-    CLj = reshape(CLj, 100)
-    title = "NACA "*string(p1[1])*string(p2[1])*string(p3[1])
+    CLpy = reshape(CLpy,length(CLpy))
+    CLj = reshape(CLj, length(CLj))
+    if p3[1] < 10
+        naca_3 = "0"*string(p3[1])
+    else
+        naca_3 = string(p3[1])
+    end
+    title = "NACA "*string(p1[1])*string(p2[1])*naca_3
     text = "Average Relative Error: "*string(round.(clavg_error,5))*"%"
+    legend = ["Python Data", "Julia Data"]
     plt.plot(aoa, CLpy,linewidth=3,"k-")
     plt.plot(aoa, CLj,linewidth=2, color=(.95,.6,0),"--")
-    plt.legend(["Python Data", "Julia Data"])
+    if length(conv_j) > 0
+        plt.plot(aoa[conv_j],CLpy[conv_j]-.6, "r.", linewidth = 3)
+        push!(legend, "Converged Julia points")
+    end
+    if length(conv_py) > 0
+        plt.plot(aoa[conv_py],CLpy[conv_py]-.5, "g.", linewidth = 3)
+        push!(legend, "Converged Python points")
+    end
+    plt.legend(legend)
     plt.xlabel("Angle of Attack")
     plt.ylabel("CL Swept values")
-    plt.text(2,.1,text)
+    plt.text(-1.5,-4,text)
     plt.title(title)
     plt.show()
 end
