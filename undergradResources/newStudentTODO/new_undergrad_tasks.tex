@@ -1,0 +1,125 @@
+\documentclass[]{article}% insert '[draft]' option to show overfull boxes 
+
+%set up margins (gemetry package does more than just margins.)
+\usepackage{geometry}
+ \geometry{
+	letterpaper,
+	left=1in,
+	top=1in,
+	bottom=1in}
+
+\usepackage{titling}
+%move title up
+\setlength{\droptitle}{-7em}   % This is your set screw
+
+%This is the package that makes the nomenclature table.
+\usepackage{nomencl}
+\makenomenclature
+%this will allow adjustment of nomenclature package in order to use multi cols and name the section myself without weird formatting.
+\usepackage{xpatch}
+\xpatchcmd{\thenomenclature}{%
+ \section*{\nomname}% Look for `\section*... etc.
+}{% Replace it by 'nothing'
+}{\typeout{Success}}{\typeout{Failure}}
+
+%% Useful packages
+%Nominal Packages
+\usepackage{amsmath} %package for math stuff
+
+\usepackage{graphicx} %package for floats (figures)
+\usepackage[colorlinks=true, allcolors=blue]{hyperref} %pacakge for hyperlinks (internal and external)
+\usepackage{indentfirst} %package that indents first sentence of each paragraph.
+
+%%Necessary Packages
+%package used in nomenclature, not necessary if you change the format
+\usepackage{multicol} %package allowing multiple columns
+
+%Advanced Packages
+\usepackage{xfrac} %package that allows slanted fractions rather than stacked ones, use \xfrac{}{} instead of \frac{}{}
+\usepackage{siunitx} %package for SI units (see ftp://ftp.dante.de/tex-archive/macros/latex/exptl/siunitx/siunitx.pdf)
+\usepackage{gensymb} %package for some convenient things in both math and text mode (see http://ctan.math.illinois.edu/macros/latex/contrib/was/gensymb.pdf)
+\usepackage{wrapfig} %package allowing wrapping figures/tables in text (i.e., Di Vinci style)
+\usepackage{caption} %package for advanced captioning
+\usepackage{subfigmat}% packages automating layout for subfigures
+\usepackage[colorinlistoftodos]{todonotes} %package for TODO callouts
+
+
+
+%!!!!!---IGNORE EVERYTHING ABOVE THIS POINT IF YOU DON'T KNOW WHAT YOU'RE DOING.---!!!!!%
+%How to learn what you're doing: 
+%This link is useful: https://www.sharelatex.com/learn/Main_Page
+%As is this one: https://artofproblemsolving.com/wiki/index.php?title=LaTeX:Symbols
+%And this one: google.com
+
+%Change the Title Here:
+\title{BYU FLOW Lab New Undergrad Researcher Introductory Skills Development Tasks}
+
+%Put your name here:
+\author{Prepared by: Judd Mehr}
+\date{\today} %Automatically puts in date when you compile.
+
+%Document Actually begins here.
+\begin{document}
+% Add Title elements defined above. (autoformatted)
+\maketitle 
+
+\section{Introduction}
+The purpose of this document is to outline tasks every new undergrad working in the BYU FLOW Lab should accomplish during their first semester.   Whether an undergrad spends a semester taking 497R credit, or years as a research assistant, these introductory tasks will help him/her find success in his/her research endeavors. The following sections introduce basic skills and associated tasks that should be gained/accomplished by new undergraduates (and new graduates if these skills haven't yet been attained.)  For more information, refer to Dr. Ning's thoughts on the FLOW Lab website \url{http://flow.byu.edu/resources/}.  Undergraduates should work with their graduate student mentors to create a timeline for task completion as well as get help with specific questions regarding the tasks.
+
+
+
+\section{Git}
+``Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.'' (\url{https://git-scm.com/})
+
+\subsection{Tasks (Shouldn't take more than 30 minutes to get everything initially set up with your mentor's help)}
+\begin{itemize}
+	\item Create a Github account.
+	\item Explore the git learning resources page: \url{https://try.github.io/} (just get familiar with where things are for future reference)
+	\item Complete a tutorial like this one: \url{https://www.codecademy.com/learn/learn-git}
+	\item Have your graduate student mentor give you access to the \textit{undergrad-onboarding} repository from the FLOW Lab's git repository.
+	\item Clone the \textit{undergrad-onboarding} repository to your local computer.
+	\item Add a branch to the repository named first-last, where first is your first name, and last is your last name.
+	\item In the new branch, create a directory that describes your project (you can change the name later), this is where you will keep your first semester's work including your code and semester report. (Do a good job, we may use it as an example for other new students.)
+	\item Regularly add, commit, and push your work, especially when asking your graduate student mentor for help.
+	\item At the end of the semester, merge your branch into the master branch.
+\end{itemize}
+
+
+
+\section{Coding}
+The majority of the work done in the FLOW Lab includes some element of coding, whether that be in Python, Julia, Matlab, or some other language (C/C++, Fortran, Bash, AWK, Javascript, etc. all are being, or have been, used in the lab.) Learning good coding practices now will help you work better on group projects in the future.
+\subsection{Tasks}
+\begin{itemize}
+	\item Read this page: \url{http://flow.byu.edu/resources/research/}
+	\item Find the best practices/style guide for the language you'll be using. Review it periodically and make sure you're matching the standard style.
+	\item Comment clearly and regularly.  It's better to have too much than too little, you can always go back and make things more consise, but you don't want to forget what you did.
+	\item Test as you go.  Write a simple test now to make sure things work so you don't have to search for as many bugs later.
+	\item Take note of when your graduate student mentor is confused when reading your code. This is a good indicator that you either don't have enough comments, aren't matching the standard style, or need to improve the organization of your code.
+\end{itemize}
+
+
+\section{\LaTeX (Shouldn't take more than 30 minutes to get everything initially set up with your mentor's help)}
+\LaTeX is a powerful typesetting language that is more or less standard for paper writing in the research community.  It makes many formatting things, including referencing and mathematics very easy.
+
+\subsection{Tasks}
+\begin{itemize}
+	\item Download the \LaTeX~language.  Work with your graduate student mentor to make this easier. 
+	\item If you want, download some sort of \LaTeX~IDE software. Note that you don't need a dedicated \LaTeX~editor to use \LaTeX. 
+	\item Obtain some sort of reference manager. Again, work with your graduate student mentor on this.
+	\item With your new found access to the  \textit{undergrad-onboarding} repository, navigate to the undergrad-onboarding/undergradResources/semsterReportTemplate/ directory and find the \LaTeX~template named template.tex.  This file contains a template for your report as well as a great introduction to \LaTeX.  You should compile the pdf from the .tex file and read the entire thing.  That should give you more than enough information to start using \LaTeX.
+	\item Practice as much as you want. For some ideas of how you might do this, use \LaTeX~instead of Word or Libre Writer, write class reports/memos in \LaTeX, or write talks in \LaTeX. Write up your math homework in \LaTeX, and you'll be fluent in the math symbology by the end of the semester. This link is a useful resource for basic questions: \url{https://www.sharelatex.com/learn/Main_Page}, as is this one for math and symbols: \url{https://artofproblemsolving.com/wiki/index.php?title=LaTeX:Symbols}.  Most of the time, a simple google search will get you the answer to basic and even advanced questions. Your graduate student mentor is also a good resource for more difficult questions.
+	\item The minimum practice task is to write your semester report using \LaTeX.
+\end{itemize}
+
+
+\section{Writing}
+Writing is an important part of research.  It is benificial to begin writing and receiving feedback early.  
+
+\subsection{Tasks}
+\begin{itemize}
+	\item Read this page: \url{http://flow.byu.edu/resources/writing/}
+	\item Do what it says.
+	\item Also review the writing helps on the BYU ME website: \url{https://me.byu.edu/students/resources} \textit{BYU ME Writing Materials} section.
+\end{itemize}
+
+\end{document}
