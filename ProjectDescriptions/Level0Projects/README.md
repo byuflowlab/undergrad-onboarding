@@ -9,12 +9,15 @@ None. These projects do not require any specific previous knowledge or experienc
 ### Coding
 
 ![GIT](need.link.here)
+
 ![Julia](need.link.here)
+
 ![Python](need.link.here)
 
 ### Writing
 
 ![LaTeX](need.link.here)
+
 ![Semester Report](need.link.here)
 
 ### Project Planning
