@@ -2,14 +2,14 @@
 
 ## Project Descriptions
 
-![EdX Classes]()
+[EdX Classes]()
 
-![Intro to Optimization]()
+[Intro to Optimization]()
 
-![Airfoil Analysis]()
+[Airfoil Analysis]()
 
-![Airfoil Optimization]()
+[Airfoil Optimization]()
 
-![Wind Farm Analysis]()
+[Wind Farm Analysis]()
 
-![Wind Farm Optimization]()
+[Wind Farm Optimization]()

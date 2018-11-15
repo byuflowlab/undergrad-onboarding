@@ -9,12 +9,12 @@ The following projects are primarily for students registered for 497R (research)
 
 ## Project Descriptions
 
-![2D Inviscid Panel Method]()
+[2D Inviscid Panel Method]()
 
-![Boundary Element Method]()
+[Boundary Element Method]()
 
-![Airfoil Parameterization]()
+[Airfoil Parameterization]()
 
-![Wind Turbine Wake Model]()
+[Wind Turbine Wake Model]()
 
-![Basic Optimizer]()
+[Basic Optimizer]()

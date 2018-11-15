@@ -9,20 +9,20 @@ None. These projects do not require any specific previous knowledge or experienc
 ## Introductory Skills
 ### Coding
 
-![GIT]()
+[GIT]()
 
-![Julia]()
+[Julia]()
 
-![Python]()
+[Python]()
 
 ### Writing
 
-![LaTeX]()
+[LaTeX]()
 
-![Semester Report]()
+[Semester Report]()
 
 ### Project Planning
 
-![Gantt Chart]()
+[Gantt Chart]()
 
 
