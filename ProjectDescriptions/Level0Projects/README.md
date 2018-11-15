@@ -26,16 +26,3 @@ None. These projects do not require any specific previous knowledge or experienc
 ![Gantt Chart]()
 
 
-## Application Projects
-
-![EdX Classes]()
-
-![Intro to Optimization]()
-
-![Airfoil Analysis]()
-
-![Airfoil Optimization]()
-
-![Wind Farm Analysis]()
-
-![Wind Farm Optimization]()
