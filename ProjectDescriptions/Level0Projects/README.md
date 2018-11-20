@@ -19,10 +19,10 @@ None. These projects do not require any specific previous knowledge or experienc
 
 [LaTeX]()
 
-[Semester Report]()
+[Semester Report](../../Resources/semesterReportTemplate/)
 
 ### Project Planning
 
-[Gantt Chart]()
+[Gantt Chart](../../Resources/planning/Excel-Gantt-Chart-Template.xlsx)
 
 
