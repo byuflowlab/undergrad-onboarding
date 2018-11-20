@@ -11,7 +11,7 @@ The following projects are primarily for students registered for 497R (research)
 
 [2D Inviscid Panel Method]()
 
-[Boundary Element Method]()
+[Blade Element Momentum Method]()
 
 [Airfoil Parameterization]()
 
