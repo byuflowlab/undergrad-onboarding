@@ -11,9 +11,9 @@ None. These projects do not require any specific previous knowledge or experienc
 
 [GIT]()
 
-[Julia]()
+[Julia (Aircraft Projects)]()
 
-[Python]()
+[Python (Wind Projects)]()
 
 ### Writing
 
