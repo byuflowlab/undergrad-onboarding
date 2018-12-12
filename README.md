@@ -1,4 +1,4 @@
-# FLOW Lab Undergraduate Student Onboarding
+# FLOW Lab Long Term Research Assistant (FlowLTRA) Program
 
 This repository contains resources for onboarding undergraduate volunteers, 497R students, and paid Research Assistants.
 The majority of the content is contained in the [ProjectDescriptions](ProjectDescriptions/) directory where [Level Zero Projects](ProjectDescriptions/Level0Projects) (introductory skills), [Level One Projects](ProjectDescriptions/Level1Projects) (volunteer skill development), and [Level Two Projects](ProjectDescriptions/Level2Projects) (497R projects) are outlined. Level Three and Four Projects also exist, but rather than the prescribed projects listed here, these are projects either supporting the research of a graduate student mentor (Level Three), or a research project leading towards a primary authorship on a conference/journal paper (Level Four). 
