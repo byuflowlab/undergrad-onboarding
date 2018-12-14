@@ -8,12 +8,13 @@ These projects are designed to draw on skills gained from completing a selection
 
 ## Project Descriptions
 
-[2D Inviscid Panel Method]()
+[Wind Farm Layout Optimization]()
 
-[Blade Element Momentum Method]()
+[Wind Turbine Design]()
 
-[Airfoil Parameterization]()
+[Aircraft Design]()
 
-[Wind Turbine Wake Model]()
+[Aerodynamics]()
 
-[Basic Optimizer]()
+[Optimization]()
+
