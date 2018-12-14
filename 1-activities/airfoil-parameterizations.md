@@ -1,4 +1,4 @@
-# Airfoil Parameterization Activities
+# Airfoil/Wing Parameterization Activities
 
 ## A - NACA 4 Series Parameterization
 
@@ -10,4 +10,13 @@
 ### Deliverables
 
 
-## B - Basis Spline (B-Spline) Parameterization
+## B - Basis Spline (B-Spline) Parameterization (basic)
+
+
+## C - B-Spline Airfoil Fitting
+
+
+## D - B-Spline Flapped Airfoil Parameterization
+
+
+## E - Tensor Product Wing Parameterization
