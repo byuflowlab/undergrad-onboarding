@@ -1,5 +1,4 @@
 # Activities
 
-
-## Activity Descriptions
+[Airfoil Parameterizations](airfoil-parameterizations)
 
