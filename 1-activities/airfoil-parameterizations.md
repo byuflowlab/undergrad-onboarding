@@ -1,12 +1,13 @@
 # Airfoil/Wing Parameterization Activities
 
-
-
+### Global Resources
+ - Tutorials for - [Julia and/or Python](../0-resources/README.md)
+ - [Airfoil Parameterization Derivations](https://github.com/byuflowlab/flowlab-notebook/blob/master/theory/airfoilparameterization/airfoilparameterization.pdf)
+ 
 ## A: NACA 4 Series Parameterization
 
 ### Resources
- - Tutorials for - [Julia and/or Python](../0-resources/README.md)
- - [Airfoil Parameterization Derivations](https://github.com/byuflowlab/flowlab-notebook/blob/master/theory/airfoilparameterization/airfoilparameterization.pdf)
+
 
 ### Methods
 
@@ -16,7 +17,6 @@ __________
 ## B: Basis Spline (B-Spline) Parameterization (basic)
 
 ### Resources
- - Tutorials for - [Julia and/or Python](../0-resources/README.md)
  
 ### Methods
 
@@ -26,7 +26,6 @@ __________
 ## C: B-Spline Airfoil Fitting
 
 ### Resources
- - Tutorials for - [Julia and/or Python](../0-resources/README.md)
  
 ### Methods
 
@@ -36,7 +35,6 @@ __________
 ## D: B-Spline Flapped Airfoil Parameterization
 
 ### Resources
- - Tutorials for - [Julia and/or Python](../0-resources/README.md)
  
 ### Methods
 
@@ -46,7 +44,6 @@ __________
 ## E: Tensor Product Wing Parameterization
 
 ### Resources
- - Tutorials for - [Julia and/or Python](../0-resources/README.md)
  
 ### Methods
 
