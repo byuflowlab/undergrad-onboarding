@@ -1,11 +1,10 @@
-# Level 2 Projects
+# Projects
 
-The following projects are primarily for students registered for 497R (research) class credit with Dr. Ning.  Their purpose is to introduce basic theory concepts relevant to research in the FLOW Lab as well as introduce or increase research related skills.  Students should be sure to be proficient in the content of, or complete relevant projects outlined in [Level Zero Projects](../Level0Projects/README.md).
+The following projects are primarily for students registered for 497R (research) class credit with Dr. Ning.  The purpose of these projects is to allow students to explore a subject area relevant to research in the FLOW Lab.  These projects are designed to be open ended (there is not a single answer), but have a clear final objective and path to completion.  
 
-## Technical Prerequisites
+## Technical Requirements
 
-- ME EN 273 (or equivalent)
-
+These projects are designed to draw on skills gained from completing a selection of Activities (also found in this repo).  Each project definition explicitly lists the Activities which develop the necessary skills to start these projects.
 
 ## Project Descriptions
 
