@@ -32,7 +32,9 @@ None. The classroom analogy is that these are the textbooks, lectures, handouts,
 - Aerodynamics of Wind Turbines, Hansen
 - [Flight Vehicle Design](https://byu.box.com/v/me415book), Ning
 
-- [Lab Notebook](https://github.com/byuflowlab/flowlab-notebook)
+### FLOW Lab Tutorials and Theory
+
+- [FLOW Lab Notebook](https://github.com/byuflowlab/flowlab-notebook)
 
 ### Journal Papers
 
