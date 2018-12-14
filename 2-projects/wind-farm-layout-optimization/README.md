@@ -10,7 +10,7 @@
 
 ## Coupled Layout and Turbine Design
 
-## Imporved Computation Strategies
+## Improved Computation Strategies
 
 ## Performance of Different Optimization Algorithms
 
