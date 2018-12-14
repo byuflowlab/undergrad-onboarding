@@ -1,7 +1,5 @@
 # Resources (Level Zero)
 
-![](https://thumbs.gfycat.com/DarkPolishedAustralianfreshwatercrocodile-size_restricted.gif)
-
 ## Technical Prerequisites:
 
 None. The classroom analogy is that these are the textbooks, lectures, handouts, etc. to help you complete assignments and projects.  Just like it wouldn't be very effective in a classroom setting to be told to go read the whole textbook then come back in six weeks and start on homework, no one should be assigned to go off and work on tutorials before starting research.  Rather these are resources to help you complete the other research tasks.  It's not expected that you master these areas at the beginning, but learn what you need to complete the task, and continue to develop skills over time.
