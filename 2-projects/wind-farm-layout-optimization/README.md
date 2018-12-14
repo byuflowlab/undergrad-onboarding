@@ -4,6 +4,8 @@
 
 Wake models are used to predict how fast wind is moving behind a wind turbine. There are many different wake models, ranging in complexity and accuracy. How does your choice of wake model affect your wind farm design? If you design a wind farm using one wake model, is that same design still optimal if you analyze it with a different model?
 
+**Relevant Activities**
+[Code Your Own Wake Model](../../1-activities)
 ## Effects of Different Wind Farm Boundaries on Optimization
 
 ## Effects of Different Metrics on Optimization
