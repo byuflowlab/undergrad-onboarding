@@ -7,5 +7,5 @@
 
 ## Wind Energy
 
-- [Jensen Wake](jensen-wake.pdf)
+- [Jensen Wake](jensen-wake.md)
 
