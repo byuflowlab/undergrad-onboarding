@@ -17,16 +17,16 @@ None. The classroom analogy is that these are the textbooks, lectures, etc. to h
 ### Writing
 
 - [LaTeX](https://www.overleaf.com/learn)
-- [Semester Report Template](../../Resources/semesterReportTemplate/)
+- [Semester Report Template](semesterReportTemplate/)
 
 ### Online Courses
 
 - [Wind Energy](https://www.coursera.org/learn/wind-energy)
 - [Introduction to Aeronautical Engineering](https://www.edx.org/course/introduction-aeronautical-engineering-delftx-ae1110x-1)
-- [Introductory Aerodynamics](https://www.edx.org/course/introduction-aerodynamics-mitx-16-101x-0)
+- [Introduction to Aerodynamics](https://www.edx.org/course/introduction-aerodynamics-mitx-16-101x-0)
 
 ### Project Planning
 
-- [Gantt Chart](../../Resources/planning/Excel-Gantt-Chart-Template.xlsx)
+- [Gantt Chart](planning/Excel-Gantt-Chart-Template.xlsx)
 
 
