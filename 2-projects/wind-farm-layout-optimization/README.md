@@ -8,6 +8,8 @@ Wake models are used to predict how fast wind is moving behind a wind turbine. T
 
 ## Effects of Different Metrics on Optimization
 
+Often wind farm layouts are optimized for maximum energy production. However, there may be other important metrics. How does a wind farm layout change if it is designed to reduce variance instead of maximize mean power? What if you consider costs or structural loads?
+
 ## Effects of Different Constraints on Optimization
 
 ## Coupled Layout and Turbine Design
@@ -20,7 +22,7 @@ Wind farm analysis is often very time consuming. There are a lot of calculations
 
 ## Performance of Different Optimization Algorithms
 
-In the FLOW lab, we almost exclusively use a gradient-based optimizer called SNOPT. This is a 
+In the FLOW lab, we almost exclusively use a gradient-based optimizer called SNOPT. This is a good optimizer that has provided good results. However, there very well may be a different optimizer that provides better, faster solutions. 
 
 ## Considering Cabling and Other Wind Farm Infrastructure
 
