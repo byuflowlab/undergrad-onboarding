@@ -16,7 +16,11 @@ Usually, when designing a wind farm you decide on some turbine design and use th
 
 ## Improved Computation Strategies
 
+Wind farm analysis is often very time consuming. There are a lot of calculations that need to be made to model how each turbine interacts with the rest of the turbines in a wind farm. In an optimization, a wind farm needs to be analyzed hundereds or thousands of times! Can you speed up wind farm analysis using code optimization, parallelization, or some other method?
+
 ## Performance of Different Optimization Algorithms
+
+In the FLOW lab, we almost exclusively use a gradient-based optimizer called SNOPT. This is a 
 
 ## Considering Cabling and Other Wind Farm Infrastructure
 
