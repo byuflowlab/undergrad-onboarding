@@ -13,7 +13,16 @@
 2. Labeled plot with legend showing NACA 0008, 2412, and 6409 unit airfoils.
 
 __________
-## B: Basis Spline (B-Spline) Parameterization (basic)
+## B: Karman-Trefftz Transformation Parameterization
+
+### Resources
+
+### Methods
+
+### Deliverables
+
+__________
+## C: Basis Spline (B-Spline) Parameterization (basic)
 
 ### Resources
 - [Spline Theory](https://github.com/byuflowlab/flowlab-notebook/blob/master/theory/splines/splines.pdf)
@@ -23,7 +32,7 @@ __________
 ### Deliverables
 
 __________
-## C: B-Spline Flapped Airfoil Parameterization
+## D: B-Spline Flapped Airfoil Parameterization
 
 ### Pre-requisites
 - Activity B
@@ -33,7 +42,7 @@ __________
 ### Deliverables
 
 __________
-## D: B-Spline Airfoil Fitting
+## E: B-Spline Airfoil Fitting
 
 ### Pre-requisites
 - Activity B
@@ -45,7 +54,7 @@ __________
 2. Error plots showing the error in fitting NACA 0010, NACA 2412, [SG6043](http://airfoiltools.com/airfoil/details?airfoil=sg6043-il), and [S1223](http://airfoiltools.com/airfoil/details?airfoil=s1223-il) airfoils.
 
 __________
-## E: Tensor Product Wing Parameterization
+## F: Tensor Product Wing Parameterization
 
 ### Pre-requisites
 - Activity B
