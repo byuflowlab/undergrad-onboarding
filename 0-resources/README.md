@@ -4,7 +4,7 @@
 
 ## Technical Prerequisites:
 
-None. The classroom analogy is that these are the textbooks, lectures, etc. to help you complete assignments and projects.  Just like it wouldn't be most effective in a classroom to be told to go read the whole textbook then come back in six weeks and start on homework, no one should be assigned just to work on tutorials.  Rather these are resources to help you complete the other levels (activities, projects, research).  It's not expected that you master them at the beginning, but learn what you need to complete the task, and continue to develop skills over time.
+None. The classroom analogy is that these are the textbooks, lectures, etc. to help you complete assignments and projects.  Just like it wouldn't be that effective in a classroom setting to be told to go read the whole textbook then come back in six weeks and start on homework, no one should be assigned to go off and work on tutorials before starting anything.  Rather these are resources to help you complete the other levels (activities, projects, research).  It's not expected that you master them at the beginning, but learn what you need to complete the task, and continue to develop skills over time.
 
 
 ### Coding
