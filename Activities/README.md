@@ -1,9 +1,9 @@
-# Level One Projects
+# Activities
 
-These projects are designed for the motivated student who is looking to develop skills relevant to research being done in the FLOW Lab, but is either not qualified for, or not ready to commit to 497R course credit.
+These activities are designed for the motivated student who is looking to develop skills relevant to research being done in the FLOW Lab, but is either not qualified for, or not ready to commit to 497R course credit.
 
 
-## Project Descriptions
+## Activity Descriptions
 
 [Relevant EdX Classes]()
 
