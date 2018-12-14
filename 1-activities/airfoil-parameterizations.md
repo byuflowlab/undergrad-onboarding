@@ -6,7 +6,7 @@
 
 ### Resources
  - Tutorials for - [Julia and/or Python](../0-resources/README.md)
- -
+ - [Airfoil Parameterization Derivations](https://github.com/byuflowlab/flowlab-notebook/blob/master/theory/airfoilparameterization/airfoilparameterization.pdf)
 
 ### Methods
 
