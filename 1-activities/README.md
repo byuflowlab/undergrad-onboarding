@@ -1,4 +1,5 @@
 # Activities
 
-[Airfoil Parameterizations](airfoil-parameterizations.md)
+- [Airfoil Parameterizations](airfoil-parameterizations.md)
+- [Panel Code](panel-code.md)
 
