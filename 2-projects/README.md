@@ -8,13 +8,21 @@ These projects are designed to draw on skills gained from completing a selection
 
 ## Project Descriptions
 
-[Wind Farm Layout Optimization]()
+[Aerodynamics](aerodynamics)
 
-[Wind Turbine Design]()
+[Aircraft Design](aircraft-design)
 
-[Aircraft Design]()
+[Optimization](optimization)
 
-[Aerodynamics]()
+[Wind Turbine Design](wind-turbine-design)
 
-[Optimization]()
+[Wind Farm Layout Optimization](wind-farm-layout-optimization)
+
+
+
+
+
+
+
+
 
