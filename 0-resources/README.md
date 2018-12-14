@@ -32,8 +32,13 @@ None. The classroom analogy is that these are the textbooks, lectures, handouts,
 - Aerodynamics of Wind Turbines, Hansen
 - [Flight Vehicle Design](https://byu.box.com/v/me415book), Ning
 
+- [Lab Notebook](https://github.com/byuflowlab/flowlab-notebook)
+
+### Journal Papers
+
+Will be recommended by your graduate mentor depending on your particular project.
+
 ### Project Planning
 
 - [Gantt Chart](planning/Excel-Gantt-Chart-Template.xlsx)
-
 
