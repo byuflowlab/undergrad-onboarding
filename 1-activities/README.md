@@ -1,4 +1,4 @@
 # Activities
 
-[Airfoil Parameterizations](airfoil-parameterizations)
+[Airfoil Parameterizations](airfoil-parameterizations.md)
 
