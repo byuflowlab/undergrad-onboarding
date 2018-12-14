@@ -35,7 +35,7 @@ __________
 ## D: B-Spline Flapped Airfoil Parameterization
 
 ### Pre-requisites
-- Activity B
+- Activity C
  
 ### Methods
 
@@ -45,7 +45,7 @@ __________
 ## E: B-Spline Airfoil Fitting
 
 ### Pre-requisites
-- Activity B
+- Activity C
  
 ### Methods
 
@@ -57,7 +57,7 @@ __________
 ## F: Tensor Product Wing Parameterization
 
 ### Pre-requisites
-- Activity B
+- Activity C
  
 ### Methods
 
