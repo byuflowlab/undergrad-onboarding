@@ -12,10 +12,10 @@ Aircraft design includes several sub-disciplines including aerodynamics, structu
 
 There is often a trade-off between model fidelity and required computational resources.  Increase the speed and/or accuracy of an existing model in the lab.  Explore the assumptions that must be made for your model and ways to increase the applicability of your model.
 
-## Objective 
+## Objective/Constraints
 
 Optimal aircraft designs are highly dependent on the objectives and constraints placed on the design.  Explore the impact of various objectives and constraints on aircraft design.  How does the design change as more realistic objectives and constraints are added.  How sensitive is your design to various objectives and constraints.
 
 ## Surrogate Models
 
-Develop a surrogate model
+Develop a surrogate model.
