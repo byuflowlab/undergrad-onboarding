@@ -24,6 +24,9 @@ __________
 __________
 ## C: Basis Spline (B-Spline) Parameterization (basic)
 
+### Pre-requisites
+- Activity A
+
 ### Resources
 - [Spline Theory](https://github.com/byuflowlab/flowlab-notebook/blob/master/theory/splines/splines.pdf)
 
