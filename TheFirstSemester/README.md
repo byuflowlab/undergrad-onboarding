@@ -42,7 +42,7 @@ Extra Credit: If you want to learn a few more things beyond the basics, you can 
 11. [anything else that looks interesting](https://www.codecademy.com/articles/command-line-commands)
 
 ## Task 2: Write like a Researcher
-In the FLOW Lab, we write technical papers (and proposals, homework, reports, todo lists, study journals, daily planners, etc. for many of us) using $\LaTeX$, which is a typesetting language. It's a bit like Microsoft Word or Libre Office, but with direct control over formatting.  Some of the things that make it attractive are its ability to typset mathematics, format figures, and automatically format text sections based on a user-defined document types and styles. The result of a compiled $\LaTeX$ file is a .pdf file.
+In the FLOW Lab, we write technical papers (and proposals, homework, reports, todo lists, study journals, daily planners, etc. for many of us) using ![equation](latex.gif), which is a typesetting language. It's a bit like Microsoft Word or Libre Office, but with direct control over formatting.  Some of the things that make it attractive are its ability to typset mathematics, format figures, and automatically format text sections based on a user-defined document types and styles. The result of a compiled $\LaTeX$ file is a .pdf file.
 
 Completing Task 2 requires the following sub-tasks (you may find [this documentation](https://www.overleaf.com/learn) helpful):
 
