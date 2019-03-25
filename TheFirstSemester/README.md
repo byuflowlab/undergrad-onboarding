@@ -42,13 +42,13 @@ Extra Credit: If you want to learn a few more things beyond the basics, you can 
 11. [anything else that looks interesting](https://www.codecademy.com/articles/command-line-commands)
 
 ## Task 2: Write like a Researcher
-In the FLOW Lab, we write technical papers (and proposals, homework, reports, todo lists, study journals, daily planners, etc. for many of us) using ![equation](latex.gif), which is a typesetting language. It's a bit like Microsoft Word or Libre Office, but with direct control over formatting.  Some of the things that make it attractive are its ability to typset mathematics, format figures, and automatically format text sections based on a user-defined document types and styles. The result of a compiled $\LaTeX$ file is a .pdf file.
+In the FLOW Lab, we write technical papers (and proposals, homework, reports, todo lists, study journals, daily planners, etc. for many of us) using ![equation](latex.gif), which is a typesetting language. It's a bit like Microsoft Word or Libre Office, but with direct control over formatting.  Some of the things that make it attractive are its ability to typset mathematics, format figures, and automatically format text sections based on a user-defined document types and styles. The result of a compiled ![equation](latex.gif) file is a .pdf file.
 
 Completing Task 2 requires the following sub-tasks (you may find [this documentation](https://www.overleaf.com/learn) helpful):
 
-1. You need a $\LaTeX$ editor. [Overleaf](https://www.overleaf.com/) is an online application that makes things really easy if you're new. If you want a bit of a challenge, or want to work offline, [TeXStudio](https://www.texstudio.org/) or other similar $\LaTeX$ editors are nice.  If you're super hardcore, you don't even need an editor, you can do everything from the commandline, but you will still have to download a distribution of $\LaTeX$ like [this one](https://tug.org/mactex/mactex-download.html). (We'll talk about general IDE's later, and that's another option in some cases.)
+1. You need a ![equation](latex.gif) editor. [Overleaf](https://www.overleaf.com/) is an online application that makes things really easy if you're new. If you want a bit of a challenge, or want to work offline, [TeXStudio](https://www.texstudio.org/) or other similar ![equation](latex.gif) editors are nice.  If you're super hardcore, you don't even need an editor, you can do everything from the commandline, but you will still have to download a distribution of ![equation](latex.gif) like [this one](https://tug.org/mactex/mactex-download.html). (We'll talk about general IDE's later, and that's another option in some cases.)
 2. Complete [this tutorial](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes), it will give you all of the fundamentals you need to know.
-3. Write an AIAA Conference Paper (well, not really): download the [AIAA $\LaTeX$ Template](https://www.overleaf.com/latex/templates/latex-template-for-the-preparation-of-papers-for-aiaa-technical-conferences/rsssbwthkptn#.WbgUXMiGNPZ) and explore how to change the title, authors, abstract, nomenclature, etc.
+3. Write an AIAA Conference Paper (well, not really): download the [AIAA Template](https://www.overleaf.com/latex/templates/latex-template-for-the-preparation-of-papers-for-aiaa-technical-conferences/rsssbwthkptn#.WbgUXMiGNPZ) and explore how to change the title, authors, abstract, nomenclature, etc.
 4. Do your homework: Create a .tex file from scratch that includes the following elements:
    - A Header that includes the class name (e.g. MATH 334), your name, the date, and the assignment (e.g. Homework 3), and a horizontal rule (big horizontal line) speparating it from the body of the paper.
    - A footer that has the page number at the bottom right (or wherever you want to put it).
@@ -66,7 +66,7 @@ Searching for, critically skimming, reading, reviewing, and keeping track of rel
 
 1. Get a reference mananger (bibdesk, Mendeley, it doesn't really matter)
 2. Create a directory to keep a master reference list.
-3. Review 5 papers, write notes in a $\LaTeX$ docuement with proper citations/bibliography
+3. Review 5 papers, write notes in a ![equation](latex.gif) docuement with proper citations/bibliography
 
 ## Task 4: Get Git
 Git (feel free to read the [Wikipedia page on why it's named that](https://en.wikipedia.org/wiki/Git#Naming)) is among the best methods for keeping track of, and backing up your work when coding. Now that you've mastered the command line, this should be relatively easy and will set you up for success in the upcoming coding task.
