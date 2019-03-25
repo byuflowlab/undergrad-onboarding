@@ -1,12 +1,14 @@
 # The First Semester
 
-So you've decided to check out the FLOW Lab's Long-Term Research Assistant Development (LTRAD) program. You've talked to Dr. Ning, and/or one of his graduate students and they instructed you to get a github account and then sent you the link to this page. Now you're wondering what's next. Well, let's just jump right in to "The First Semester." This is an introductory set of homework-like assignments that will give you the fundamental skills required to do research in the FLOW Lab. You'll learn, among other things, how to navigate computers via the command line, write basic computer scripts anFd programs, critically review technical writing, and do some technical writing of your own. You can complete these assignments as quickly or slowly as you want, be we strongly suggest forming a group with other students starting out just like you so you can work together, ask and answer questions, and figure as much out together as you can, since that will accelerate your learning.
+So you've decided to check out the FLOW Lab's Long-Term Research Assistant Development (LTRAD) program. You've talked to Dr. Ning, and/or one of his graduate students and they instructed you to get a github account and then sent you the link to this page. Now you're wondering what's next. Well, let's just jump right in to "The First Semester." This is an introductory set of homework-like assignments that will give you the fundamental skills required to do research in the FLOW Lab. You'll learn, among other things, how to navigate computers via the command line, write basic computer scripts and programs, critically review technical writing, and do some technical writing of your own. You can complete these assignments as quickly or slowly as you want, be we strongly suggest forming a group with other students starting out just like you so you can work together, ask and answer questions, and figure as much out together as you can, since that will accelerate your learning.
 
 ## Task 1: Master the Command Line
 What's the Command Line, you ask? It's the text-based interface to your computer. Depending on your operating system, the Command Line Interface application will have a different name, but they all do the same thing.
 
 - Mac/Linux : Terminal
 - Windows : Command Prompt
+
+> Note that commands in Windows are different than Mac/Linux and you will need to know the latter. If you are on a Windows machine the easiest way to get going is to use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about).  Other alternatives include installing linux (either as a virtual machine or as a separate boot drive) or just creating an account on one of the Mac Mini's we have in the lab.
 
 Your first task is to master navigating the command line. You'll find [Code Academy's Tutorial](https://www.codecademy.com/learn/learn-the-command-line) useful in this endeavor, but you may find yourself needing to look up some details elsewhere (*cough Google *cough).
 
