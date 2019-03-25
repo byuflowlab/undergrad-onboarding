@@ -1,6 +1,6 @@
 # The First Semester
 
-So you've decided to check out the FLOW Lab's Long-Term Research Assistant Development (LTRAD) program. You've talked to Dr. Ning, and/or one of his graduate students and they instructed you to get a github account and then sent you the link to this page. Now you're wondering what's next. Well, let's just jump right in to "The First Semester." This is an introductory set of homework-like assignments that will give you the fundamental skills required to do research in the FLOW Lab. You'll learn, among other things, how to navigate computers via the command line, write basic computer scripts and programs, critically review technical writing, and do some technical writing of your own. You can complete these assignments as quickly or slowly as you want, be we strongly suggest forming a group with other students starting out just like you so you can work together, ask and answer questions, and figure as much out together as you can, since that will accelerate your learning.
+So you've decided to check out the FLOW Lab's Long-Term Research Assistant Development (LTRAD) program. You've talked to Dr. Ning, and/or one of his graduate students and they instructed you to get a github account and then sent you the link to this page. Now you're wondering what's next. Well, let's just jump right in to "The First Semester." This is an introductory set of homework-like assignments that will give you the fundamental skills required to do research in the FLOW Lab. You'll learn, among other things, how to navigate computers via the command line, write basic computer scripts anFd programs, critically review technical writing, and do some technical writing of your own. You can complete these assignments as quickly or slowly as you want, be we strongly suggest forming a group with other students starting out just like you so you can work together, ask and answer questions, and figure as much out together as you can, since that will accelerate your learning.
 
 ## Task 1: Master the Command Line
 What's the Command Line, you ask? It's the text-based interface to your computer. Depending on your operating system, the Command Line Interface application will have a different name, but they all do the same thing.
@@ -59,7 +59,7 @@ Completing Task 2 requires the following sub-tasks (you may find [this documenta
      - Your work (maths, plots/figures, etc.)
      - Results
      - Conclusions
-5. If possible, actually submit a homework assignment that you've written up in $\LaTeX$.
+5. If possible, actually submit a homework assignment that you've written up in ![equation](latex.gif).
 
 ## Task 3: Read Like a Researcher
 Searching for, critically skimming, reading, reviewing, and keeping track of relevant research articles is a necessity as a researcher. Starting with these simple things now will eliminate potential headaches later. You'll want to develop a system for keeping papers organized so that when it comes time to cite them, or do a literature review, you have everything ready to go.  We don't have a standardized system for this, so you'll have to decide on your own how you want to organize things, but in order to complete this task, you'll need to do at least the following:
