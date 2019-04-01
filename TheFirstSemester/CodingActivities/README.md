@@ -10,8 +10,13 @@ To help introduce the Julia language, we are going to do a practical aerodynamic
 
 ## Tutorials:
 [Julia Basics](juliabasics.md)
+
 [Functions](functions.md)
+
 [Control Flow](loops.md)
+
 [Arrays and Matrices](arrays.md)
+
 [Packages](packages.md)
+
 [Numerical Integration](integration.md)
