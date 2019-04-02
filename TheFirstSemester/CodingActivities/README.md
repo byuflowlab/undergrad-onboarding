@@ -9,9 +9,9 @@ For the following tutorials, we will primarily be using the [Julia Documentation
 To help introduce the Julia language, we are going to do a practical aerodynamics problem, very similar to a homework problem from the aerodynamics class, ME EN 515. The tutorials here will guide you through the steps to complete your own [Panel Method](http://flowlab.groups.et.byu.net/me515/slides/9-panel.pdf).
 
 ## Tutorials:
-[Julia Basics](juliabasics.md)
+[Julia Basics](latex/basics.pdf)
 
-[Functions](functions.md)
+[Functions](latex/functions.pdf)
 
 [Control Flow](loops.md)
 
