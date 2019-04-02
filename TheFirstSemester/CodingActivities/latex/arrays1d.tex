@@ -1,0 +1,121 @@
+\documentclass{article}% insert '[draft]' option to show overfull boxes 
+
+%set up margins (gemetry package does more than just margins.)
+\usepackage{geometry}
+\geometry{
+	letterpaper,
+	left=1in,
+	top=1in,
+	bottom=1in}
+
+%% Useful packages
+%Nominal Packages
+\usepackage{amsmath,xparse} %package for math stuff
+\usepackage{esint} %package for cauchy principal value integral \fint
+\NewDocumentCommand{\qfrac}{smm}{%
+	\dfrac{\IfBooleanT{#1}{\vphantom{\big|}}#2}{\mathstrut #3}%
+} % spaces out fractions
+
+\usepackage{graphicx} %package for floats (figures)
+\usepackage[colorlinks=true, allcolors=blue]{hyperref} %pacakge for hyperlinks (internal and external)
+\usepackage{indentfirst} %package that indents first sentence of each paragraph.
+
+%Advanced Packages
+\usepackage{xfrac} %package that allows slanted fractions rather than stacked ones, use \xfrac{}{} instead of \frac{}{}
+\usepackage{siunitx} %package for SI units (see ftp://ftp.dante.de/tex-archive/macros/latex/exptl/siunitx/siunitx.pdf)
+\usepackage{gensymb} %package for some convenient things in both math and text mode (see http://ctan.math.illinois.edu/macros/latex/contrib/was/gensymb.pdf)
+\usepackage{caption} %package for advanced captioning
+\usepackage{subfigmat}% packages automating layout for subfigures
+\usepackage{tcolorbox} %makes colored boxes
+
+\usepackage{listings}
+%\usepackage[usenames,dvipsnames]{xcolor}
+
+\lstdefinelanguage{Julia}%
+{morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+		end,export,false,for,function,immutable,import,importall,if,in,%
+		macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+		using,while},%
+	sensitive=true,%
+	alsoother={\$},%
+	morecomment=[l]\#,%
+	morecomment=[n]{\#=}{=\#},%
+	morestring=[s]{"}{"},%
+	morestring=[m]{'}{'},%
+}[keywords,comments,strings]%
+
+\lstset{%
+	language         = Julia,
+	basicstyle       = \footnotesize,
+	keywordstyle     = \bfseries\color{blue},
+	stringstyle      = \color{magenta},
+	commentstyle     = \color{gray},
+	showstringspaces = false,
+	breaklines=true,
+	breakindent=0pt,
+	tabsize=4,
+}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Last Updated\\\today}
+\chead{Activity 3:\\1D Arrays}
+\lhead{FLOW Lab\\LTRAD Program}
+\rfoot{}
+\lfoot{}
+
+
+%Document Actually begins here.
+\begin{document}
+
+The purpose of this assignment is to gain familiarity with basic arrays and matrices. You can learn about these with the \href{https://en.wikibooks.org/wiki/Introducing_Julia/Arrays_and_tuples}{Introducing Julia} page.
+
+\section{1D Arrays}
+To practice using basic arrays, you'll create the full NACA 4-series airfoil coordinate function, which will call the functions you wrote in activities 1 and 2.
+
+\bigskip
+
+\begin{tcolorbox}
+	\textbf{
+		NACA 4-series Airfoil Coordinates}
+	\textit{
+		The NACA 4-series airfoil coordinates are obtained by adding and subtracting half the thinkness from the mean camber line. That is, the upper surface of the airfoil is half the thickness above the mean camber line, and the lower is half the thickness below.
+	}
+	\begin{align*}
+	z_u = \bar{z} + \frac{t}{2}\\
+	z_\ell = \bar{z} - \frac{t}{2}\\
+	\end{align*}
+	
+\end{tcolorbox}
+
+\bigskip
+
+Create a function that takes whole number values for max camber, $c$; max camber position, $p$; max thickness, $t$; and an array of $x$ values spanning (0, 1). The function should take the whole numbers for $c$, $p$, and $t$, and convert them into the correct magnitudes ($c$ and $t$ are in units chord/100, and $p$ is in units chord/10). Using a loop, call your thickness and camber functions and solve for the upper and lower $z$ coordinates for each $x$ coordinate. Return three arrays: $x$, $z_u$, and $z_\ell$. (remember, in Julia you must initialize arrays before populating them in loops.)
+
+To check your work, look at a NACA 2412 airfoil, that is to say, input $c=2$, $p=4$, $t=12$ and x = [0.0; 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0], and recreate the following table.
+
+\bigskip
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{ l | l | l}
+$x$ & $z_u$ & $z_\ell$\\
+\hline
+0.0 & 0.0 & 0.0 \\
+0.1 & 0.055565104238239515 & -0.038065104238239514 \\
+0.2 & 0.0723250299023625 & -0.0423250299023625 \\
+0.3 & 0.07865386639397029 & -0.04115386639397029 \\
+0.4 & 0.07782850847647903 & -0.03782850847647902 \\
+0.5 & 0.07206969644501603 & -0.03318080755612714 \\
+0.6 & 0.06295786843645562 & -0.02740231288090007 \\
+0.7 & 0.051021667126780204 & -0.021021667126780205 \\
+0.8 & 0.03653589091583613 & -0.014313668693613908 \\
+0.9 & 0.01956768382582959 & -0.00734546160360737 \\
+1.0 & -1.6653345369377347e-17 & 1.6653345369377347e-17 \\
+\hline
+\end{tabular}
+
+
+
+\end{document}
