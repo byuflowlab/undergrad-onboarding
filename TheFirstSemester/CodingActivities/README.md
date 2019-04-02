@@ -15,7 +15,7 @@ To help introduce the Julia language, we are going to do a practical aerodynamic
 
 [Control Flow](latex/controlflow.pdf)
 
-[Arrays and Matrices](latex/arrays.pdf)
+[1D Arrays](latex/arrays1D.pdf)
 
 [Plotting](latex/plotting.pdf)
 
