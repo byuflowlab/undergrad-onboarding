@@ -1,0 +1,127 @@
+\documentclass{article}% insert '[draft]' option to show overfull boxes 
+
+%set up margins (gemetry package does more than just margins.)
+\usepackage{geometry}
+\geometry{
+	letterpaper,
+	left=1in,
+	top=1in,
+	bottom=1in}
+
+%% Useful packages
+%Nominal Packages
+\usepackage{amsmath,xparse} %package for math stuff
+\usepackage{esint} %package for cauchy principal value integral \fint
+\NewDocumentCommand{\qfrac}{smm}{%
+	\dfrac{\IfBooleanT{#1}{\vphantom{\big|}}#2}{\mathstrut #3}%
+} % spaces out fractions
+
+\usepackage{graphicx} %package for floats (figures)
+\usepackage[colorlinks=true, allcolors=blue]{hyperref} %pacakge for hyperlinks (internal and external)
+\usepackage{indentfirst} %package that indents first sentence of each paragraph.
+
+%Advanced Packages
+\usepackage{xfrac} %package that allows slanted fractions rather than stacked ones, use \xfrac{}{} instead of \frac{}{}
+\usepackage{siunitx} %package for SI units (see ftp://ftp.dante.de/tex-archive/macros/latex/exptl/siunitx/siunitx.pdf)
+\usepackage{gensymb} %package for some convenient things in both math and text mode (see http://ctan.math.illinois.edu/macros/latex/contrib/was/gensymb.pdf)
+\usepackage{caption} %package for advanced captioning
+\usepackage{subfigmat}% packages automating layout for subfigures
+\usepackage{tcolorbox} %makes colored boxes
+
+\usepackage{listings}
+%\usepackage[usenames,dvipsnames]{xcolor}
+
+\lstdefinelanguage{Julia}%
+{morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+		end,export,false,for,function,immutable,import,importall,if,in,%
+		macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+		using,while},%
+	sensitive=true,%
+	alsoother={\$},%
+	morecomment=[l]\#,%
+	morecomment=[n]{\#=}{=\#},%
+	morestring=[s]{"}{"},%
+	morestring=[m]{'}{'},%
+}[keywords,comments,strings]%
+
+\lstset{%
+	language         = Julia,
+	basicstyle       = \footnotesize,
+	keywordstyle     = \bfseries\color{blue},
+	stringstyle      = \color{magenta},
+	commentstyle     = \color{gray},
+	showstringspaces = false,
+	breaklines=true,
+	breakindent=0pt,
+	tabsize=4,
+}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Last Updated\\\today}
+\chead{Activity 2:\\Control Flow}
+\lhead{FLOW Lab\\LTRAD Program}
+\rfoot{}
+\lfoot{}
+
+
+%Document Actually begins here.
+\begin{document}
+	
+	The purpose of this assignment is to gain familiarity with basic control flow commands: if, elseif, else, for, while, etc. You can learn about these with the \href{https://en.wikibooks.org/wiki/Introducing_Julia/Controlling_the_flow}{Introducing Julia} page.
+	
+	\section{If}
+	To practice if statements you'll create a camber function associated with the \href{https://en.wikipedia.org/wiki/NACA_airfoil}{NACA 4-Series Airfoils} 
+	
+	\bigskip
+	
+	\begin{tcolorbox}
+		\textbf{
+			NACA 4-series Camber Formula
+		} 
+		\textit{
+			The NACA 4-series formula for airfoil camber along the chord is given by the following piecewise olynomial function, where $c$ is the value of maximum camber (as a percentage of the chord), p is the position of maximum camber (in units of chord/10), and $x$ is the x-position along the chord.
+		}
+		\begin{align*}
+		\bar{z} = 
+		\begin{cases}
+		\qfrac{c(2cx-x^2)}{p^2} &\text{if  } x \leq p\\
+		\qfrac{c(1-2c +2cx - x^2)}{(1-p)^2} &\text{if  } x > p
+		\end{cases}
+		\end{align*}
+		
+	\end{tcolorbox}
+	
+	\bigskip
+	
+	Using the NACA 4-series Camber Formula above, create a function that takes in three inputs: $x$, $p$, and $c$; and outputs the camber $\bar{z}$.
+	
+	To check your work, you should be able to recreate the following table for $c=0.02$ and $p=0.40$
+	
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{ l | l }
+		$x$ & $\bar{z}$ \\
+		\hline
+		0.0 & 0.0\\
+		0.1 & 0.00875\\
+		0.2 & 0.015\\
+		0.3 & 0.01875\\
+		0.4 & 0.02\\
+		0.5 & 0.019444\\
+		0.6 & 0.01777\\
+		0.7 & 0.015\\
+		0.8 & 0.0111\\
+		0.9 & 0.006111\\
+		1.0 & 0.0\\
+	\end{tabular}
+	
+	
+	\section{Loops}
+	\begin{enumerate}
+		\item Using for loops, print the tables from activities 1 and 2 using 3 lines of code each. (hint, call your function in the loop and use the iterator in your inputs)
+		\item Do the same using while loops (you'll need 2 more lines of code to initialize and update the iterator).
+	\end{enumerate}
+	
+\end{document}

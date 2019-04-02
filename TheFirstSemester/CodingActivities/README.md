@@ -13,7 +13,7 @@ To help introduce the Julia language, we are going to do a practical aerodynamic
 
 [Functions](latex/functions.pdf)
 
-[Control Flow](loops.md)
+[Control Flow](latex/controlflow.pdf)
 
 [Arrays and Matrices](arrays.md)
 
