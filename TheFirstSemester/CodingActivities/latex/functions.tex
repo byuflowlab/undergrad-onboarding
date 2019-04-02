@@ -1,0 +1,134 @@
+\documentclass{article}% insert '[draft]' option to show overfull boxes 
+
+%set up margins (gemetry package does more than just margins.)
+\usepackage{geometry}
+ \geometry{
+	letterpaper,
+	left=1in,
+	top=1in,
+	bottom=1in}
+
+%% Useful packages
+%Nominal Packages
+\usepackage{amsmath} %package for math stuff
+\usepackage{esint} %package for cauchy principal value integral \fint
+
+\usepackage{graphicx} %package for floats (figures)
+\usepackage[colorlinks=true, allcolors=blue]{hyperref} %pacakge for hyperlinks (internal and external)
+\usepackage{indentfirst} %package that indents first sentence of each paragraph.
+
+%Advanced Packages
+\usepackage{xfrac} %package that allows slanted fractions rather than stacked ones, use \xfrac{}{} instead of \frac{}{}
+\usepackage{siunitx} %package for SI units (see ftp://ftp.dante.de/tex-archive/macros/latex/exptl/siunitx/siunitx.pdf)
+\usepackage{gensymb} %package for some convenient things in both math and text mode (see http://ctan.math.illinois.edu/macros/latex/contrib/was/gensymb.pdf)
+\usepackage{caption} %package for advanced captioning
+\usepackage{subfigmat}% packages automating layout for subfigures
+\usepackage{tcolorbox} %makes colored boxes
+
+\usepackage{listings}
+%\usepackage[usenames,dvipsnames]{xcolor}
+
+\lstdefinelanguage{Julia}%
+{morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+		end,export,false,for,function,immutable,import,importall,if,in,%
+		macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+		using,while},%
+	sensitive=true,%
+	alsoother={\$},%
+	morecomment=[l]\#,%
+	morecomment=[n]{\#=}{=\#},%
+	morestring=[s]{"}{"},%
+	morestring=[m]{'}{'},%
+}[keywords,comments,strings]%
+
+\lstset{%
+	language         = Julia,
+	basicstyle       = \footnotesize,
+	keywordstyle     = \bfseries\color{blue},
+	stringstyle      = \color{magenta},
+	commentstyle     = \color{gray},
+	showstringspaces = false,
+	breaklines=true,
+	breakindent=0pt,
+	tabsize=4,
+}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Last Updated\\\today}
+\chead{Assignment 1:\\Functions}
+\lhead{FLOW Lab\\LTRAD Program}
+\rfoot{}
+\lfoot{}
+
+
+%Document Actually begins here.
+\begin{document}
+
+\section{Thickness Function}
+
+The purpose of this assignment is to gain familiarity with basic functions. You can learn about how functions work with the \href{https://en.wikibooks.org/wiki/Introducing_Julia/Functions}{Introducing Julia} page. To practice creating functions you'll create a thickness function associated with the \href{https://en.wikipedia.org/wiki/NACA_airfoil}{NACA 4-Series Airfoils} 
+
+\bigskip
+
+\begin{tcolorbox}
+	\textbf{
+		NACA 4-series Thickness Formula
+	} 
+	\textit{
+		The NACA 4-series formula for airfoil thickness along the chord is given by the following polynomial function, where $m$ is the value of maximum thickness (as a percentage of the chord), and $x$ is the x-position along the chord. (This formulation is for airfoils with sharp trailing edges.)
+	}
+	\begin{align*}
+	10 m \left( 0.2969\sqrt{x} - 0.1260x - 0.3537x^2 + 0.2843x^3 - 0.1015x^4 \right)
+	\end{align*}
+\end{tcolorbox}
+
+\bigskip
+
+Using the NACA 4-series Thickness Formula above, create a function that takes in two inputs: $x$, and $m$; and outputs the thickness $t$.
+
+To check your work, you should be able to recreate the following table for $m=0.10$
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{ l | l }
+	$x$ & $t$ \\
+	\hline
+	0.0 & 0.0\\
+	0.1 & 0.07802517373039919\\
+	0.2 & 0.0955417165039375\\
+	0.3 & 0.09983977732328385\\
+	0.4 & 0.09638084746079838\\
+	0.5 & 0.08770875333428597\\
+	0.6 & 0.07530015109779636\\
+	0.7 & 0.060036111877966966\\
+	0.8 & 0.04237463300787503\\
+	0.9 & 0.02242762119119747\\
+	1.0 & -2.7755575615628914e-17 (this can be thought of as zero)\\
+\end{tabular}
+
+
+\section{Docstrings}
+
+With any function you write, you'll want to add what's called a docstring above it. This is similar to a file header, but just for the function.  The \href{https://docs.julialang.org/en/v1/manual/documentation/index.html#Accessing-Documentation-1}{Documentation Page of Julia} explains in detail how to do this. For the basics, you can follow this example for now:
+
+\begin{lstlisting}[frame=single]
+
+"""
+	examplefunction(inputs)
+
+This is a one sentence description of the examplefunction.
+
+If you need more details than the single sentence, you can do that here. If you have several inputs and outputs and you want to clarify what they are, etc., you can do that below.
+
+"""
+function examplefuction(inputs)
+	outputs = inputs
+	return outputs
+end
+\end{lstlisting}
+
+Once I've done this and compiled this function. I can type ``? examplefunction'' into the Julia REPL and the docstring will print out. This is very helpful when you are working with complicated codes with many functions that either you didn't write, or you wrote a long time ago.
+
+\end{document}
