@@ -18,6 +18,7 @@
 
 \usepackage{graphicx} %package for floats (figures)
 \usepackage[colorlinks=true, allcolors=blue]{hyperref} %pacakge for hyperlinks (internal and external)
+\usepackage{cleveref}
 \usepackage{indentfirst} %package that indents first sentence of each paragraph.
 
 %Advanced Packages
@@ -72,6 +73,26 @@
 
 The purpose of this assignment is to gain familiarity with basic plotting. You can learn about these with the \href{https://en.wikibooks.org/wiki/Introducing_Julia/Plotting}{Introducing Julia} page.
 
+You won't need any more functions for this activity. In order to practice plotting, do the following:
+\begin{enumerate}
+	\item Using your NACA 4-series coordinate function from activity 3, plot a NACA 2412 airfoil.
+	\item Explore the 3 NACA parameters by plotting (and labeling) several NACA airfoils (you may try a 0008, 0012, 2412, 4412, 2424, etc.)
+	\item Adjust several line parameters such as line color, style, and thickness.
+	\item Learn how to turn the grid off/on.
+	\item Adjust the legend to have no border and a transparent background.
+	\item Learn how to adjust the x and y limits of the plot, as well as the x and y tick labels.
+	\item Save your figure as a .pdf file. 
+\end{enumerate}
+
+When you are done, you should have a figure resembling \cref{fig:airfoilplot}
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{activity4plot.pdf}
+	\caption{An example output for this activity.}
+	\label{fig:airfoilplot}
+\end{figure}
 
 
 \end{document}
