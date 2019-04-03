@@ -2,7 +2,7 @@
 
 %set up margins (gemetry package does more than just margins.)
 \usepackage{geometry}
- \geometry{
+\geometry{
 	letterpaper,
 	left=1in,
 	top=1in,
@@ -10,11 +10,15 @@
 
 %% Useful packages
 %Nominal Packages
-\usepackage{amsmath} %package for math stuff
+\usepackage{amsmath,xparse} %package for math stuff
 \usepackage{esint} %package for cauchy principal value integral \fint
+\NewDocumentCommand{\qfrac}{smm}{%
+	\dfrac{\IfBooleanT{#1}{\vphantom{\big|}}#2}{\mathstrut #3}%
+} % spaces out fractions
 
 \usepackage{graphicx} %package for floats (figures)
 \usepackage[colorlinks=true, allcolors=blue]{hyperref} %pacakge for hyperlinks (internal and external)
+\usepackage{cleveref}
 \usepackage{indentfirst} %package that indents first sentence of each paragraph.
 
 %Advanced Packages
@@ -49,27 +53,16 @@
 	commentstyle     = \color{gray},
 	showstringspaces = false,
 	breaklines=true,
+	breakindent=0pt,
+	tabsize=4,
 }
 
-\lstdefinestyle{customc}{
-	belowcaptionskip=1\baselineskip,
-	breaklines=true,
-	frame=L,
-	xleftmargin=\parindent,
-	language=Julia,
-	showstringspaces=false,
-	basicstyle=\footnotesize\ttfamily,
-	keywordstyle=\bfseries\color{green!40!black},
-	commentstyle=\itshape\color{purple!40!black},
-	identifierstyle=\color{blue},
-	stringstyle=\color{gray},
-}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Last Updated\\\today}
-\chead{Activity 0:\\Julia Basics}
+\chead{Activity 5:\\Packages}
 \lhead{FLOW Lab\\LTRAD Program}
 \rfoot{}
 \lfoot{}
@@ -78,25 +71,28 @@
 %Document Actually begins here.
 \begin{document}
 
-\section*{The Basics}
-The \href{https://learnxinyminutes.com/docs/julia/}{Learn X in Y Minutes} page for Julia has more than you'll need to get started.  Using the Julia REPL, learn how to do basic math such as addition, subtraction, multiplication, division, exponents, etc.  When you're comfortable with that, create a .jl file and write a script with some basic math things. Search the \href{https://docs.julialang.org/en/v1/index.html}{Julia Documentation} and learn how to print out strings and variables (you may find print, println, and display useful terms to search). Then learn how to run your julia script file either in the terminal, or in an IDE if you're using one.
+The purpose of this assignment is to gain familiarity with basic plotting. You can learn about these with the \href{https://en.wikibooks.org/wiki/Introducing_Julia/Plotting}{Introducing Julia} page.
+
+You won't need any more functions for this activity. In order to practice plotting, do the following:
+\begin{enumerate}
+	\item Using your NACA 4-series coordinate function from activity 3, plot a NACA 2412 airfoil.
+	\item Explore the 3 NACA parameters by plotting (and labeling) several NACA airfoils (you may try a 0008, 0012, 2412, 4412, 2424, etc.)
+	\item Adjust several line parameters such as line color, style, and thickness.
+	\item Learn how to turn the grid off/on.
+	\item Adjust the legend to have no border and a transparent background.
+	\item Learn how to adjust the x and y limits of the plot, as well as the x and y tick labels.
+	\item Save your figure as a .pdf file. 
+\end{enumerate}
+
+When you are done, you should have a figure resembling \cref{fig:airfoilplot}
 
 
-\section*{Headers}
-Although not necessary, you'll probably want to get in the habit of putting commented headers in your coding files with information such as who the author is (you), when it was written, what the file does, and any major updates after initial publication.
-
-\begin{lstlisting}[frame=single]
-
-# Example Header
-# FLOW Lab LTRAD Program
-# Author: Judd Mehr
-# Date: 2 April 2019
-# This header is an example of what you might want to put at the top of your Julia files.
-\end{lstlisting}
-
-
-\section*{Style Guide}
-We follow the Julia language \href{https://docs.julialang.org/en/v1/manual/style-guide/index.html}{Style Guide}. Read through it. You won't understand a lot of it at this point, but keep referring back to make sure you're coding in the accepted style (this makes it much easier for people to read your code).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{activity4plot.pdf}
+	\caption{An example output for this activity.}
+	\label{fig:airfoilplot}
+\end{figure}
 
 
 \end{document}
