@@ -15,10 +15,10 @@ To help introduce the Julia language, we are going to do a practical aerodynamic
 
 [Control Flow](latex/controlflow.pdf)
 
-[1D Arrays](latex/arrays1d.pdf)
+[1D Arrays](latex/arrays.pdf)
 
 [Plotting](latex/plotting.pdf)
 
-[Packages](packages.md)
+[Packages](latex/packages.pdf)
 
 [Numerical Integration](integration.md)
