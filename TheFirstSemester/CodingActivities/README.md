@@ -17,8 +17,8 @@ To help introduce the Julia language, we are going to do a practical aerodynamic
 
 [1D Arrays](latex/arrays.pdf)
 
-[Plotting](latex/plotting.pdf)
-
 [Packages](latex/packages.pdf)
+
+[Plotting](latex/plotting.pdf)
 
 [Numerical Integration](integration.md)
