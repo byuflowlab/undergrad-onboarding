@@ -6,9 +6,9 @@ First things first. You need to get Julia. You can get the current version from 
 
 For the following tutorials, we will primarily be using the [Julia Documentation](https://docs.julialang.org/en/v1/) and [Introducing Julia](https://en.wikibooks.org/wiki/Introducing_Julia). Some other quick references for Julia syntax are [Learn X in Y, where X=Julia](https://learnxinyminutes.com/docs/julia/), and [Julia by Example](https://juliabyexample.helpmanual.io/).
 
-To help introduce the Julia language, we are going to do a practical aerodynamics problem, very similar to a homework problem from the aerodynamics class, ME EN 515. The tutorials here will guide you through the steps to complete your own [Panel Method](http://flowlab.groups.et.byu.net/me515/slides/9-panel.pdf).
+To help introduce the Julia language, we are going to do a practical aerodynamics problem, very similar to a homework problem from the aerodynamics class, ME EN 515. The activities here will help you develop the necessary skills to complete your own [Panel Method](latex/panelmethod.pdf).
 
-## Activities:
+## Learning Activities:
 [Julia Basics](latex/basics.pdf)
 
 [Functions](latex/functions.pdf)
@@ -22,3 +22,5 @@ To help introduce the Julia language, we are going to do a practical aerodynamic
 [Plotting](latex/plotting.pdf)
 
 [Numerical Integration](integration.md)
+
+[Application Activity: Panel Method](latex/panelmethod.pdf)
