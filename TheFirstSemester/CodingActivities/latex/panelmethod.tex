@@ -1,0 +1,121 @@
+\documentclass{article}% insert '[draft]' option to show overfull boxes 
+
+%set up margins (gemetry package does more than just margins.)
+\usepackage{geometry}
+\geometry{
+	letterpaper,
+	left=1in,
+	top=1in,
+	bottom=1in}
+
+%% Useful packages
+%Nominal Packages
+\usepackage{amsmath,xparse} %package for math stuff
+\usepackage{esint} %package for cauchy principal value integral \fint
+\NewDocumentCommand{\qfrac}{smm}{%
+	\dfrac{\IfBooleanT{#1}{\vphantom{\big|}}#2}{\mathstrut #3}%
+} % spaces out fractions
+
+\usepackage{graphicx} %package for floats (figures)
+\usepackage[colorlinks=true, allcolors=blue]{hyperref} %pacakge for hyperlinks (internal and external)
+\usepackage{cleveref}
+\usepackage{indentfirst} %package that indents first sentence of each paragraph.
+
+%Advanced Packages
+\usepackage{xfrac} %package that allows slanted fractions rather than stacked ones, use \xfrac{}{} instead of \frac{}{}
+\usepackage{siunitx} %package for SI units (see ftp://ftp.dante.de/tex-archive/macros/latex/exptl/siunitx/siunitx.pdf)
+\usepackage{gensymb} %package for some convenient things in both math and text mode (see http://ctan.math.illinois.edu/macros/latex/contrib/was/gensymb.pdf)
+\usepackage{caption} %package for advanced captioning
+\usepackage{subfigmat}% packages automating layout for subfigures
+\usepackage{tcolorbox} %makes colored boxes
+
+\usepackage{listings}
+%\usepackage[usenames,dvipsnames]{xcolor}
+
+\lstdefinelanguage{Julia}%
+{morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+		end,export,false,for,function,immutable,import,importall,if,in,%
+		macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+		using,while},%
+	sensitive=true,%
+	alsoother={\$},%
+	morecomment=[l]\#,%
+	morecomment=[n]{\#=}{=\#},%
+	morestring=[s]{"}{"},%
+	morestring=[m]{'}{'},%
+}[keywords,comments,strings]%
+
+\lstset{%
+	language         = Julia,
+	basicstyle       = \footnotesize,
+	keywordstyle     = \bfseries\color{blue},
+	stringstyle      = \color{magenta},
+	commentstyle     = \color{gray},
+	showstringspaces = false,
+	breaklines=true,
+	breakindent=0pt,
+	tabsize=4,
+}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Last Updated\\\today}
+\chead{Application Activity:\\2D Inviscid Panel Method}
+\lhead{FLOW Lab\\LTRAD Program}
+\rfoot{}
+\lfoot{}
+
+
+%Document Actually begins here.
+\begin{document}
+
+The purpose of this activity is to apply what you have learned in all the previous activities. This document will walk you through the steps to create your own 2D, inviscid panel method. This activity is significantly more computationally involved than the previous ones, so be prepared to see some math.
+
+\section*{Panel Methods}
+
+By way of introduction: Panel Methods are analytic methods by which we can solve for some of the important airfoil characteristics, such as the lift and moment coefficients. In order to do this, we solve a system of potential flow equations of the standard form \(Ax=b\) where A is a square matrix, b is a vector of known values, and x is the vector of unknowns for which we are solving. (The topic of potential flow is covered in the fluid mechanics courses, ME EN 312 and 512, and, of course, in the aerodynamics course, ME EN 515.) A detailed understanding of the physics behind the panel method is not necessary, however. All that really needs to be understood is that, as shown in \cref{fig:panelplot}, an airfoil is approximated by straight lines that we are calling panels, and based on the geometry of those lines, we can set up a system of equations (the equations will be given to you), to solve for some of the flow characteristics around the airfoil, assuming the fluid is inviscid (no friction), among other assumptions.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{panelplot.pdf}
+	\caption{In a panel method, the airfoil is approximated by several ``panels.'' Shown here is a rough representation of linear panels (straight lines between points) for a NACA 2412 airfoil. In general, many panels are used so that the curvature of the airfoil is well approximated.}
+	\label{fig:panelplot}
+\end{figure}
+
+There are four major parts to the panel method: 1) characterize the geometry 2) populate the coefficient matrix on the left hand side of the system of equations, 3) populate the right hand side vector of the system of equations, 4) use the solution to the system of equations to obtain the desired flow properties.
+
+\subsection*{Geometry Characterization}
+We begin with characterizing the geometry since all the following steps depend on the geometry. For the math to work out, you will need to loop through the points/panels from bottom side trailing edge of the airfoil, around the front to the top side trailing edge. Here is an overview of the steps needed to have the geometry values you need:
+\begin{enumerate}
+	\item Using your NACA 4-series coordinate function, create the x and z vectors, concatenating them as described in activity 3 such that they begin with the bottom trailing edge point, go toward the front and around until ending at the top side trailing edge point.
+	\item Calculate each panel length (the distance between consecutive points), and store the results in a 1D array
+	\item Calculate the midpoint of each panel and store the x and z coordinates either together in a 2D array, or separately in two 1D arrays.
+	\item Calculate the angle of each panel relative to the +x axis, and store the results in a 1D array.
+	\\(hint: panel length, center point position, and panel angle can all be done in the same loop.)
+	\item Calculate the distance between each panel center point, and each panel edge point (the airfoil coordinate points.), and save these in a 2D vector where the rows are associated with each center point, and the columns are associated with each coordinate point. (In other words, there will be one more column there there are rows.)
+	\\(hint: you'll need to use a for loop inside of a for loop for this and the next step.)
+	\item Calculate the angle between each panel and all other panels. Store these in a 2D array.
+\end{enumerate}
+
+The equation for the angle between panels is given by:
+
+\begin{equation}
+	\beta_{i,j} = 
+	\begin{cases}
+		\text{atan2}\left[ \qfrac{ \left( x_j-\bar{x}_i \right) \left( z_{j+1} - \bar{z}_i \right) - \left( z_j-\bar{z}_i \right) \left( x_{j+1} - \bar{x}_i \right) }{ \left( x_j-\bar{x}_i \right) \left( x_{j+1} - \bar{x}_i \right) + \left( z_j-\bar{z}_i \right) \left( z_{j+1} - \bar{z}_i \right) } \right] &\text{  if } i \neq j\\
+		\pi &\text{  otherwise}
+	\end{cases}
+\end{equation}
+
+where $x$ and $z$ are the x and z components of the airfoil coordinates and $\bar{x}$ and $\bar{z}$ are the panel midpoint coordinates. Also note the notation here: for each ith panel, we need the angle between in and every jth panel. This means the array that stores these values should have the same number of rows an columns, where the ith row has the angles between the ith panel and every other panel. atan2 is a Julia function that computes the inverse tangent in the correct quadrant.
+
+\subsection*{Coefficient Matrix}
+
+
+
+
+
+
+\end{document}
