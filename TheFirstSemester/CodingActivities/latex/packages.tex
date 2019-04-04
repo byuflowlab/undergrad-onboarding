@@ -71,7 +71,22 @@
 %Document Actually begins here.
 \begin{document}
 
-The purpose of this assignment is to gain familiarity with using Packages. There is a lot of information out there, but at this point you really only need to know how to add packages, and then how to import/use them. You will probably only need to review the \href{https://julialang.github.io/Pkg.jl/v1/}{introduction} and \href{https://julialang.github.io/Pkg.jl/v1/getting-started/}{getting started} pages of the package manager documentation, and you will also want to look at the \href{https://docs.julialang.org/en/v1/base/base/#import}{import and using} keywords.
+The purpose of this assignment is to gain familiarity with using Packages. There is a lot of information out there, but at this point you really only need to know how to add packages, and then how to import/use them. You will probably only need to review the \href{https://julialang.github.io/Pkg.jl/v1/}{introduction} and \href{https://julialang.github.io/Pkg.jl/v1/getting-started/}{getting started} pages of the package manager documentation, and you will also want to look at the \href{https://docs.julialang.org/en/v1/base/base/#import}{import and using} keywords in the Julia documentation.
+
+Below are a few packages you may find useful. These aren't the only packages out there (you'll be using another common one in the next activity), but these are just a few to get you started. Go ahead and learn how to use the basic functions listed, you may need some of them later.
+
+\section*{CSV}
+
+The CSV package is very useful for reading in .csv files. Of course, you could just use the read function in Julia to read in files, but this package reads .csv files in as DataFrames (another package) objects, which can be nice. We won't get into DataFrames right now, however, we'll just worry about reading in files. First, add the CSV package, then use the \href{http://juliadata.github.io/CSV.jl/v0.1.1/index.html#CSV.read}{CVS.read()} function to read in the \href{https://github.com/byuflowlab/undergrad-onboarding/blob/master/TheFirstSemester/CodingActivities/E203.csv}{E203.csv} file in the \href{https://github.com/byuflowlab/undergrad-onboarding/tree/master/TheFirstSemester/CodingActivities}{CodingActivities} directory.
+
+\section*{LinearAlgebra}
+
+The LinearAlgebra package contains many useful functions, the most common that you may encounter are \href{https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/index.html#Standard-Functions-1}{matrix multiplication and division}, \href{https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/index.html#LinearAlgebra.dot}{vector norm}, \href{https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/index.html#LinearAlgebra.dot}{dot product}, and \href{https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/index.html#LinearAlgebra.cross}{cross product}. Learn how to use each of these.
+
+\section*{Dierckx}
+
+The \href{https://github.com/kbarbary/Dierckx.jl}{Dierckx Package} is a package for creating 1- and 2-D spline interpolations. Learn how to use the Spline1D function using the example on the page linked above. You may also take a glance at the derivative and integral functions in this package as well.
+
 
 
 
