@@ -113,7 +113,107 @@ where $x$ and $z$ are the x and z components of the airfoil coordinates and $\ba
 
 \subsection*{Coefficient Matrix}
 
+It may be helpful to visualize the entirety of our system of equations in matrix form. It is as follows:
 
+\begin{equation}
+	\begin{bmatrix} 
+	A_{1,1} & A_{1,2} & \cdots & A_{1,N} & A_{1,N+1} \\ 
+	A_{2,1} & A_{2,2} & \cdots & A_{2,N} & A_{2,N+1} \\
+	\vdots & \vdots &  & \vdots & \vdots \\
+	A_{N,1} & A_{N,2} & \cdots & A_{N,N} & A_{N,N+1} \\
+	A_{N+1,1} & A_{N+1,2} & \cdots & A_{N+1,N} & A_{N+1,N+1} \\
+	\end{bmatrix}
+	\begin{bmatrix}
+	q_1\\
+	q_2\\
+	\vdots \\
+	q_N \\
+	\gamma
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	b_1\\
+	b_2\\
+	\vdots \\
+	b_N \\
+	b_{N+1}
+	\end{bmatrix}
+\end{equation}
+
+where $A$ are the elements of the coefficient matrix. The equations 1 through $N$ (where $N$ is the number of panels) have to do with boundary conditions on the airfoil panels and have the same form. The final equation (the $N+1$ row) has a different form and is associated with a boundary condition at the trailing edge. The $q$'s and $\gamma$ are the values for which we are solving, and the $b$'s are known values we calculate.
+
+Right now we are concerned with calculating the elements of the $A$ matrix. The equation for the $A$ values for $i$ and $j$ from 1 to $N$ is:
+
+\begin{equation}
+	A_{i,j} = \sin(\theta_i-\theta_j) \ln\left(\frac{r_{i,j+1}}{r_{i,j}}\right) + \cos(\theta_i-\theta_j)\beta_{i,j}
+\end{equation}
+
+where $theta$ are the angles of the panels with respect to the +x axis, $r$ are the distances from the panel centers to the coordinate points, and $\beta$ are the angles between the panels. For $i$ from 1 to $N$ and $j=N+1$, the equation is:
+
+\begin{equation}
+	A_{i,N+1} = \sum_{j=1}^N \left[ \cos(\theta_i-\theta_j) \ln\left(\frac{r_{i,j+1}}{r_{i,j}}\right) - \sin(\theta_i-\theta_j)\beta_{i,j} \right]
+\end{equation}
+
+for $i=N+1$ and $j$ from 1 to $N$ the equation is:
+
+\begin{equation}
+	A_{N+1,j} = \sum_{k=1 \text{ and } N} \left[ \sin(\theta_k-\theta_j)\beta_{k,j} - \cos(\theta_k-\theta_j) \ln\left(\frac{r_{k,j+1}}{r_{k,j}}\right) \right]
+\end{equation}
+
+Note that this sum is only for the first and last panel, not every panel like the previous equations. Finally the equation for $i=j=N+1$ is:
+
+\begin{equation}
+	A_{N+1,N+1} = \sum_{k=1 \text{ and } N}  \left(\sum_{j=1}^N \left[ \cos(\theta_k-\theta_j)\beta_{k,j} + \sin(\theta_k-\theta_j) \ln\left(\frac{r_{k,j+1}}{r_{k,j}}\right) \right] \right)
+\end{equation}
+
+\subsection*{Right Hand Side Vector}
+
+Now we need the equations for the $b$ values of the right hand side vector. The equation for $i$ from 1 to $N$ is:
+
+\begin{equation}
+	b_i = 2\pi V_{\infty} \sin(\theta_i - \alpha)
+\end{equation}
+
+where $V_\infty$ is the velocity of the air far away from the airfoil, and $\alpha$ is the angle of attack of the airfoil, in other words, the angle of the airfoil relative to the direction of the air velocity. For $i=N+1$, the equation for $b$ is;
+
+\begin{equation}
+	b_{N+1} = -2\pi V_{\infty} \left[ \cos(\theta_1 - \alpha) + \cos(\theta_N - \alpha) \right]
+\end{equation}
+
+\subsection*{Flow Properties}
+
+You can solve the system (let's write it now as $Aq=b$) by using the ``\textbackslash'' operator in Julia:
+
+\begin{equation}
+q = A \backslash b
+\end{equation}
+
+This is doing a left multiply of the inverse of $A$ to solve for q. (If you haven't seen this before, you will in your linear algebra course.)
+
+\begin{equation}
+	q = A^{-1} b
+\end{equation}
+
+Remember the $q$ contains the $q$ and $\gamma$ values for our system (these are the magnitudes of the potential flows mentioned earlier). We can now use these to find the tangential velocity on each panel and thereby the pressure coefficient distribution around the airfoil.  The tangential velocity is calculated by:
+
+\begin{equation}
+	\begin{aligned}
+		V_{ti} =& ~V_\infty \cos(\theta_i-alpha) \\
+		&+ \frac{1}{2\pi} \sum_{j=1}^N \left( q_j\left[ \sin(\theta_i-\theta_j)\beta_{i,j} - \cos(\theta_i-\theta_j) \ln\left(\frac{r_{i,j+1}}{r_{i,j}}\right) \right] \right)\\
+		&+ \frac{\gamma}{2\pi} \sum_{j=1}^N \left[ \cos(\theta_i-\theta_j)\beta_{i,j} + \sin(\theta_i-\theta_j) \ln\left(\frac{r_{i,j+1}}{r_{i,j}}\right) \right]
+	\end{aligned}
+\end{equation}
+
+The coefficient of pressure at the midpoint of each panel can now be calculated by:
+
+\begin{equation}
+	C_{P_i} = 1- \left(\frac{V_{ti}}{V_\infty}\right)^2
+\end{equation}
+
+
+\section*{Example Solutions}
+
+The following are intermediate results based on a NACA 2412 airfoil using 10 panels.
 
 
 
