@@ -21,6 +21,4 @@ To help introduce the Julia language, we are going to do a practical aerodynamic
 
 [Plotting](latex/plotting.pdf)
 
-[Numerical Integration](integration.md)
-
 [Application Activity: Panel Method](latex/panelmethod.pdf)
