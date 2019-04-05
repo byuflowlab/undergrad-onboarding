@@ -69,7 +69,7 @@ Completing Activity 2 requires the following sub-activities (you may find [this 
 ### Activity 3: Read Like a Researcher
 Searching for, critically skimming, reading, reviewing, and keeping track of relevant research articles is a necessity as a researcher. Starting with these simple things now will eliminate potential headaches later. You'll want to develop a system for keeping papers organized so that when it comes time to cite them, or do a literature review, you have everything ready to go.
 
-1. Get a reference mananger.  The previous link to LaTeX also discussed [BibDesk](https://github.com/byuflowlab/flowlab-notebook/blob/master/tutorials/latex.md), which is the recommended option in our lab.  However, you are welcome to use other options like Mendeley.
+1. Get a reference mananger.  The previous link to ![equation](latex.gif) also discussed [BibDesk](https://github.com/byuflowlab/flowlab-notebook/blob/master/tutorials/latex.md), which is the recommended option in our lab.  However, you are welcome to use other options like Mendeley.
 2. Create a directory to keep a master reference list.
 3. Review 5 papers, write notes in a ![equation](latex.gif) docuement with proper citations/bibliography
 
