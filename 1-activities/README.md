@@ -95,21 +95,23 @@ For the following tutorials, we will primarily be using the [Julia Documentation
 To help introduce the Julia language, we are going to do a practical aerodynamics problem, very similar to a homework problem from the aerodynamics class, ME EN 515. The activities here will help you develop the necessary skills to complete your own [Panel Method](JuliaCodingActivities/latex/panelmethod.pdf).
 
 ##### Julia Coding Activities:
-[Julia Basics](JuliaCodingActivities/latex/basics.pdf)
+1. [Julia Basics](JuliaCodingActivities/latex/basics.pdf)
 
-[Functions](JuliaCodingActivities/latex/functions.pdf)
+2. [Functions](JuliaCodingActivities/latex/functions.pdf)
 
-[Control Flow](JuliaCodingActivities/latex/controlflow.pdf)
+3. [Control Flow](JuliaCodingActivities/latex/controlflow.pdf)
 
-[Arrays](JuliaCodingActivities/latex/arrays.pdf)
+4. [Arrays](JuliaCodingActivities/latex/arrays.pdf)
 
-[Packages](JuliaCodingActivities/latex/packages.pdf)
+5. [Packages](JuliaCodingActivities/latex/packages.pdf)
 
-[Plotting](JuliaCodingActivities/latex/plotting.pdf)
+6. [Plotting](JuliaCodingActivities/latex/plotting.pdf)
 
-[Application Activity: Panel Method](JuliaCodingActivities/latex/panelmethod.pdf)
+7. [Application Activity: Panel Method](JuliaCodingActivities/latex/panelmethod.pdf)
 
 #### Wind Energy
 
-- [Jensen Wake](jensen-wake.md)
+#####Python Coding Activities
+
+[Application Activity: Jensen Wake](jensen-wake.md)
 
