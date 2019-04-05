@@ -6,7 +6,33 @@ These application activities are desgined to help students apply the [basic skil
 
 So you've decided to check out the FLOW Lab's Long-Term Research Assistant Development (LTRAD) program. You've talked to Dr. Ning, and/or one of his graduate students and they instructed you to get a github account and then sent you the link to this page. Now you're wondering what's next. Well, let's just jump right in to "The First Semester." This is an introductory set of homework-like assignments that will give you the fundamental skills required to do research in the FLOW Lab. You'll learn, among other things, how to navigate computers via the command line, write basic computer scripts and programs, critically review technical writing, and do some technical writing of your own. You can complete these assignments as quickly or slowly as you want, be we strongly suggest forming a group with other students starting out just like you so you can work together, ask and answer questions, and figure as much out together as you can, since that will accelerate your learning.
 
-### Activity 1: Master the Command Line
+### Activity 1: Write like a Researcher
+In the FLOW Lab, we write technical papers (and for many of us proposals, homework, reports, todo lists, study journals, daily planners, etc.) using ![equation](latex.gif), which is a typesetting language. An overview of ![equation](latex.gif), editors, and basic syntax is available in our [lab notebook](https://github.com/byuflowlab/flowlab-notebook/blob/master/tutorials/latex.md).  As a beginner, we recommend using Overleaf.
+
+Completing Activity 2 requires the following sub-activities (you may find [this documentation](https://www.overleaf.com/learn) helpful):
+1. Complete [this tutorial](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes), it will give you all of the fundamentals you need to know.
+2. Write an AIAA Conference Paper (well, not really): download the [AIAA Template](https://www.overleaf.com/latex/templates/latex-template-for-the-preparation-of-papers-for-aiaa-technical-conferences/rsssbwthkptn#.WbgUXMiGNPZ) and explore how to change the title, authors, abstract, nomenclature, etc.
+3. Do your homework: Create a .tex file from scratch that includes the following elements:
+   - A Header that includes the class name (e.g. MATH 334), your name, the date, and the assignment (e.g. Homework 3), and a horizontal rule (big horizontal line) speparating it from the body of the paper.
+   - A footer that has the page number at the bottom right (or wherever you want to put it).
+   - Sections for each homework problem with
+   - Subsections for:
+     - Problem descriptions (in italics)
+     - Assumptions
+     - Your work (maths, plots/figures, etc.)
+     - Results
+     - Conclusions
+4. If possible, actually submit a homework assignment that you've written up in ![equation](latex.gif).
+
+### Activity 2: Read Like a Researcher
+Searching for, critically skimming, reading, reviewing, and keeping track of relevant research articles is a necessity as a researcher. Starting with these simple things now will eliminate potential headaches later. You'll want to develop a system for keeping papers organized so that when it comes time to cite them, or do a literature review, you have everything ready to go.
+
+1. Get a reference mananger.  The previous link to ![equation](latex.gif) also discussed [BibDesk](https://github.com/byuflowlab/flowlab-notebook/blob/master/tutorials/latex.md), which is the recommended option in our lab.  However, you are welcome to use other options like Mendeley.
+2. Create a directory to keep a master reference list.
+3. Review 5 papers, write notes in a ![equation](latex.gif) docuement with proper citations/bibliography
+4. Continue reading/reviewing one paper per week.
+
+### Activity 3: Master the Command Line
 What's the Command Line, you ask? It's the text-based interface to your computer. Depending on your operating system, the Command Line Interface application will have a different name, but they all do the same thing.
 
 - Mac/Linux : Terminal
@@ -47,31 +73,6 @@ Extra Credit: If you want to learn a few more things beyond the basics, you can 
 10. touch
 11. chmod
 12. [anything else that looks interesting](https://www.codecademy.com/articles/command-line-commands)
-
-### Activity 2: Write like a Researcher
-In the FLOW Lab, we write technical papers (and for many of us proposals, homework, reports, todo lists, study journals, daily planners, etc.) using ![equation](latex.gif), which is a typesetting language. An overview of ![equation](latex.gif), editors, and basic syntax is available in our [lab notebook](https://github.com/byuflowlab/flowlab-notebook/blob/master/tutorials/latex.md).  As a beginner, we recommend using Overleaf.
-
-Completing Activity 2 requires the following sub-activities (you may find [this documentation](https://www.overleaf.com/learn) helpful):
-1. Complete [this tutorial](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes), it will give you all of the fundamentals you need to know.
-2. Write an AIAA Conference Paper (well, not really): download the [AIAA Template](https://www.overleaf.com/latex/templates/latex-template-for-the-preparation-of-papers-for-aiaa-technical-conferences/rsssbwthkptn#.WbgUXMiGNPZ) and explore how to change the title, authors, abstract, nomenclature, etc.
-3. Do your homework: Create a .tex file from scratch that includes the following elements:
-   - A Header that includes the class name (e.g. MATH 334), your name, the date, and the assignment (e.g. Homework 3), and a horizontal rule (big horizontal line) speparating it from the body of the paper.
-   - A footer that has the page number at the bottom right (or wherever you want to put it).
-   - Sections for each homework problem with
-   - Subsections for:
-     - Problem descriptions (in italics)
-     - Assumptions
-     - Your work (maths, plots/figures, etc.)
-     - Results
-     - Conclusions
-4. If possible, actually submit a homework assignment that you've written up in ![equation](latex.gif).
-
-### Activity 3: Read Like a Researcher
-Searching for, critically skimming, reading, reviewing, and keeping track of relevant research articles is a necessity as a researcher. Starting with these simple things now will eliminate potential headaches later. You'll want to develop a system for keeping papers organized so that when it comes time to cite them, or do a literature review, you have everything ready to go.
-
-1. Get a reference mananger.  The previous link to ![equation](latex.gif) also discussed [BibDesk](https://github.com/byuflowlab/flowlab-notebook/blob/master/tutorials/latex.md), which is the recommended option in our lab.  However, you are welcome to use other options like Mendeley.
-2. Create a directory to keep a master reference list.
-3. Review 5 papers, write notes in a ![equation](latex.gif) docuement with proper citations/bibliography
 
 ### Activity 4: Get Git
 Git (feel free to read the [Wikipedia page on why it's named that](https://en.wikipedia.org/wiki/Git#Naming)) is a widely used method for version control.  Version control is essential to code development as it tracks changes, allows you to work collaboratively, and allows you to roll back changes (amongst many other features).  Now that you've mastered the command line, this should be relatively straightforward and will set you up for success in the upcoming coding activity.
