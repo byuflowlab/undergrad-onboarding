@@ -148,7 +148,7 @@ Right now we are concerned with calculating the elements of the $A$ matrix. The 
 	A_{i,j} = \sin(\theta_i-\theta_j) \ln\left(\frac{r_{i,j+1}}{r_{i,j}}\right) + \cos(\theta_i-\theta_j)\beta_{i,j}
 \end{equation}
 
-where $theta$ are the angles of the panels with respect to the +x axis, $r$ are the distances from the panel centers to the coordinate points, and $\beta$ are the angles between the panels. For $i$ from 1 to $N$ and $j=N+1$, the equation is:
+where $\theta$ are the angles of the panels with respect to the +x axis, $r$ are the distances from the panel centers to the coordinate points, and $\beta$ are the angles between the panels. For $i$ from 1 to $N$ and $j=N+1$, the equation is:
 
 \begin{equation}
 	A_{i,N+1} = \sum_{j=1}^N \left[ \cos(\theta_i-\theta_j) \ln\left(\frac{r_{i,j+1}}{r_{i,j}}\right) - \sin(\theta_i-\theta_j)\beta_{i,j} \right]
@@ -198,7 +198,7 @@ Remember the $q$ contains the $q$ and $\gamma$ values for our system (these are 
 
 \begin{equation}
 	\begin{aligned}
-		V_{ti} =& ~V_\infty \cos(\theta_i-alpha) \\
+		V_{ti} =& ~V_\infty \cos(\theta_i-\alpha) \\
 		&+ \frac{1}{2\pi} \sum_{j=1}^N \left( q_j\left[ \sin(\theta_i-\theta_j)\beta_{i,j} - \cos(\theta_i-\theta_j) \ln\left(\frac{r_{i,j+1}}{r_{i,j}}\right) \right] \right)\\
 		&+ \frac{\gamma}{2\pi} \sum_{j=1}^N \left[ \cos(\theta_i-\theta_j)\beta_{i,j} + \sin(\theta_i-\theta_j) \ln\left(\frac{r_{i,j+1}}{r_{i,j}}\right) \right]
 	\end{aligned}
