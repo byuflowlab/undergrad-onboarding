@@ -84,7 +84,7 @@ You will need to do the following to complete this activity.
 4. Use it.
 
 ### Activity 5: Write. Some. Code.
-Almost everything done in the FLOW Lab revolves around writing code. In the FLOW Lab, most students end up using several different languages at some point. The most common languages we use are Julia and Python, but several of us dabble in Matlab, Fortran, C/C++, Java, as well as other things like Bash and Regular Expressions. For this activity, we'll have you start with Julia (unless you've been specifically told to do this part in Python). This activity is actually a series of activities, since, unlike the previous activities, it will take a bit more work to become oriented to programming (especially if you've never done it before). Look in the [CodingActivities](./CodingActivities) subdirectory for the series of assignments that will get you going on gaining the necessary coding skills you'll need to do research in the FLOW Lab.
+Almost everything done in the FLOW Lab revolves around writing code. In the FLOW Lab, most students end up using several different languages at some point. The most common languages we use are Julia and Python, but several of us dabble in Matlab, Fortran, C/C++, Java, as well as other things like Bash and Regular Expressions. For this activity, we'll have you start with Julia (unless you've been specifically told to do this part in Python). This activity is actually a series of activities, since, unlike the previous activities, it will take a bit more work to become oriented to programming (especially if you've never done it before).
 
 #### Aerodynamics
 
