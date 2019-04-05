@@ -111,7 +111,7 @@ To help introduce the Julia language, we are going to do a practical aerodynamic
 
 #### Wind Energy
 
-#####Python Coding Activities
+##### Python Coding Activities
 
 [Application Activity: Jensen Wake](jensen-wake.md)
 
