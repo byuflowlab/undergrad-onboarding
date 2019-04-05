@@ -94,6 +94,8 @@ For the following tutorials, we will primarily be using the [Julia Documentation
 
 To help introduce the Julia language, we are going to do a practical aerodynamics problem, very similar to a homework problem from the aerodynamics class, ME EN 515. The activities here will help you develop the necessary skills to complete your own [Panel Method](JuliaCodingActivities/latex/panelmethod.pdf).
 
+(Note: The activities are .pdf files that can be downloaded so you don't have to be online to access them. Also note that the hyperlinks do _not_ work in the github preview, so you will need to download them if you want the hyper links to function properly.)
+
 ##### Julia Coding Activities:
 1. [Julia Basics](JuliaCodingActivities/latex/basics.pdf)
 
