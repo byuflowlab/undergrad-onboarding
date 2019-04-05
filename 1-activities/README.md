@@ -49,7 +49,7 @@ Extra Credit: If you want to learn a few more things beyond the basics, you can 
 12. [anything else that looks interesting](https://www.codecademy.com/articles/command-line-commands)
 
 ### Activity 2: Write like a Researcher
-In the FLOW Lab, we write technical papers (and for many of us proposals, homework, reports, todo lists, study journals, daily planners, etc.) using ![equation](latex.gif), which is a typesetting language. An overview of LaTeX, editors, and basic syntax is available in our [lab notebook](https://github.com/byuflowlab/flowlab-notebook/blob/master/tutorials/latex.md).  As a beginner, we recommend using Overleaf.
+In the FLOW Lab, we write technical papers (and for many of us proposals, homework, reports, todo lists, study journals, daily planners, etc.) using ![equation](latex.gif), which is a typesetting language. An overview of ![equation](latex.gif), editors, and basic syntax is available in our [lab notebook](https://github.com/byuflowlab/flowlab-notebook/blob/master/tutorials/latex.md).  As a beginner, we recommend using Overleaf.
 
 Completing Activity 2 requires the following sub-activities (you may find [this documentation](https://www.overleaf.com/learn) helpful):
 1. Complete [this tutorial](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes), it will give you all of the fundamentals you need to know.
@@ -92,22 +92,22 @@ First things first. You need to get Julia. You can get the current version from 
 
 For the following tutorials, we will primarily be using the [Julia Documentation](https://docs.julialang.org/en/v1/) and [Introducing Julia](https://en.wikibooks.org/wiki/Introducing_Julia). Some other quick references for Julia syntax are [Learn X in Y, where X=Julia](https://learnxinyminutes.com/docs/julia/), and [Julia by Example](https://juliabyexample.helpmanual.io/).
 
-To help introduce the Julia language, we are going to do a practical aerodynamics problem, very similar to a homework problem from the aerodynamics class, ME EN 515. The activities here will help you develop the necessary skills to complete your own [Panel Method](latex/panelmethod.pdf).
+To help introduce the Julia language, we are going to do a practical aerodynamics problem, very similar to a homework problem from the aerodynamics class, ME EN 515. The activities here will help you develop the necessary skills to complete your own [Panel Method](JuliaCodingActivities/latex/panelmethod.pdf).
 
 ##### Julia Coding Activities:
-[Julia Basics](latex/basics.pdf)
+[Julia Basics](JuliaCodingActivities/latex/basics.pdf)
 
-[Functions](latex/functions.pdf)
+[Functions](JuliaCodingActivities/latex/functions.pdf)
 
-[Control Flow](latex/controlflow.pdf)
+[Control Flow](JuliaCodingActivities/latex/controlflow.pdf)
 
-[Arrays](latex/arrays.pdf)
+[Arrays](JuliaCodingActivities/latex/arrays.pdf)
 
-[Packages](latex/packages.pdf)
+[Packages](JuliaCodingActivities/latex/packages.pdf)
 
-[Plotting](latex/plotting.pdf)
+[Plotting](JuliaCodingActivities/latex/plotting.pdf)
 
-[Application Activity: Panel Method](latex/panelmethod.pdf)
+[Application Activity: Panel Method](JuliaCodingActivities/latex/panelmethod.pdf)
 
 #### Wind Energy
 
