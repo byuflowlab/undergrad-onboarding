@@ -4,7 +4,12 @@ Most research groups, like the FLOW Lab, require a base set of skills that under
 
 This is an introductory set of homework-like assignments that will give you the fundamental skills required to do research in the FLOW Lab. You'll learn, among other things, how to navigate computers via the command line, write basic computer scripts and programs, critically review technical writing, and do some technical writing of your own. You can complete these assignments as quickly or slowly as you want, be we strongly suggest forming a group with other students starting out just like you so you can work together, ask and answer questions, and figure as much out together as you can, since that will accelerate your learning.
 
-<!-- Along with the deliverables listed in the descriptions below, each activity should include a memo/report written in LaTeX (after you've completed the LaTeX activity).  In the coding activities, unless otherwise stated, the Julia or Python language should be used (Julia if you are on an aircraft track, Python if on a wind energy track), and version control (Git) should be used as you go. -->
+- [1: Write](#activity-1-write-like-a-researcher)
+- [2: Read](#activity-2-read-like-a-researcher)
+- [3: Command Line](#activity-3-master-the-command-line)
+- [4: Version Control](#activity-4-get-git)
+- [5: Code](#activity-5-write-some-code)
+- [6: Put It All Together](#activity-6-application)
 
 ### Activity 1: Write like a Researcher
 
@@ -112,7 +117,7 @@ To help introduce the Julia language, we are going to do some basic airfoil gene
 6. [Plotting](JuliaCodingActivities/latex/plotting.pdf)
 
 
-### Activity 6: Application Activity
+### Activity 6: Application
 
 You are now ready to apply what you've learned on a miniature project.  At this point you need to choose whether you want to an aircraft project or a wind energy project.  This project will require you to put all of the above skills together.  You'll also learn a little bit of aerodynamics along the way.  Your final deliverables should include:
 1) A written report (in LaTeX)
