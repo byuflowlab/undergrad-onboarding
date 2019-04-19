@@ -188,11 +188,13 @@ You can solve the system (let's write it now as $Aq=b$) by using the ``\textback
 q = A \backslash b
 \end{equation}
 
-This is doing a left multiply of the inverse of $A$ to solve for q. (If you haven't seen this before, you will in your linear algebra course.)
+This is similar to doing a left multiply of the inverse of $A$ to solve for q. (If you haven't seen this before, you will in your linear algebra course.)
 
 \begin{equation}
-	q = A^{-1} b
+q = A^{-1} b
 \end{equation}
+
+\noindent although the ``\textbackslash'' operator doesn't actually invert the matrix (see the \href{https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/}{Julia Documentation} page, specifically the Base.:\textbackslash~documentation for more details)
 
 Remember the $q$ contains the $q$ and $\gamma$ values for our system (these are the magnitudes of the potential flows mentioned earlier). We can now use these to find the tangential velocity on each panel and thereby the pressure coefficient distribution around the airfoil.  The tangential velocity is calculated by:
 
