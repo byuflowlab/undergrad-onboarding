@@ -19,7 +19,7 @@ Completing Activity 1 requires the following sub-activities (you may find [this 
 1. Complete [this tutorial](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes), it will give you all of the fundamentals you need to know.
 2. Write an AIAA Conference Paper (well, not really): download the [AIAA Template](https://www.overleaf.com/latex/templates/latex-template-for-the-preparation-of-papers-for-aiaa-technical-conferences/rsssbwthkptn#.WbgUXMiGNPZ) and explore how to change the title, authors, abstract, nomenclature, etc.
 3. Do your homework: Create a .tex file from scratch that includes the following elements:
-   - A header that includes the class name (e.g. MATH 334), your name, the date, and the assignment (e.g. Homework 3), and a horizontal rule (big horizontal line) speparating it from the body of the paper.
+   - A header that includes the class name (e.g. MATH 334), your name, the date, and the assignment (e.g. Homework 3), and a horizontal rule (big horizontal line) separating it from the body of the paper.
    - A footer that has the page number at the bottom right (or wherever you want to put it).
    - Sections for each homework problem with
    - Subsections for:
