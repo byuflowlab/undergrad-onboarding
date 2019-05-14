@@ -1,9 +1,10 @@
 \documentclass{article}
 
 \usepackage{graphicx}
-\usepackage{amsmath}
+\usepackage{amsmath,amsfonts,amssymb}
 \usepackage[colorlinks,bookmarks,bookmarksnumbered,allcolors=blue]{hyperref}
 \usepackage[capitalise]{cleveref}
+\usepackage[top=0.75in]{geometry}
 
 \begin{document}
 
@@ -66,6 +67,50 @@ Hint (if you're comfortable with vectors): In vector form, the induced velocity 
     \item Start learning about the command line.  The command line is the text-based interface to your computer.  You won't need to know anything about the command line to complete this assignment, but it is widely used in the lab and in scientific computing in general.  Step 1 and 2 of \href{https://www.codecademy.com/learn/learn-the-command-line}{this tutorial} would be a good place to start, but feel free to learn more as interested.  For Mac OS or Linux you will use Terminal.  For Windows, the built in command line (DOS) is totally different and not of use to us. Instead you will need to install \href{https://docs.microsoft.com/en-us/windows/wsl/about}{Windows Subsystem for Linux}.  Newer versions of Windows may include it already.
     \item A static image of leapfrogging vortices isn't as fun.  See if you can create an animation so that you can actually watch the movement in time.  You might also like to draw a line between the vortex pairs to better visualize them as a connected ring.
 \end{enumerate}
+
+\subsubsection*{Example Calculations}
+
+In order to help you make sure you're heading in the right direction, we'll do some example calculations for the following case:
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{r | l}
+	Parameter & Value \\
+	\hline
+	$\Gamma$ & $[0,0,1]^\top$ \\
+	d & 1.0 \\
+	$\Delta t$ & 0.01 
+\end{tabular}
+
+\noindent where we are going to let the cross-sectional vortices as shown in \cref{fig:vortices} be numbered 1 through 4 starting with the bottom left and moving clockwise.
+
+The following tables show the values for position, P, and velocity, V, (rounded to the nearest 1/1000) at the \textit{beginning} of the first couple time steps for your reference. Note that they are vectors of the form [x,y].
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{r | l | l | l | l }
+	Time Step & P1 & P2 & P3 & P4  \\
+	\hline
+	0  & [0.0,-0.5] & [0.0,0.5] & [1.0,0.5] & [1.0,-0.5]   \\
+	1 & [0.002,-0.499] & [0.002,0.499] & [1.002,0.501] & [1.002,-0.501] 
+\end{tabular}
+
+\bigskip 
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{r | l | l | l | l  }
+	Time Step & V1 & V2 & V3 & V4 \\
+	\hline
+	0   & [0,0] & [0,0] & [0,0] & [0,0]  \\
+	1 & [0.239, 0.0796] & [0.239, -0.0796] & [0.239, 0.0796] & [0.239, -0.0796]  
+\end{tabular}
+
+Once you have the pieces working together, you can compare your end results with \cref{fig:vortexpaths}, an example solution for what your vortex ring paths might look like. 
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{paths.pdf}
+	\caption{Paths for the leapfrogging vortex rings using $\Gamma = [0,0,1]^\top$, an initial distance of $d=1.0$, and a time step of $\Delta t =0.01$, over 4000 time steps.}
+	\label{fig:vortexpaths}
+\end{figure}
 
 
 \end{document}
