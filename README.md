@@ -11,4 +11,4 @@ The problem description is [here](leapfrog/leapfrog.pdf) and involves simulating
 This project provides an orientation to the bare minimum skills needed to begin participating as an undergraduate researcher in our lab.  While you could potentially learn these on the job, we find that a starter project provides several benefits: 
 1. The focus enables you to learn these basic skills much more quickly.
 2. It allows both you and us to assess fit for research in the lab.
-3. A starter project allows those with less experience (e.g., freshmen) to start participating in our lab without waiting until 273, 312, etc.
+3. A starter project allows those with less experience to start participating in our lab without waiting until 273, 312, etc.
