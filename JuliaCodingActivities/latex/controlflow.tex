@@ -82,13 +82,13 @@
 			NACA 4-series Camber Formula
 		} 
 		\textit{
-			The NACA 4-series formula for airfoil camber along the chord is given by the following piecewise olynomial function, where $c$ is the value of maximum camber (as a percentage of the chord), p is the position of maximum camber (in units of chord/10), and $x$ is the x-position along the chord.
+			The NACA 4-series formula for airfoil camber along the chord is given by the following piecewise polynomial function, where $c$ is the value of maximum camber (as a percentage of the chord), p is the position of maximum camber (in units of chord/10), and $x$ is the x-position along the unit length chord.
 		}
 		\begin{align*}
 		\bar{z} = 
 		\begin{cases}
-		\qfrac{c(2cx-x^2)}{p^2} &\text{if  } x \leq p\\
-		\qfrac{c(1-2c +2cx - x^2)}{(1-p)^2} &\text{if  } x > p
+		~~~~~\qfrac{c(2px-x^2)}{p^2} &\text{if  } x \leq p\\[15pt]
+		\qfrac{c(1-2p +2px - x^2)}{(1-p)^2} &\text{if  } x > p
 		\end{cases}
 		\end{align*}
 		
