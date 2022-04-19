@@ -8,7 +8,7 @@
 
 \begin{document}
 
-\author{Andrew Ning}
+\author{Andrew Ning and Judd Mehr}
 \title{Leapfrogging Vortices}
 \date{}  %May 10, 2019}
 \maketitle
@@ -52,21 +52,9 @@ Hint (if you're comfortable with vectors): In vector form, the induced velocity 
     \end{aligned}
 \end{equation}
 
-\subsubsection*{Deliverables}
 
-\begin{enumerate}
-    \item \textbf{Code:} Implement the leapfrogging vortices and plot the resulting trajectories. Make sure your plots are clear and easily understood.  You are welcome to prototype in any programming language you want, but your final submission needs to be in Julia (or Python if requested by your graduated mentor).  Julia is probably a new language for you.  If you're familiar with another language like Matlab you'll be able to pick this up relatively quickly.  However, if programming is new to you this is probably where you will spend most of your time. Judd put together a helpful introduction to Julia \href{https://github.com/byuflowlab/undergrad-onboarding/blob/master/julia.md}{here}.
-    
-    Use git for version control as you develop the code.  If you are unfamiliar with git, \href{https://guides.github.com/introduction/git-handbook/}{here} is a basic overview.  You won't need to branch or do pull requests when working in your own repo.  You can use a GUI like GitHub Desktop to make this easier, or you can use the command line if comfortable (see bonus below).  Create an account on \href{https://github.com}{GitHub} so that you can create your own repositories.  You'll need to send the link to your repository (with the code) as part of your submission.
-    
-    \item \textbf{Report:} Write a short scientific report with an introduction, methodology, and results.  See \href{https://me.byu.edu/resources}{BYU ME Writing Materials on the IMRaD genre} for some guidance and examples on scientific writing if this style of writing is new to you.  You will need to use LaTeX.  If you are unfamiliar with LaTeX \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{here} is a 30 minute tutorial.  
-\end{enumerate}
-
-\subsubsection*{Bonus (not required)}
-\begin{enumerate}
-    \item Start learning about the command line.  The command line is the text-based interface to your computer.  You won't need to know anything about the command line to complete this assignment, but it is widely used in the lab and in scientific computing in general.  Step 1 and 2 of \href{https://www.codecademy.com/learn/learn-the-command-line}{this tutorial} would be a good place to start, but feel free to learn more as interested.  For Mac OS or Linux you will use Terminal.  For Windows, the built in command line (DOS) is totally different and not of use to us. Instead you will need to install \href{https://docs.microsoft.com/en-us/windows/wsl/about}{Windows Subsystem for Linux}.  Newer versions of Windows may include it already.
-    \item A static image of leapfrogging vortices isn't as fun.  See if you can create an animation so that you can actually watch the movement in time.  You might also like to draw a line between the vortex pairs to better visualize them as a connected ring.
-\end{enumerate}
+\clearpage
+\newpage
 
 \subsubsection*{Example Calculations}
 
@@ -78,7 +66,7 @@ In order to help you make sure you're heading in the right direction, we'll do s
 	\hline
 	$\Gamma$ & $[0,0,1]^\top$ \\
 	d & 1.0 \\
-	$\Delta t$ & 0.01 
+	$\Delta t$ & 0.01
 \end{tabular}
 
 \noindent where we are going to let the cross-sectional vortices as shown in \cref{fig:vortices} be numbered 1 through 4 starting with the bottom left and moving clockwise.
@@ -90,20 +78,20 @@ The following tables show the values for position, P, and velocity, V, (rounded 
 	Time Step & P1 & P2 & P3 & P4  \\
 	\hline
 	0  & [0.0,-0.5] & [0.0,0.5] & [1.0,0.5] & [1.0,-0.5]   \\
-	1 & [0.002,-0.499] & [0.002,0.499] & [1.002,0.501] & [1.002,-0.501] 
+	1 & [0.002,-0.499] & [0.002,0.499] & [1.002,0.501] & [1.002,-0.501]
 \end{tabular}
 
-\bigskip 
+\bigskip
 
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{r | l | l | l | l  }
 	Time Step & V1 & V2 & V3 & V4 \\
 	\hline
 	0   & [0,0] & [0,0] & [0,0] & [0,0]  \\
-	1 & [0.239, 0.0796] & [0.239, -0.0796] & [0.239, 0.0796] & [0.239, -0.0796]  
+	1 & [0.239, 0.0796] & [0.239, -0.0796] & [0.239, 0.0796] & [0.239, -0.0796]
 \end{tabular}
 
-Once you have the pieces working together, you can compare your end results with \cref{fig:vortexpaths}, an example solution for what your vortex ring paths might look like. 
+Once you have the pieces working together, you can compare your end results with \cref{fig:vortexpaths}, an example solution for what your vortex ring paths might look like.
 
 \begin{figure}[htb]
 	\centering
