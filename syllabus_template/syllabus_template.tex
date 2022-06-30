@@ -1,30 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
 \usepackage[top=1.0in,
 bottom=1.0in,
 right=1.0in,
 left = 1.0in]{geometry}
-\usepackage{graphicx}
-\usepackage{datetime}
-\usepackage[hidelinks]{hyperref}
-\usepackage[noabbrev]{cleveref}
-\usepackage{multicol}
 
+%Set up links and internal references
+\usepackage[hidelinks]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+
+%Swap out the itemize symbol for an N-dash rather than a bullet
 \def\labelitemi{--}
 
+%Set up fancy header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-
+%Fancy Header Content
 \fancyhead[L]{ME EN 497R Syllabus}
 \fancyhead[C]{Semester YYYY}
 \fancyhead[R]{Student Name}
-\fancyfoot[L,C]{}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
 \fancyfoot[R]{\thepage}
 
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%BEGIN Document Environment
 \begin{document}
-	
-\section*{Overview}
+
+
+%--------------------------%
+%----     OVERVIEW     ----%
+%--------------------------%
+\section{Overview}
+\label{sec:overview}
+
 %NOTE: This section has been written for the student's information.  Make sure they see it before you overwrite it with the overview for their semester.
 ME EN 497R is a research course that may be applied toward the technical elective requirement for the Mechanical Engineering program (and occasionally other programs, e.g. Applied Physics).
 The overall goal of the 497R course is to give undergraduates research experiences typically reserved for graduate students, albeit in an format accessible to the abilities and time constraints of an undergraduate student.
@@ -35,10 +56,38 @@ This paragraph should be replaced by an overview paragraph summarizing the rest 
 Note that items in square brackets below should be replaced with the relevant information based on each student's custom course design.
 Also note, that there are several auxiliary items that every student will be expected to accomplish during their 497R experience.  These are the items not within square brackets.
 
-\section*{Learning Outcomes}
 
-\subsection*{Technical}
 
+
+
+%-------------------------------%
+%----     PREREQUISITES     ----%
+%-------------------------------%
+\section{Prerequisites}
+\label{sec:prerequisites}
+
+It is assumed that the student has completed the FLOW Lab Introductory Project, and have a basic familiarity with the following concepts:
+
+\begin{itemize}
+	\item The Julia language, including using packages, functions, loops, doctstrings, comments, etc.
+	\item LaTeX, including basic document creation, section headers, including figures, etc.
+	\item Creating a github repository and using git for basic add, commit, pull, and push commands.	
+\end{itemize}
+
+
+
+
+
+%--------------------------%
+%----     OUTCOMES     ----%
+%--------------------------%
+\section{Learning Outcomes}
+\label{sec:learningoutcomes}
+
+
+% --- Technical Outcomes
+\subsection{Technical}
+\label{ssec:technicaloutcomes}
 
 \begin{enumerate}
 	\item[1.] [Technical Outcomes Here]
@@ -47,8 +96,12 @@ Also note, that there are several auxiliary items that every student will be exp
 	\end{itemize}
 \end{enumerate}
 
-\subsection*{Auxiliary}
-%NOTE: DO NOT CHANGE THIS SUBSECTION!!!
+
+% --- Auxiliary Outcomes
+\subsection{Auxiliary}
+\label{ssec:auxiliaryoutcomes}
+
+The following auxiliary learning outcomes are based on those tools and methods of communication that are \textit{universal} in the FLOW Lab.  Note that there are other auxiliary skills that may be gained depending on your approach to your chosen course design.
 
 \begin{enumerate}
 	\item Coding: The student, utilizing the Julia language, will learn the follwing:
@@ -64,34 +117,199 @@ Also note, that there are several auxiliary items that every student will be exp
 	\end{itemize}
 	\item Technical Writing: The student will gain introductory experience in the following areas:
 	\begin{itemize}
-		\item Reading and reviewing technical papers
+		\item Reading and reviewing technical papers and creating a bibliography
 		\item Writing technical memos, a research proposal, and a technical report
 		\item Presenting technical information in well designed figures
 		\item Receiving and applying critical feedback
 	\end{itemize}
 \end{enumerate}
 
-\section*{Semester Schedule}
 
-As mentioned above, the semester will be broken down into 8, 2-week mini-projects as follows:
 
-\subsection*{Weeks 1-2: [Assignment 1]}
 
-\subsection*{Weeks 3-4: [Assignment 2]}
 
-\subsection*{Weeks 5-6: [Assignment 3]}
+%--------------------------%
+%----     SCHEDULE     ----%
+%--------------------------%
+\section{Semester Schedule}
+\label{sec:semesterschedule}
 
-\subsection*{Weeks 7-8: Prospectus}
+As mentioned above, the semester will be broken down into 8, 2-week mini-projects.  For each project, there will be a manditory auxiliary component along with your chosen technical component.
 
-Each student will be required to submit a brief research prospectus including a simple literature review (at least 3 sources).  See the prospectus in the undergraduate-onboarding repository template for additional information.
 
-\subsection*{Weeks 9-10: [Assignment 4]}
 
-\subsection*{Weeks 11-12: [Assignment 5]}
+% --- Assignment 1
+\vspace{1em}\hrule
+\subsection{[Assignment 1 Title]}
+\label{ssec:a1}
 
-\subsection*{Weeks 13-14: [Assignment 6]}
+\textit{[date start - date end (Weeks 1-2)]}
+ 
+ 
+\subsubsection{Technical Component}
+\label{sssec:a1t}
 
-\subsection*{Weeks 15-16: Final Report and Code Submission}
+[Technical Assignment Description]
+
+
+\subsubsection{Auxiliary Component}
+\label{sssec:a1a}
+
+Since you will need a method to submit your assignments for the semester, we'll set that up here.  As part of your first assignment, complete the following:
+
+\begin{enumerate}
+	\item Create a repository on github called something along the lines of ``497R Project'' or something similar.
+	\item Add your graduate mentor as a collaborator so they can view your submissions throughout the semester
+	\item Create at least one project in your repository. Either for the semester, or perhaps one for the first term and another for the second. You decide what makes sense based on your course design.
+	\item Organize your repository in a way that makes sense for your course design. For example, you may consider adding a directory for memos/reports, a directory for code, etc.  Keep in mind that you need files in those directories before git will recognize them.
+	\item Initialize a README.md file in your repository
+	\item In the README, write a summary of your project.  You can use this syllabus for ideas of what to include.  Make sure to include section headers and any other organizational elements to make it easy to read. (Think about how you could use this project as part of a portfolio.) You may also consider including a description of what your various directories include for easy reference later.
+\end{enumerate}
+
+TIP:  Remember that you can change any of this later, so don't worry about getting things perfect.  More often than not, you'll update as you go and figure out better ways to organize, etc.
+
+
+
+% --- Assignment 2
+\vspace{1em}\hrule\vspace{1em}
+\subsection{[Assignment 2 Title]}
+\label{ssec:a2}
+\textit{[date start - date end (Weeks 3-4)]}
+
+
+\subsubsection{Technical Component}
+\label{sssec:a2t}
+
+[Technical Assignment Description]
+
+
+\subsubsection{Auxiliary Component}
+\label{sssec:a2a}
+
+\noindent \textit{Version Control:}
+For this, and every subsequent assignment, you will submit your deliverables using github.  Thus, for every assignment from now on, you should do the following: (note that this seems involved, but it's really very simple in practice)
+
+\begin{enumerate}
+	\item BEFORE you start coding, etc. create a github issue with a comment describing the problem description and any other information you want to include.
+	\item Make sure to add any assignments (assign yourself...) and labels (you may need to create custom labels) that make sense for your issue. Also add the issue to the relevant project.  You may consider using multiple issues in a single assignment, depending on how you've designed your course.  The Project Kanban boards can be helpful for organization.
+	\item Create a branch for what you're working on for this assignment.
+	\item Throughout the assignment period, feel free to add comments and questions in your issue (this is a good way to write things down that you want to ask your graduate mentor in your weekly meetings).
+	\item When you are ready to submit your assignment deliverables, create a pull request for your branch (this assumes you've been adding, committing, and pushing along the way as well). Request your graduate mentor as a reviewer.
+	\item Upon approval of your pull request, merge with a comment that closes the issue for that assignment, and delete your branch (unless you need it for something else).
+\end{enumerate}
+
+REMEMBER: Do steps 1-3 before you start \textit{this} assignment.
+
+\bigskip
+
+\noindent \textit{\LaTeX:} As you will be required to submit a memo, proposal, or report for this and each of the following assignments, so you will need to put together a \LaTeX template for this assignment.  Your template should include at a minimum:
+
+\begin{enumerate}
+	\item A well commented preamble with any packages you might need (for things like math, figures, hyperlinks, etc.)
+	\item A header with the assignment name/number, your name, and the date completed.
+	\item A footer with the page number.
+	\item Sections (with labels) for Introduction, Methods, Results, and Discussion/Conclusion.
+	\item Templates for basic figures and tables.
+\end{enumerate}
+
+NOTE: This is a minimal template for this assignment.  You will likely add to it later as your needs increase.  If you do this well, you should be able to use your template for your other course assignments, especially final reports.  Anecdotal evidence indicates that well formatted final reports such as those you can produce with \LaTeX often lead to significant grade increases.
+
+You can obviously use this document as a reference for your template, but make sure you understand what everything does, and feel free to add your own personal flair.
+
+
+
+% --- Assignment 3
+\vspace{1em}\hrule\vspace{1em}
+\subsection{[Assignment 3 Title]}
+\label{ssec:a3}
+
+\textit{[date start - date end (Weeks 5-6)]}
+
+
+\subsubsection{Technical Component}
+\label{ssaec:a3t}
+
+[Technical Assignment Description]
+
+
+\subsubsection{Auxiliary Component}
+\label{sssec:a3a}
+
+
+
+% --- Prospectus
+\vspace{1em}\hrule\vspace{1em}
+\subsection{Prospectus}
+\label{ssec:prospectus}
+\textit{[date start - date end (Weeks 7-8)]}
+
+Each student will be required to submit a brief research prospectus including a simple literature review (at least 3 sources).  See the prospectus in the undergraduate-onboarding repository template for additional information.  Note that this can be moved around as needed to another bi-week block.
+
+
+
+% --- Assignment 4
+\vspace{1em}\hrule\vspace{1em}
+\subsection{[Assignment 4 Title]}
+\label{ssec:a4}
+
+\textit{[date start - date end (Weeks 9-10)]}
+
+
+\subsubsection{Technical Component}
+\label{sssec:a4t}
+
+[Technical Assignment Description]
+
+
+\subsubsection{Auxiliary Component}
+\label{sssec:a4a}
+
+
+
+% --- Assignment 5
+\vspace{1em}\hrule\vspace{1em}
+\subsection{[Assignment 5 Title]}
+\label{ssec:a5}
+
+\textit{[date start - date end (Weeks 11-12)]}
+
+
+\subsubsection{Technical Component}
+\label{sssec:a5t}
+
+[Technical Assignment Description]
+
+
+\subsubsection{Auxiliary Component}
+\label{sssec:a5a}
+
+
+
+% --- Assignment 6
+\vspace{1em}\hrule\vspace{1em}
+\subsection{[Assignment 6 Title]}
+\label{ssec:a6}
+
+\textit{[date start - date end (Weeks 13-14)]}
+
+
+\subsubsection{Technical Component}
+\label{sssec:a6t}
+
+[Technical Assignment Description]
+
+
+\subsubsection{Auxiliary Component}
+\label{sssec:a6a}
+
+
+
+% --- Final Report
+\vspace{1em}\hrule\vspace{1em}
+\subsection{Final Report and Code Submission}
+\label{sec:finalreport}
+
+\textit{[date start - date end (Weeks 15-16)]}
 
 The Final Report is a culmination of the bi-weekly memos produced thus far, revised according to mentor feedback, as well as any additional material necessary to produce a technical report that is both complete and well executed.  A final report template is available in the undergraduate-onboarding repository
 
@@ -99,7 +317,17 @@ The Final Code Submission is similarly the final, cumulative state of the code p
 
 Both submissions will be due to the graduate mentor for review/grading on the last day of Finals.
 
-\section*{Grade Rubric}
+\vspace{1em}\hrule\vspace{1em}
+
+
+
+
+
+%------------------------------%
+%----     GRADE RUBRIC     ----%
+%------------------------------%
+\section{Grade Rubric}
+\label{sec:graderubric}
 
 \Cref{tab:rubric} includes the proprosed grading rubric for this course.
 
@@ -107,17 +335,17 @@ Both submissions will be due to the graduate mentor for review/grading on the la
 	\caption{Proposed grade division for ME 497R. }
 	\label{tab:rubric}
 	\renewcommand{\arraystretch}{1.2}
-	\vspace*{1em}
+	\vspace{1em}
 	\begin{tabular}{c|l}
 		\textbf{Points} & \textbf{Deliverable}\\ 
 		\hline
-		10 & [Assignment 1] \\
-		10 & [Assignment 2] \\
-		10 & [Assignment 3] \\
+		10 & [Assignment 1 Title] \\
+		10 & [Assignment 2 Title] \\
+		10 & [Assignment 3 Title] \\
 		10 & Prospectus     \\
-		10 & [Assignment 5] \\
-		10 & [Assignment 6] \\
-		10 & [Assignment 7] \\
+		10 & [Assignment 4 Title] \\
+		10 & [Assignment 5 Title] \\
+		10 & [Assignment 6 Title] \\
 		10 & Final Report   \\
 		80 & Time Log       \\
 		   &                \\
@@ -128,7 +356,15 @@ Both submissions will be due to the graduate mentor for review/grading on the la
 
 \newpage
 
-\section*{Student/Mentor Acknowledgement}
+
+
+
+
+%---------------------------------%
+%----     ACKNOWLEDGEMENT     ----%
+%---------------------------------%
+\section{Student/Mentor Acknowledgement}
+\label{sec:acknowledgement}
 
 I, [the student], have helped write, and have read, and I understand the above proposed syllabus and accept it as my desired 497R experience.
 
