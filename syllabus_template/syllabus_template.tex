@@ -125,14 +125,13 @@ The following auxiliary learning outcomes are based on those tools and methods o
 	\end{itemize}
 	\item Version Control: Using git, the student will gain familiarity with the following concepts:
 	\begin{itemize}
-		\item Using github Projects
 		\item Submitting and responding to github Issues
 		\item Opening and reviewing github Pull Requests
 	\end{itemize}
 	\item Technical Writing: The student will gain introductory experience in the following areas:
 	\begin{itemize}
 		\item Reading and reviewing technical papers and creating a bibliography
-		\item Writing technical memos, a research proposal, and a technical report
+		\item Writing basic versions of: technical papers, research proposals, and theses
 		\item Presenting technical information in well designed figures
 		\item Receiving and applying critical feedback
 	\end{itemize}
@@ -216,7 +215,9 @@ Complete the following:
 	\item In the README, write a brief summary what your repository will be used for.  You can use this syllabus for ideas of what to include.  Make sure to include section headers and any other organizational elements to make it easy to read. (Think about how you could use this project as part of a portfolio.) You may also consider including a description of what your various directories include for easy reference later.
 \end{enumerate}
 
-\noindent TIP:  Remember that you can change any of this later, so don't worry about getting things perfect.  More often than not, you'll update as you go and figure out better ways to organize, etc.
+\noindent TIP:  Remember that you can change any of this later.
+You will be graded, but that doesn't mean everything is set in stone later. 
+More often than not, you'll update as you go and figure out better ways to organize, etc.
 
 
 
@@ -235,7 +236,7 @@ If you haven't already, meet with your graduate mentor as soon as possible to re
 As part of your report revisions deliverable, you should update your \LaTeX~document such that it can be used as a template for your written deliverables during this semester.
 Your template should resemble the example document that can be found in the MEEN497R directory in the undergrad-onboarding repository.
 Be sure to include a well commented preamble with any packages you might need (for things like math, figures, hyperlinks, etc.)
-Note that this will likely not be a perfectly complete template, you will likely add to it later as your needs increase.  If you do this well, you should be able to use your template for your other course assignments (outside 497R), especially final reports.  Anecdotal evidence indicates that well formatted final reports (specifically in the 2-column peer-reviewed journal style format) such as those you can produce with \LaTeX~often lead to significant grade increases.
+Note that this will likely not be a perfectly complete template, you will likely add to it later as your needs increase.  If you do this well, you should be able to use your template for your other course assignments (outside 497R), especially final reports.  Anecdotal evidence indicates that well formatted final reports (specifically in the 2-column peer-reviewed journal style format) such as those you can produce with \LaTeX~often lead to significant grade increases in most classes.
 
 You can obviously use this syllabus document as a reference for your template, but make sure you understand what everything does rather than simply copy and pasting (there are some settings in this document purposely designed to cause problems if you simply copy and paste).
 
@@ -249,23 +250,26 @@ You can obviously use this syllabus document as a reference for your template, b
 
 \bigskip
 
+Your written submission should be written in the ``IMRaD'' format and include a bibliography with at least 3 references. 
+You will also be graded on quality of your figures for this and all following assignments.
+You may consider asking your graduate mentor for resources describing good figure design.
+Be sure to use version control (see below) as you work on this assignment.
+
+\bigskip
+
 \noindent \textit{Version Control:}
-For this, and every subsequent assignment, you will submit your deliverables using github.  Thus, for every assignment from now on, you should do the following: (note that this seems involved, but it's really very simple in practice)
+For this, and every subsequent assignment, you will submit your deliverables using github.  Thus, for every assignment from now (meaning including this assignment) on, you should do the following: (note that this seems involved, but it's really very simple in practice)
 
 \begin{enumerate}
-	\item BEFORE you start coding, etc. create a github issue with a comment describing the problem description and any other information you want to include.
-	\item Make sure to add any assignments (assign yourself...) and labels (you may need to create custom labels) that make sense for your issue. Also add the issue to the relevant project.  You may consider using multiple issues in a single assignment, depending on how you've designed your course.  The Project Kanban boards can be helpful for organization.
+	\item BEFORE you start coding, etc.~create a github issue with a comment describing the problem description and any other information you want to include.
+	\item Make sure to add any assignments (assign yourself...) and labels (you may need to create custom labels) that make sense for your issue. You may consider using multiple issues in a single assignment, depending on how you've designed your course.
 	\item Create a branch for what you're working on for this assignment.
 	\item Throughout the assignment period, feel free to add comments and questions in your issue (this is a good way to write things down that you want to ask your graduate mentor in your weekly meetings).
 	\item When you are ready to submit your assignment deliverables, create a pull request for your branch (this assumes you've been adding, committing, and pushing along the way as well). Request your graduate mentor as a reviewer.
 	\item Upon approval of your pull request, merge with a comment that closes the issue for that assignment, and delete your branch (unless you need it for something else).
 \end{enumerate}
 
-\noindent REMEMBER: Do steps 1-3 before you start the coding and writing parts of this assignment.
-
-
-
-
+\noindent REMEMBER: Do steps 1-3 before you start the coding and writing parts of this assignment. Also make sure you are using version control for your written papers in addition to your code.
 
 
 % --- Prospectus
@@ -289,7 +293,9 @@ A prospectus is a formal proposal of a research project developed to convince a 
 Your deliverables for this assignment are first, a written prospectus.
 As you prepare your written prospectus, you may find the \href{https://www.me.byu.edu/00000177-4afb-d009-abf7-ebff31d50000/prospectus-outline-pdf-pdf}{ME department prospectus infographic} helpful.
 
-The second deliverable is a review and revision of your prospectus.  You should complete your review-ready draft of your prospectus by the end of the second week of this assignment and submit it to your graduate mentor and another graduate student in the FLOW Lab (you will have to ask around in the FLOW Lab to see who has the time and experience to provide a review).  Using their feedback, revise your prospectus.
+The second deliverable is a review and revision of your prospectus.
+You should complete your review-ready draft of your prospectus by the end of the second week of this assignment and submit it to your graduate mentor and another graduate student in the FLOW Lab (you will have to ask around in the FLOW Lab to see who has the time and experience to provide a review).
+Using their feedback, revise your prospectus.
 
 The format of your deliverable should be 3 documents:
 \begin{itemize}
@@ -298,7 +304,15 @@ The format of your deliverable should be 3 documents:
 	\item A ``Diff'' document that highlights the changes you made between drafts.
 \end{itemize}
 
-To create your ``Diff'' document, you can either utilize multiple branches, or commits to save the versions of your prospectus.  You can then use a \LaTeX~diff tool (e.g. \href{https://texblog.org/2018/08/14/track-changes-with-latexdiff/}{latexdiff}) to highlight the changes you have made to your document.
+To create your ``Diff'' document, you can either utilize multiple branches, or commits to save the versions of your prospectus.
+You can then use a \LaTeX~diff tool (e.g. \href{https://texblog.org/2018/08/14/track-changes-with-latexdiff/}{latexdiff}) to highlight the changes you have made to your document.
+
+\bigskip
+
+TIP: Diff files and git merges are somewhat easier if you only put one sentence per line.
+Remember a single newline will continue the paragraph in \LaTeX, while a double return will initiate a new paragraph.
+
+
 
 % --- Paper 2 
 \vspace{1em}\hrule\vspace{1em}
@@ -306,6 +320,8 @@ To create your ``Diff'' document, you can either utilize multiple branches, or c
 \label{ssec:p2}
 
 \textit{[date start - date end (Weeks 9-10)]}
+
+\bigskip
 
 
 
@@ -316,22 +332,32 @@ To create your ``Diff'' document, you can either utilize multiple branches, or c
 
 \textit{[date start - date end (Weeks 11-13)]}
 
+\bigskip
 
-% --- Final Report
+
+
+% --- Final
 \vspace{1em}\hrule\vspace{1em}
 \subsection{Thesis and Defense}
 \label{sec:finalreport}
 
 \textit{[date start - date end (Weeks 14-16)]}
 
+\bigskip
 
-[RE-WRITE AND ADD INFORMATION ABOUT PRESENTATION]
+Your Thesis is a culmination of the papers produced thus far, revised according to mentor feedback, as well as any additional material necessary to produce a thesis that is both complete and well executed.
 
-The Final Report is a culmination of the bi-weekly memos produced thus far, revised according to mentor feedback, as well as any additional material necessary to produce a technical report that is both complete and well executed.  A final report template is available in the undergraduate-onboarding repository
+The Final Code Submission is similarly the final, cumulative state of the code produced as part of your assignments throughout the semester, revised according to mentor feedback, as well as any additional material necessary to understand and use the code produced.
 
-The Final Code Submission is similarly the final, cumulative state of the code produced as part of the bi-weekly assignments, revised according to mentor feedback, as well as any additional material necessary to understand and use the code produced.
+In addition, you will need to schedule a Thesis Defense for some time during finals week.
+You will schedule this with your graduate mentor, Dr. Ning, and one other graduate student in the FLOW Lab.
+Your defense is really a presentation covering the contents in your Thesis, but in a condensed manner that highlights the main takeaways and your most significant contributions---think: what did \textit{you} do, and what were the most important things you found from your efforts.
+You should expect to take roughly 15-20 minutes presenting in addition to a question and answer period.
+You may also invite anyone else you would like to attend your presentation, but only the two graduate students and Dr. Ning will officially grade you.
 
-Both submissions will be due to the graduate mentor for review/grading on the last day of Finals.
+Your Thesis should be written using the provided Thesis template, completed with the required frontmatter material.
+Your Thesis and Final Code are due at the end of the day, on the last day of classes, and must be sent to the graduate students who will be attending your Defense as well as Dr. Ning, so that they have time to review your Thesis before your Defense.
+You must complete your Defense presentation by the end of Finals week.
 
 
 % --- Time Log
