@@ -125,14 +125,16 @@ The following auxiliary learning outcomes are based on those tools and methods o
 	\end{itemize}
 	\item Version Control: Using git, the student will gain familiarity with the following concepts:
 	\begin{itemize}
+		\item Basic github repository organization and settings
 		\item Submitting and responding to github Issues
 		\item Opening and reviewing github Pull Requests
 	\end{itemize}
-	\item Technical Writing: The student will gain introductory experience in the following areas:
+	\item Technical Writing/Presenting: The student will gain introductory experience in the following areas:
 	\begin{itemize}
-		\item Reading and reviewing technical papers and creating a bibliography
+		\item Reading and reviewing technical papers and creating bibliographies
 		\item Writing basic versions of: technical papers, research proposals, and theses
-		\item Presenting technical information in well designed figures
+		\item Presenting technical information in well designed figures and slides
+		\item Presenting, both to subject matter experts as well as educated non-specialists
 		\item Receiving and applying critical feedback
 	\end{itemize}
 \end{enumerate}
@@ -250,14 +252,29 @@ You can obviously use this syllabus document as a reference for your template, b
 
 \bigskip
 
-Your written submission should be written in the ``IMRaD'' format and include a bibliography with at least 3 references. 
+Technical Stuff: Learn how to run vortexlattice.jl and do a 3 case comparison study.
+
+\begin{itemize}
+	\item Follow tutorial on VortexLattice.jl to figure out basics of running it.
+	\item Follow example on Steady State Analysis of a Wing and Tail to figure out how to run full plane
+	\item Create plots for the following:
+	\begin{itemize}
+		\item tail volume ratio vs relevant stability derivatives
+		\item wing aspect ratio vs efficiency
+		\item angle of attack vs cl (why does it look like that?)
+	\end{itemize}
+\end{itemize}
+
+\bigskip
+
+\noindent \textbf{Deliverables:}
+
+\textit{Report:} Your written submission should be written in the ``IMRaD'' format and include a bibliography with at least 3 references. 
 You will also be graded on quality of your figures for this and all following assignments.
 You may consider asking your graduate mentor for resources describing good figure design.
 Be sure to use version control (see below) as you work on this assignment.
 
-\bigskip
-
-\noindent \textit{Version Control:}
+\textit{Version Control:}
 For this, and every subsequent assignment, you will submit your deliverables using github.  Thus, for every assignment from now (meaning including this assignment) on, you should do the following: (note that this seems involved, but it's really very simple in practice)
 
 \begin{enumerate}
@@ -323,6 +340,14 @@ Remember a single newline will continue the paragraph in \LaTeX, while a double 
 
 \bigskip
 
+Technical Stuff:  Airfoil family generation and surrogate model generation
+
+\begin{itemize}
+	\item Compare several airfoils designed for your application.
+	\item Create a family of airfoils
+	\item using XFoil.jl, generate a surrogate model for your airfoil family.
+\end{itemize}
+
 
 
 % --- Paper 3
@@ -334,7 +359,14 @@ Remember a single newline will continue the paragraph in \LaTeX, while a double 
 
 \bigskip
 
+Technical Stuff:  Airframe Optimization
 
+\begin{itemize}
+	\item Set up SNOW/ipopt
+	\item using content from papers 1 and 2, set up an airframe sensitivity study
+	\item set up optimization
+	\item optimize airframe for various sets of constraints and/or objectives.
+\end{itemize}
 
 % --- Final
 \vspace{1em}\hrule\vspace{1em}
