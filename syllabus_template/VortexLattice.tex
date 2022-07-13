@@ -1,0 +1,90 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Vortex Lattice Method Assignment A}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+\section{Background}
+
+	The Vortex Lattice Method is an invscid method for the low-fidelity analysis of lifting bodies (wings).
+	You can learn more about the theory from the ME 515 Book and/or a google search.
+	
+	For this assignment, you will be utilizing a code produced by students in the FLOWLab.
+	It is a Julia package called VortexLattice.jl.
+	You will probably want to go through the Getting Started and Examples: Steady State Analysis of a Wing and Tail portions of the documentation to get familiar with how to use the code.
+	
+	[todo: add more details to the background]
+	
+\section{Assignment}
+	Once you are familiar with using VortexLattice.jl, complete the following trade studies:
+	
+	\begin{enumerate}
+		\item Explore the wing aspect ratio vs wing efficiency. 
+		\item Explore the affects of tail volume ratio on the stability derivatives of an airframe. Be sure to discuss desirable signs for stability derivatives.
+		\item Explore the effects on angle of attack on the lift coefficient. Discuss the limitations of the VLM and explain which of your results are wrong due to those limitations.
+	\end{enumerate}
+
+
+\noindent Then write a report (paper) on your methods, results, and takeaways as described in the course syllabus.
+
+\bigskip
+
+\noindent And submit your code via a branch/pull request as described in the course syllabus.
+
+\section{Useful Resources}
+
+[todo: add links here to text resources, code documentation, etc.]
+	
+\end{document}
