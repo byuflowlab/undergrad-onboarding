@@ -68,23 +68,63 @@ left = 1.0in]{geometry}
 	[todo: add more details to the background]
 	
 \section{Assignment}
-	Once you are familiar with using VortexLattice.jl, complete the following trade studies:
+	Once you are familiar with using VortexLattice.jl, complete the following trade studies and write them up in your paper:
 	
 	\begin{enumerate}
-		\item Explore the wing aspect ratio vs wing efficiency. 
+		\item Explore and discuss the wing aspect ratio vs wing efficiency. 
 		\item Explore the effects of tail volume ratio on the stability derivatives of an airframe. Be sure to discuss desirable signs for stability derivatives.
 		\item Explore the effects on angle of attack on the lift coefficient. Discuss the limitations of the VLM and explain which of your results are wrong due to those limitations.
 	\end{enumerate}
 
 
-\noindent Then write a report (paper) on your methods, results, and takeaways as described in the course syllabus.
 
-\bigskip
 
-\noindent And submit your code via a branch/pull request as described in the course syllabus.
 
 \section{Useful Resources}
 
 [todo: add links here to text resources, code documentation, etc.]
+
+
+\section{Rubric}
+
+The rubric for this assignment is broken into two categories. 
+\Cref{tab:paperrubric} shows details for the paper submission rubric, and
+\cref{tab:coderubric} shows details for the code submission rubric.
+
+\begin{table}[h!]
+	\caption{Approximate Rubric for Paper (subject to change)}
+	\label{tab:paperrubric}
+	\renewcommand{\arraystretch}{1.2}
+	\vspace{1em}
+	\begin{tabular}{r|p{5in}}
+		\textbf{Points} & \textbf{Item} \\ 
+		\hline
+		5 & Correct Paper Format (see paper format example doc) \\
+		3 & Helpful Introduction \\
+		6 & Detailed Methodology \\
+		6 & Clear Presentation of Results \\
+		6 & Quality Figures, with correct internal references \\
+		6 & Reasonable Discussion \\
+		3 & Correct Bibliography and citations \\
+		\textbf{35} & \textbf{Total}
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\caption{Approximate Rubric for Code (subject to change)}
+	\label{tab:coderubric}
+	\renewcommand{\arraystretch}{1.2}
+	\vspace{1em}
+	\begin{tabular}{c|p{5in}}
+		\textbf{Points} & \textbf{Item} \\ 
+		\hline
+		5 & Correct Code Submission and Version Control usage\\
+		5 & Descriptive Comments in code and commits \\
+		5 & Correct Docstrings in code\\
+		5 & Code uses functions and scripts to produce all the results and figures included in the paper without modification \\
+		5 & Code runs from a single run file without bugs on the long-term support release of Julia\\
+		\textbf{25} & \textbf{Total}
+	\end{tabular}
+\end{table}
 	
 \end{document}
