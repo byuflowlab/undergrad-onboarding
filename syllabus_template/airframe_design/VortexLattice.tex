@@ -65,10 +65,10 @@ left = 1.0in]{geometry}
 	It is a Julia package called VortexLattice.jl.
 	You will probably want to go through the Getting Started and Examples: Steady State Analysis of a Wing and Tail portions of the documentation to get familiar with how to use the code.
 	
-	[todo: add more details to the background]
+%	[todo: add more details to the background]
 	
 \section{Assignment}
-	Once you are familiar with using VortexLattice.jl, complete the following trade studies and write them up in your paper:
+	Once you are familiar with using VortexLattice.jl, complete the following trade studies and write them up in a paper using the template provided by your graduate student mentor (AIAA Conference Template):
 	
 	\begin{enumerate}
 		\item Explore and discuss the wing aspect ratio vs wing efficiency. 
@@ -83,6 +83,12 @@ left = 1.0in]{geometry}
 \section{Useful Resources}
 
 [todo: add links here to text resources, code documentation, etc.]
+\begin{itemize}
+	\item \href{https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf}{ME EN 515 Book (chapter 4 specifically)}
+	\item \href{https://flow.byu.edu/VortexLattice.jl/stable/}{VortexLattice.jl Documentation}
+	\item \href{https://letmegooglethat.com/?q=what+is+the+vertical+tail+volume+ratio+formula}{Google}
+	\item \href{https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages}{Adding wiki pages to your repository.}
+\end{itemize}
 
 
 \section{Rubric}
@@ -90,6 +96,9 @@ left = 1.0in]{geometry}
 The rubric for this assignment is broken into two categories. 
 \Cref{tab:paperrubric} shows details for the paper submission rubric, and
 \cref{tab:coderubric} shows details for the code submission rubric.
+
+Note that you will be receiving detailed feedback on the quality of your figures for this assignment, but you will not be graded on figure quality until the next assignment.
+You should, however, include figures in this paper in order to receive feedback; otherwise you won't know what will be expected on subsequent assignments.
 
 \begin{table}[h!]
 	\caption{Approximate Rubric for Paper (subject to change)}
@@ -99,13 +108,13 @@ The rubric for this assignment is broken into two categories.
 	\begin{tabular}{r|p{5in}}
 		\textbf{Points} & \textbf{Item} \\ 
 		\hline
-		5 & Correct Paper Format (see paper format example doc) \\
+		5 & Commented packages in document preamble \\
+		3 & Relevant title and author information \\
 		3 & Helpful Introduction \\
 		6 & Detailed Methodology \\
 		6 & Clear Presentation of Results \\
-		6 & Quality Figures, with correct internal references \\
+		6 & Included Figures, with correct internal references \\
 		6 & Reasonable Discussion \\
-		3 & Correct Bibliography and citations \\
 		\textbf{35} & \textbf{Total}
 	\end{tabular}
 \end{table}
@@ -118,11 +127,11 @@ The rubric for this assignment is broken into two categories.
 	\begin{tabular}{c|p{5in}}
 		\textbf{Points} & \textbf{Item} \\ 
 		\hline
-		5 & Correct Code Submission and Version Control usage\\
-		5 & Descriptive Comments in code and commits \\
-		5 & Correct Docstrings in code\\
-		5 & Code uses functions and scripts to produce all the results and figures included in the paper without modification \\
-		5 & Code runs from a single run file without bugs on the long-term support release of Julia\\
+		5 & Create a new issue for this project on your git repository\\
+		5 & Create a new local branch for this project and commit regularly (not just right at the end). \\
+		5 & Push your branch to your remote origin and submit a pull request.\\
+		5 & Go through the review process with your graduate mentor and accept and merge the pull request. \\
+		5 & Add a Q\&A section to your git repository wiki where you write down questions to ask your graduate student mentor (or Google), then fill in the answers when you get them. \\
 		\textbf{25} & \textbf{Total}
 	\end{tabular}
 \end{table}

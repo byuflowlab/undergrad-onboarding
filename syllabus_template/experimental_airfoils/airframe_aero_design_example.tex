@@ -69,8 +69,6 @@ The overall goal of the 497R course is to give undergraduates research experienc
 In the FLOW Lab, under the direction of Dr. Ning, we have somewhat formalized this course while also allowing a great deal of student-lead learning.
 This syllabus document is the beginning of that process, wherein the undergraduate and graduate mentor work together to develop a customized syllabus for the undergraduate.
 This document is a template to be filled out and submitted to Dr. Ning for final approval and an add code for ME EN 497R.
-You will need to delete the current content of most sections and fill it in with information pertaining to your specific research.
-497R is a challenging course that requires self-motivation and we have high expectations of the students who choose to take this course. 
 
 
 
@@ -106,10 +104,9 @@ It is assumed that the student has completed the FLOW Lab Introductory Project, 
 \label{ssec:technicaloutcomes}
 
 \begin{enumerate}
-	\item[1.] [Technical Outcomes Here]
-	\begin{itemize}
-		\item[--] [futher details as needed]
-	\end{itemize}
+	\item[1.] A basic understanding of the capabilities and weaknesses of, and practical experience using, the Vortex Lattice Method.
+	\item[2.] A basic understanding of airfoil physics and practical experience analyzing airfoils and generating airfoil datasets.
+	\item[3.] A basic understanding of optimization principles and practical experience applying optimization to a simple aerodynamic shape optimization.
 \end{enumerate}
 
 
@@ -124,6 +121,8 @@ The following auxiliary learning outcomes are based on those tools and methods o
 	\begin{itemize}
 		\item Docstring usage
 		\item Good commenting practice
+		\item Good code organization
+		\item How to define, construct, and use parametric composite type structures
 	\end{itemize}
 	\item Version Control: Using git, the student will gain familiarity with the following concepts:
 	\begin{itemize}
@@ -152,10 +151,8 @@ The following auxiliary learning outcomes are based on those tools and methods o
 \label{sec:graderubric}
 
 We have set up the semester schedule to resemble an approximation of a graduate student's timeline, but obviously condensed into a single semester time frame.
-There are 8 major deliverables due throughout the semester.
+There are 7 major deliverables due throughout the semester.
 \Cref{tab:rubric} shows the grade breakdown for those deliverables.
-Two corrections of each paper will be allowed to help you refine you skills and content.
-Grades will be available through a shared Google Sheet, where you will report your hours. 
 The following section provides detailed descriptions of the various deliverable contents and formats.
 
 \begin{table}[h!]
@@ -223,9 +220,9 @@ More often than not, you'll update as you go and figure out better ways to organ
 \label{ssec:ipr}
 
 \textit{[date start - date end (Week 1)]}
- 
+
 \bigskip
- 
+
 Before enrolling in 497R, you should have finished and submitted your Intro Project to your assigned graduate student mentor for approval to move on to 497R.
 If you haven't already, meet with your graduate mentor as soon as possible to receive feedback on your report and code.  Then take that feedback and revise your Introductory Project code and report.  Your revised code and report are your deliverables for this week.
 
@@ -240,27 +237,19 @@ You can obviously use this syllabus document as a reference for your template, b
 
 % --- Paper 1 
 \vspace{1em}\hrule\vspace{1em}
-\subsection{Paper 1}
+\subsection{Paper 1: Vortex Lattice Method}
 \label{ssec:p1}
 \textit{[date start - date end (Weeks 2-4)]}
 
 \bigskip
 
-
-Complete the tasks and write a report based on the assignment definition found in the [Paper 1] assignment document.
+Complete the tasks and write a report based on the assignment definition found in the VortexLattice assignment document.
 
 \bigskip
 
 
-\noindent \textbf{Deliverables:}
-
-\textit{Report:} Your written submission should be written in the ``IMRaD'' format and include a bibliography with at least 3 references. 
-You will also be graded on quality of your figures for this and all following assignments.
-You may consider asking your graduate mentor for resources describing good figure design.
-Be sure to use version control (see below) as you work on this assignment.
-
 \textit{Version Control:}
-For this, and every subsequent assignment, you will submit your deliverables using github.  Thus, for every assignment from now (meaning including this assignment) on, you should do the following: (note that this seems involved, but it's really very simple in practice)
+For this, and every subsequent assignment, you will submit your deliverables using github.  Thus, for every assignment you should do the following: (note that this seems involved, but it's really very simple in practice)
 
 \begin{enumerate}
 	\item BEFORE you start coding, etc.~create a github issue with a comment describing the problem description and any other information you want to include.
@@ -272,6 +261,7 @@ For this, and every subsequent assignment, you will submit your deliverables usi
 \end{enumerate}
 
 \noindent REMEMBER: Do steps 1-3 before you start the coding and writing parts of this assignment. Also make sure you are using version control for your written papers in addition to your code.
+
 
 
 % --- Prospectus
@@ -291,6 +281,8 @@ A prospectus is a formal proposal of a research project developed to convince a 
 	\item an overview of scholarship related to this topic or to the this author,
 	\item a brief summary of your research methods and/or your theoretical approach.
 \end{itemize}
+
+\noindent \textbf{Deliverables:}
 
 Your deliverables for this assignment are first, a written prospectus.
 As you prepare your written prospectus, you may find the \href{https://www.me.byu.edu/00000177-4afb-d009-abf7-ebff31d50000/prospectus-outline-pdf-pdf}{ME department prospectus infographic} helpful.
@@ -318,30 +310,41 @@ Remember a single newline will continue the paragraph in \LaTeX, while a double 
 
 % --- Paper 2 
 \vspace{1em}\hrule\vspace{1em}
-\subsection{Paper 2}
+\subsection{Paper 2: Airfoil Families}
 \label{ssec:p2}
 
 \textit{[date start - date end (Weeks 8-10)]}
 
 \bigskip
 
-Complete the tasks and write a report based on the assignment definition found in the [Paper 2] assignment document.
+Complete the tasks and write a report based on the assignment definition found in the AirfoilFamilies assignment document.
 
+\bigskip
+
+\noindent \textbf{Deliverables:}
+
+As part of this assignment, your code should include the following elements:
+\begin{itemize}
+	\item Typical code file organization structure
+	\item At least one parametric composite type (that is used)
+	\item Docstrings for every function
+	\item Informative file headers
+	\item Good commenting throughout code (you should have received feedback on this as part of your Paper 1 grading).
+\end{itemize}
 
 
 % --- Paper 3
 \vspace{1em}\hrule\vspace{1em}
-\subsection{Paper 3}
+\subsection{Paper 3: Airframe Optimization}
 \label{ssec:p3}
 
 \textit{[date start - date end (Weeks 11-13)]}
 
 \bigskip
 
-Complete the tasks and write a report based on the assignment definition found in the [Paper 3] assignment document.
-
+Complete the tasks and write a report based on the assignment definition found in the AirframeOptimization assignment document.
+	
 \bigskip
-
 
 % --- Final
 \vspace{1em}\hrule\vspace{1em}
@@ -352,9 +355,7 @@ Complete the tasks and write a report based on the assignment definition found i
 
 \bigskip
 
-Your Thesis is a culmination of the papers produced thus far.
-You will combine your first three papers in an intelligent manner, while applying any feedback you may have received from your mentor. 
-You will need additional material to produce a thesis that is both complete and well executed. 
+Your Thesis is a culmination of the papers produced thus far, revised according to mentor feedback, as well as any additional material necessary to produce a thesis that is both complete and well executed.
 
 The Final Code Submission is similarly the final, cumulative state of the code produced as part of your assignments throughout the semester, revised according to mentor feedback, as well as any additional material necessary to understand and use the code produced.
 
@@ -375,9 +376,9 @@ You must complete your Defense presentation by the end of Finals week.
 \label{sec:timelog}
 
 \begin{quote}
-\textit{``The expectation for undergraduate courses is three hours of work per week per credit hour for the average student who is appropriately prepared; much more time may be required to achieve excellence.'' }
-
---- BYU Policy and Procedures Catalog
+	\textit{``The expectation for undergraduate courses is three hours of work per week per credit hour for the average student who is appropriately prepared; much more time may be required to achieve excellence.'' }
+	
+	--- BYU Policy and Procedures Catalog
 \end{quote}
 
 
