@@ -36,7 +36,7 @@ left = 1.0in]{geometry}
 %Fancy Header Content
 \fancyhead[L]{ME EN 497R}
 \fancyhead[C]{}
-\fancyhead[R]{Airfoil Family Assignment A}
+\fancyhead[R]{Rotor Design - Panel Method Assignment}
 %Fancy Footer Content
 \fancyfoot[L,C]{} %make bottom left and center empty
 \fancyfoot[R]{\thepage}
@@ -62,24 +62,27 @@ left = 1.0in]{geometry}
 	
 	Airfoils are the cross sections of wings and rotors, so airfoil performance directly affects the performance of any lifting object.
 	A simple way to analyze airfoils is by using a \textit{panel method}. 
-	Learn more about the theory from the ME 515 Book and/or a google search.
-	
 	For this assignment, you will be utilizing a code produced by students in the FLOWLab called Xfoil.jl.
-	Go through the examples in the documentation to get familiar with how to use the code.
 	
 	
 	\section{Assignment}
-	Once you are familiar with using Xfoil.jl, complete the following:
-	
-	\begin{itemize}
-		\item Define words and include them in an appendix dictionary.  Include images to illustrate meaning where applicable. 
+
+	\begin{enumerate}
+		\item Start a new branch on your repository. Name it something relevant to the project. Create issues for each of the following 9 steps of this assignment. Close them with a comment as you finish. each step. 
+		\item Read  through the \href{https://en.wikipedia.org/wiki/Aerodynamic_potential-flow_code}{Wikipedia article} on \textit{Aerodynamic potential-flow code.}  Define words and include them in a dictionary that you'll include in an appendix in your report.  Include images to illustrate meaning where applicable. Include equations where applicable to clarify and add meaning. 
+		\item Complete the examples given in the Xfoil.jl documentation. Take notes on how the functions are used as you will be using them. 
 		\item Explore the effect of airfoil angle of attack on airfoil lift, drag, and moment.
 		\item Compare data collected from XFoil to published data (experimental or other). 
 		\item Explore the effect of airfoil thickness and camber on airfoil lift, drag., and moment.
 		\item Explore the effect of Reynolds number on airfoil lift, drag, and moment.
-		\item Write a report (paper) on your methods, results, and takeaways as described in the course syllabus.
-		\item Submit your code via a branch/pull request as described in the course syllabus.
-	\end{itemize}
+		\item Write a report (paper) on your methods, results, and takeaways as described in the course syllabus. You should include discussion on what you learned steps 1-7.  Focus on the relationships found steps 4-7. 
+		\begin{itemize}
+			\item Use the IMRAD format.
+			\item Use the provided AIAA conference paper template.
+			\item Comment all of the packages in the preamble so you know what they are doing. 
+		\end{itemize}
+		\item Submit your code and paper via a pull request as described in the course syllabus.
+	\end{enumerate}
 	
 	\bigskip
 	
@@ -104,7 +107,18 @@ left = 1.0in]{geometry}
 	
 	
 	\section{Useful Resources}
+	\begin{multicols}{2}
+	\begin{itemize}
+    		\item \href{https://flow.byu.edu/Xfoil.jl/stable/}{Xfoil.jl Documentation}
+    		\item \href{https://dl2.boxcloud.com/d/1/b1!_lom972XNub0HBof1p6FP6KGBb_4tdyvhy5Kb7zl3ld8RIwqlXJndIfGWS2uuEH8qQKhu4oSjIUuztdO0lewCVo__3JyzkW7BMtoCmXh-mj-FgFbpgFQGjKY1W1Mi2mNdgHi1OThVWCKpbtWpwvhD5oeeiOktPg5vSWtl9S3w6SwA0cx8m7S76J2AdIDnGehinA4wTExMuozauk_dMGIhvVKjRlXqEesfp8dYdMxLx7dUtaaqhgh2QEIj4qHnSiHBnvEXL73tQm6d409fRUzb0eZ81cqabFEw_Lt2lPqgRaQnBSlt0NtFB0uZX1roFW3gpcIyBQEMkRwnqQy4r8FLWk5JG-DmTJKsdY4yc_CgUIsKUGN3B4XSU2u1eDqeFKwtj_euudjv3XHq3JyjAUNI2Bd0887Py2wZrgnNA62RtsAvJQAgfvb3Rjj01yinXrZO3Sh7vgzhFNvm08RTtGVAJ8dKhMjJ_gTpcV2Xo3xp18u-9bJvhrJJO3kBgVXswyYu4UHhhSWwaY3J6kABAf1nsNIHybIi6Tc6o2vXdFGyaoFPmTSgxOu9oXHbfksSLolNLNbVi3LMoLAtxSUULaASUe4pqcF1UL9VsKbTXAhU3QkMxAm5dvNxgMgjmgw1e_K6kFfnsODFtAtTIxMwH3Ycxqs7hhWh8DjR3SJCvnk045UFSyhFL439ngh0O7DtI7kZPx84c-aIMT7vAd2eKOii-YnLFOMYNtU9yLQLVhkVDIrOcneMZqU78IACJvLD3yvaA4D72rnWw78Yx7oH0975bxcKK3XmaD3mnqcwVKKZp9Eb1s0dwVsZ48MIG5KfMG_NQglf4OYsRHxsNSy1CzDI9W2YQwenv_Hi0urX0RkpggfXaoLTRqclLxSssphDgi-z02KKcj6TLMqZ-JjoqSecKYNMSa0btiXrtMBfZkIfVSWEAPzkfv2WcJKbxSDE4ny2wxDyG07AcX3DvXOC7HI6J7GCWCaDpRlb6_aY8bfFrQtDN0oETsksJb6IzPa6MWVWln5kV8UQxM9NNHDXS4luZTXFJqUPeNWzTjTKfuuigfKEmy3p9PRHKvLMHt9EhEaVywSxAHer02V_XlCa6ZyLbFGgfreDnUwvS72sr-F0V73y_gLDGd9aSNe0kadPSmanZwXmtv3TJRMudduzOC-PQISkY2Jk_3l-ZfMzAPTpD7-Uojlj-gDCiXyxpjncuEQXgtKlA2LhABZ0_oGFIIeAxG_ZMrdpK3s39XrONytYijpSqrkJRx3bF3gPU2WaLrFvpC2shsDwqIIw1uIwBO7fxjnepjnqqb2F0NvOFOddbYSefYou00FbGXpONMRmaE0ZpUs-KhE97kdOCcnnMfsz7N5q7GgqUuX8MzNR7Phtg18q6GXXnozAMFE9Yg8yz53204qd7w./download}{ME 515 Textbook : Chapter 2 Sections 5 \& 6}
+    		\item \href{http://web.mit.edu/drela/Public/web/xfoil/xfoil_doc.txt}{XFoil Documentation}
+    		\item \href{https://www.google.com/}{Google}
+	\end{itemize}
+	\end{multicols}
 	
-	[todo: add links here to text resources, code documentation, etc.]
+	
+	
+	
+	
 	
 \end{document}
