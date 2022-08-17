@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Rotor Design - Panel Method Assignment}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+	\section{Rubric}
+	
+	Here is the breakdown for the points.  Note that the breakdown follows a tree diagram, so any sub-bullet is the breakdown of the parent bullet's point. For instance, the entire assignment is worth 60 points. The exploration part is worth 35 of the 60 points (58\% of the total score). Writing skill is worth 6 of those 35 points. And so on.  
+	
+	\bigskip
+	
+	\textbf{Total Assignment - 60 points}
+	
+\begin{itemize}
+	\item (35 points) Exploration Report
+	\begin{itemize}
+		\item (6 points) Writing Skills
+		\begin{itemize}
+			\item (2 points) Correct grammar usage.
+			\item (1 point) Includes citations.
+			\item (1 point) Includes figures.
+			\item (1 point) Is in the IMRAD format (organized well).
+			\item (1 point) The report looks pretty.
+		\end{itemize}
+		\item (5 points) Appendix Dictionary
+		\begin{itemize}
+			\item (1 point) Dictionary is included.
+			\item (1 point) Dictionary is well though out. Effort is clearly demonstrated.
+			\item (1 point) Figures are included.
+			\item (1 point) Equations are included.
+			\item (1 point) Recommended words are included.
+		\end{itemize}
+		\item (9 points) Explores effect of angle of attack on lift, drag, and moment.
+		\begin{itemize}
+			\item (6 points) Discusses major characteristics of airfoil polar.
+			\begin{itemize}
+				\item (2 points) Talks about lift, drag, and moment
+				\item (1 points) Talks about how lift, drag, and moment are all just functions of alpha... $C_L(\alpha)$, $C_D(\alpha)$, and $C_M(\alpha)$. ... All of these values are inter-related to the angle of attack of the airfoil. 
+				\item (3 points) Talks about major trends, such as stall, zero-lift angle of attack. 
+			\end{itemize}
+			\item (3 points) Includes a figure for lift, drag, and moment (1 point each)
+		\end{itemize}
+		\item (4 points) Explores effect of airfoil thickness
+		\begin{itemize}
+			\item (1 point) Includes a relevant figure. 
+			\item (1 point) Explains thickness
+			\item (2 points) Discusses the relationship between thickness and lift (drag and moment optional). 
+		\end{itemize}
+		\item (4 points) Explores effect of airfoil camber
+		\begin{itemize}
+			\item (1 point) Includes a relevant figure. 
+			\item (1 point) Explains camber
+			\item (2 points) Discusses the relationship between camber and lift (drag and moment optional). 
+		\end{itemize}
+		\item (3 points) Airfoil Polar Comparison
+		\begin{itemize}
+			\item (1 point) Includes a relevant figure. 
+			\item (1 point) Compares student's calculated values and experimental/accepted values.
+			\item (1 point) Includes error calculations.
+		\end{itemize}
+		\item (4 points) Explores effect of Reynold's Number
+		\begin{itemize}
+			\item (1 point) Includes a relevant figure.
+			\item (1 point) Talks about the Reynold's number.
+			\item (2 point) Discusses the relationship between the Reynold's number and lift (drag and moment optional).
+		\end{itemize}
+	\end{itemize}
+	\item (25 points) Research Skills
+	\begin{itemize}
+	\item (5 points) Template preamble comments.
+	\begin{itemize}
+		\item (1 point) Preamble comments are present.
+		\item (3 points) Comments are correct.
+		\item (1 point) Comments are pretty and concise.
+	\end{itemize}
+	\item (5 points) Used a branch.
+	\item (5 points) Used issues properly.
+		\begin{itemize}
+		\item (2 points) Issues were used.
+		\item (2 points) Issues were closed with a comment.
+		\item (1 point) Issues showed thought and effort.
+	\end{itemize}
+	\item (5 points) Used a pull request.
+		\begin{itemize}
+		\item (3 points) Submitted assignment via a pull request.
+		\item (2 points) Pull request comment demonstrated thought. 
+	\end{itemize}
+	\item (5 points) Code was submitted.
+		\begin{itemize}
+		\item (4 points) Code used was submitted.
+		\item (1 point) Code was of good style (not super messy). 
+	\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+\end{document}

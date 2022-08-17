@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Rotor Design - Trade Study Assignment}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+	\section{Background}
+	
+	Now that you've become comfortable with the BEM, it's time to explore the design space.
+That means we want to better understand how changing different defining geometric and mechanical characteristics (called design variables) of the the wind turbine to see how it affects the outputs of our model. 
+	
+	
+	\section{Assignment}
+
+	\begin{enumerate}
+		\item Start a new branch on your repository. Name it something relevant to the project. Create issues for each of the following 4 steps of this assignment. Close them with a comment as you finish each step. 
+		\item Read  through the \href{https://en.wikipedia.org/wiki/Trade_study}{Wikipedia article} on a \textit{trade study} to get a basic understanding. For further understanding, check out chapter 1 of the Engineering Design Optimization. 
+		\item Using the model you analyzed in your previous assignment, conduct a trade study. You should consider the affect of at least the radius, chord distribution, and twist distribution on relevant model outputs. Determine what the most effective design variables for this model are. Determine what conditions you should analyze. Determine a good objective function.
+		\begin{itemize}
+			\item (\textit{optional}) Conduct a basic optimization using an out of the box optimizer such as \href{https://github.com/JuliaNLSolvers/Optim.jl}{optim.jl}. 
+		\end{itemize}
+		\item Write a report (paper) on your methods, results, and takeaways as described in the course syllabus. You should include discussion on what you learned steps 2 - 3.  Focus on the relationships found in step 3.  Use the IMRAD format. Use the 2 column journal template provided. Make sure all of your packages are commented. 
+		\item Submit your code and paper via a pull request as described in the course syllabus. Continue to use good coding style. 
+	\end{enumerate}
+	
+	\bigskip
+	
+
+	
+	
+	\section{Useful Resources}
+	\begin{multicols}{2}
+	\begin{itemize}
+    		\item \href{http://flowlab.groups.et.byu.net/mdobook.pdf}{Engineering Design Optimization : Chapter 1}
+    		\item \href{https://www.google.com/}{Google}
+	\end{itemize}
+	\end{multicols}
+	
+	
+	
+	
+	
+	
+\end{document}

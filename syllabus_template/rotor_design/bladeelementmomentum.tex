@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+\usepackage{soul} %strikethrough
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Rotor Design - Blade Element Momentum Assignment}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+	\section{Background}
+	
+	Now that you've become with how flow around an airfoil induces forces, we can extend that knowledge to find the total loads on any type of rotor. I say rotor because that could be a propeller, helicopter blade, or wind turbine blade. We will use Blade Element Momentum (BEM) theory to analyze our rotor.  This theory is implemented in a package we will use called CCBlade (developed by Dr.Ning). 
+	
+	
+	\section{Assignment}
+
+	\begin{enumerate}
+		\item Start a new branch on your repository. Name it something relevant to the project. Create issues for each of the following 5 steps of this assignment. Close them with a comment as you finish each step. 
+		\item Read  through the \href{https://en.wikipedia.org/wiki/Blade_element_momentum_theory}{Wikipedia article} on \textit{Blade element momentum theory} to get a basic understanding. For further understanding, check out chapter 6 of the ME 515 textbook. 
+		\item Complete the \textit{Quick Start} section given in the \href{https://flow.byu.edu/CCBlade.jl/stable/}{CCBlade.jl documentation}. Also complete the \textit{Airfoil Data} section under \textit{Guided Examples}. Take notes on how the functions are used as you will be using them.  You may also consider completing the \textit{Wind Turbine Operation} or \textit{Helicopter Operation} sections under \textit{Guided Examples} if that pertains to your project. 
+		\item Analyze a rotor of your choice:
+		\begin{itemize}
+			\item Analyze the APC 10x7. Consider the effect of advance ratio ($J$) on: the coefficient of thrust ($C_T$), the coefficient of torque ($C_Q$), the coefficient of power ($C_P$), and efficiency ($\eta$).  Compare to experimental data found on the \href{https://m-selig.ae.illinois.edu/props/propDB.html}{UIUC propeller database.} 
+			\item Analyze the UAE 20 kW wind turbine. Find the normal and tangential loading along the length of the blade. Compare this loading to experimental data.  %Todo: Add experimental data to this repository. 
+		\end{itemize}
+		\item Write a report (paper) on your methods, results, and takeaways as described in the course syllabus. You should include discussion on what you learned steps 2 and 4.  Focus on the relationships found steps 4.  Use the IMRAD format and the provided 1 column journal paper template. Make sure all of your packages are commented. 
+		\item Submit your code and paper via a pull request as described in the course syllabus. In this assignment we expect a higher level of coding. In your code you should have: 
+		\begin{itemize}
+			\item Most of your code should be written in functions, with a small script to call your functions. Functions are faster and more modular. 
+			\item All of your code should be commented. This doesn't mean that every line must have a comment, but sufficient comments throughout a required. Comments should make the intent of the code explicit, as well as provide a road map. Any complicated line of code should be commented. 
+			\item All of your code should be able to be run from a runfile. This means your code to produce any figures and run any experiements. The file shouldn't be too long because all of your functions should be in other files. Any data referenced in your code should be referenced by a relative path. 
+			\item \st{Your code should include a composite parametric type. } I'm sure that is a realistic requirement. Most code that the students will be writing won't have need of a composite type. I'm not sure contriving a situation for them to solve that would be best solved with a composite type is the best solution either. 
+		\end{itemize}
+	\end{enumerate}
+	
+	\bigskip
+	
+
+	
+	
+	\section{Useful Resources}
+	\begin{multicols}{2}
+	\begin{itemize}
+    		\item \href{https://dl2.boxcloud.com/d/1/b1!_lom972XNub0HBof1p6FP6KGBb_4tdyvhy5Kb7zl3ld8RIwqlXJndIfGWS2uuEH8qQKhu4oSjIUuztdO0lewCVo__3JyzkW7BMtoCmXh-mj-FgFbpgFQGjKY1W1Mi2mNdgHi1OThVWCKpbtWpwvhD5oeeiOktPg5vSWtl9S3w6SwA0cx8m7S76J2AdIDnGehinA4wTExMuozauk_dMGIhvVKjRlXqEesfp8dYdMxLx7dUtaaqhgh2QEIj4qHnSiHBnvEXL73tQm6d409fRUzb0eZ81cqabFEw_Lt2lPqgRaQnBSlt0NtFB0uZX1roFW3gpcIyBQEMkRwnqQy4r8FLWk5JG-DmTJKsdY4yc_CgUIsKUGN3B4XSU2u1eDqeFKwtj_euudjv3XHq3JyjAUNI2Bd0887Py2wZrgnNA62RtsAvJQAgfvb3Rjj01yinXrZO3Sh7vgzhFNvm08RTtGVAJ8dKhMjJ_gTpcV2Xo3xp18u-9bJvhrJJO3kBgVXswyYu4UHhhSWwaY3J6kABAf1nsNIHybIi6Tc6o2vXdFGyaoFPmTSgxOu9oXHbfksSLolNLNbVi3LMoLAtxSUULaASUe4pqcF1UL9VsKbTXAhU3QkMxAm5dvNxgMgjmgw1e_K6kFfnsODFtAtTIxMwH3Ycxqs7hhWh8DjR3SJCvnk045UFSyhFL439ngh0O7DtI7kZPx84c-aIMT7vAd2eKOii-YnLFOMYNtU9yLQLVhkVDIrOcneMZqU78IACJvLD3yvaA4D72rnWw78Yx7oH0975bxcKK3XmaD3mnqcwVKKZp9Eb1s0dwVsZ48MIG5KfMG_NQglf4OYsRHxsNSy1CzDI9W2YQwenv_Hi0urX0RkpggfXaoLTRqclLxSssphDgi-z02KKcj6TLMqZ-JjoqSecKYNMSa0btiXrtMBfZkIfVSWEAPzkfv2WcJKbxSDE4ny2wxDyG07AcX3DvXOC7HI6J7GCWCaDpRlb6_aY8bfFrQtDN0oETsksJb6IzPa6MWVWln5kV8UQxM9NNHDXS4luZTXFJqUPeNWzTjTKfuuigfKEmy3p9PRHKvLMHt9EhEaVywSxAHer02V_XlCa6ZyLbFGgfreDnUwvS72sr-F0V73y_gLDGd9aSNe0kadPSmanZwXmtv3TJRMudduzOC-PQISkY2Jk_3l-ZfMzAPTpD7-Uojlj-gDCiXyxpjncuEQXgtKlA2LhABZ0_oGFIIeAxG_ZMrdpK3s39XrONytYijpSqrkJRx3bF3gPU2WaLrFvpC2shsDwqIIw1uIwBO7fxjnepjnqqb2F0NvOFOddbYSefYou00FbGXpONMRmaE0ZpUs-KhE97kdOCcnnMfsz7N5q7GgqUuX8MzNR7Phtg18q6GXXnozAMFE9Yg8yz53204qd7w./download}{ME 515 Textbook : Chapter 6}
+    		\item \href{https://www.google.com/}{Google}
+    		\item \href{https://docs.julialang.org/en/v1/}{Julia Documentation}
+	\end{itemize}
+	\end{multicols}
+	
+	
+	
+	
+	
+	
+\end{document}
