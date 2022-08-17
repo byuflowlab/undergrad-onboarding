@@ -62,18 +62,23 @@ left = 1.0in]{geometry}
 	
 	Now that you've become comfortable with the BEM, it's time to explore the design space.
 That means we want to better understand how changing different defining geometric and mechanical characteristics (called design variables) of the the wind turbine to see how it affects the outputs of our model. 
+Finally, we will design a better rotor. 
 	
 	
 	\section{Assignment}
 
 	\begin{enumerate}
 		\item Start a new branch on your repository. Name it something relevant to the project. Create issues for each of the following 4 steps of this assignment. Close them with a comment as you finish each step. 
-		\item Read  through the \href{https://en.wikipedia.org/wiki/Trade_study}{Wikipedia article} on a \textit{trade study} to get a basic understanding. For further understanding, check out chapter 1 of the Engineering Design Optimization. 
-		\item Using the model you analyzed in your previous assignment, conduct a trade study. You should consider the affect of at least the radius, chord distribution, and twist distribution on relevant model outputs. Determine what the most effective design variables for this model are. Determine what conditions you should analyze. Determine a good objective function.
+		\item Read chapter 1 of the Engineering Design Optimization. 
+		\item Using the model you analyzed in your previous assignment determine what the most effective design variables for this model are. Determine what conditions you should analyze. Determine a good objective function.
+		\item Design a rotor following these criteria: 
 		\begin{itemize}
-			\item (\textit{optional}) Conduct a basic optimization using an out of the box optimizer such as \href{https://github.com/JuliaNLSolvers/Optim.jl}{optim.jl}. 
+			\item Increase your objective value.
+			\item The root bending moment may no greater that 110\% of the original. 
+			\item Propellers and helicopters may not have torque requirements larger than 110\% of the original value. 
 		\end{itemize}
-		\item Write a report (paper) on your methods, results, and takeaways as described in the course syllabus. You should include discussion on what you learned steps 2 - 3.  Focus on the relationships found in step 3.  Use the IMRAD format. Use the 2 column journal template provided. Make sure all of your packages are commented. 
+		\item[] (\textit{optional}) You may consider conducting a basic optimization using an out of the box optimizer such as \href{https://github.com/JuliaNLSolvers/Optim.jl}{optim.jl}. 
+		\item Write a report (paper) on your methods, results, and takeaways as described in the course syllabus. You should include discussion on what you learned steps 2 - 4.  Focus on the outcomes found in step 4.  Use the IMRAD format. Use the 2 column journal template provided. Make sure all of your packages are commented. 
 		\item Submit your code and paper via a pull request as described in the course syllabus. Continue to use good coding style. 
 	\end{enumerate}
 	

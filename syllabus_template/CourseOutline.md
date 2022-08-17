@@ -16,6 +16,9 @@
 2) Paper two (4 weeks)
     - Quality Figures
     - Revisions available.
+    - Functions
+    - Code comments
+    - runfile
 
 3) Paper three (3 weeks + 1 week)
     - Bibliography & citations. 

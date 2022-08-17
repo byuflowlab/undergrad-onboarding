@@ -2,6 +2,8 @@
 
 Still working on this. 
 
+**Total Points Possible**
+
 - (30 points) Content
     - Working Title
     - Introduction
