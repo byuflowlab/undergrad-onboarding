@@ -34,6 +34,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ### Paper 1 (4 Weeks)
 
 #### Writing
+ - Formatting is correct (the provided template is used).
  - Contents of preamble (packages and commands) are well commented.
  - A descriptive title is used.
  - Author information is present and accurate.
