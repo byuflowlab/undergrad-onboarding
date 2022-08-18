@@ -40,8 +40,9 @@ It should also be noted that these are cumulative, so the requirements of earlie
  - Author information is present and accurate.
 
 #### Code
- - Code is beginning to be well commented.
- - Functions are beginning to be heavily utilized (as opposed to scripts).
+ - A git branch is used.
+ - Git issues are employed.
+ - Submission takes the form of a github Pull Request.
 
 ### Paper 2 (4 Weeks)
 
