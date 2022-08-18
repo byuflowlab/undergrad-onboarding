@@ -5,3 +5,7 @@
 ## Paper 2: [Rotor Analyais](../assignment_descriptions/rotor_analysis.pdf)
 
 ## Paper 3: [Rotor Design](../assignment_descriptions/rotor_design.pdf)
+
+## [Paper 3 Review](../assignment_descriptions/formal_review.pdf)
+
+## [Thesis](../assignment_descriptions/thesis.pdf)
