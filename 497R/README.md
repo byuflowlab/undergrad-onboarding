@@ -16,7 +16,7 @@ In the FLOW Lab, under the direction of Dr. Ning, we have somewhat formalized th
 
 ME EN 497R can take multiple tracks depending on student interests.  Currently, we have 2 major tracks available: Airframe Design, and Rotor Design.  You can find descriptions of these tracks [here](./track_descriptions)
 
-## Course Outline
+## Course Outline (16 Weeks Total)
 
 The following outline of assignment requirements/outcomes for auxiliary research skills used in the FLOW Lab, regardless of the specific track chosen.
 It should also be noted that these are cumulative, so the requirements of earlier assignments are assumed to be required for later assignments.
@@ -74,7 +74,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
 #### Code
  - Code is clear and able to be read and utilized easily by others.
 
-### Thesis Defense (1 Week)
+### Thesis Defense (Finals Week)
 
 #### Presentation
  - Quality slides and figures are used.
