@@ -37,7 +37,7 @@ left = 1.0in]{geometry}
 %Fancy Header Content
 \fancyhead[L]{ME EN 497R}
 \fancyhead[C]{}
-\fancyhead[R]{Rotor Design - Blade Element Momentum Assignment}
+\fancyhead[R]{Rotor Analysis Assignment}
 %Fancy Footer Content
 \fancyfoot[L,C]{} %make bottom left and center empty
 \fancyfoot[R]{\thepage}
@@ -59,48 +59,70 @@ left = 1.0in]{geometry}
 %BEGIN Document Environment
 \begin{document}
 	
-	\section{Background}
-	
-	Now that you've become with how flow around an airfoil induces forces, we can extend that knowledge to find the total loads on any type of rotor. I say rotor because that could be a propeller, helicopter blade, or wind turbine blade. We will use Blade Element Momentum (BEM) theory to analyze our rotor.  This theory is implemented in a package we will use called CCBlade (developed by Dr.Ning). 
-	
-	
-	\section{Assignment}
+\section{Background}
 
-	\begin{enumerate}
-		\item Start a new branch on your repository. Name it something relevant to the project. Create issues for each of the following 5 steps of this assignment. Close them with a comment as you finish each step. 
-		\item Read  through the \href{https://en.wikipedia.org/wiki/Blade_element_momentum_theory}{Wikipedia article} on \textit{Blade element momentum theory} to get a basic understanding. For further understanding, check out chapter 6 of the ME 515 textbook. 
-		\item Complete the \textit{Quick Start} section given in the \href{https://flow.byu.edu/CCBlade.jl/stable/}{CCBlade.jl documentation}. Also complete the \textit{Airfoil Data} section under \textit{Guided Examples}. Take notes on how the functions are used as you will be using them.  You may also consider completing the \textit{Wind Turbine Operation} or \textit{Helicopter Operation} sections under \textit{Guided Examples} if that pertains to your project. 
-		\item Analyze a rotor of your choice:
-		\begin{itemize}
-			\item Analyze the APC 10x7. Consider the effect of advance ratio ($J$) on: the coefficient of thrust ($C_T$), the coefficient of torque ($C_Q$), the coefficient of power ($C_P$), and efficiency ($\eta$).  Compare to experimental data found on the \href{https://m-selig.ae.illinois.edu/props/propDB.html}{UIUC propeller database.} Consider the affect of at least the radius, chord distribution, and twist distribution on relevant model outputs. 
-			\item Analyze the UAE 20 kW wind turbine. Find the normal and tangential loading along the length of the blade. Compare this loading to experimental data. Consider the affect of at least the radius, chord distribution, and twist distribution on relevant model outputs.  %Todo: Add experimental data to this repository. 
-		\end{itemize}
-		\item Write a report (paper) on your methods, results, and takeaways as described in the course syllabus. You should include discussion on what you learned steps 2 and 4.  Focus on the relationships found steps 4.  Use the IMRAD format and the provided 1 column journal paper template. Make sure all of your packages are commented. 
-		\item Submit your code and paper via a pull request as described in the course syllabus. In this assignment we expect a higher level of coding. In your code you should have: 
-		\begin{itemize}
-			\item Most of your code should be written in functions, with a small script to call your functions. Functions are faster and more modular.  Every function should have a docstring explaining the purpose, inputs, and outputs. 
-			\item All of your code should be commented. This doesn't mean that every line must have a comment, but sufficient comments throughout a required. Comments should make the intent of the code explicit, as well as provide a road map. Any complicated line of code should be commented. 
-			\item All of your code should be able to be run from a runfile. This means your code to produce any figures and run any experiements. The file shouldn't be too long because all of your functions should be in other files. Any data referenced in your code should be referenced by a relative path. 
-			\item \st{Your code should include a composite parametric type. } I'm sure that is a realistic requirement. Most code that the students will be writing won't have need of a composite type. I'm not sure contriving a situation for them to solve that would be best solved with a composite type is the best solution either. 
-		\end{itemize}
-	\end{enumerate}
-	
-	\bigskip
-	
+Now that you've become familiar with how flow around an airfoil induces forces, we can extend that knowledge to find the total loads on any type of rotor. Note that by rotor, we can mean propeller, helicopter blade, or wind turbine blade. For this assignment, you will use Blade Element Momentum (BEM) theory to analyze our rotor.  This theory is implemented in a package called \href{https://github.com/byuflowlab/CCBlade.jl}{CCBlade.jl} (developed by Dr.Ning). 
 
-	
-	
-	\section{Useful Resources}
-	\begin{multicols}{2}
+
+\section{Assignment}
+Start a new branch on your repository. Name it something relevant to the project. Create and issue for at least step 3. Close any issues you create with a comment as you finish each step. 
+
+\begin{enumerate}
+	\item Read  through the \href{https://en.wikipedia.org/wiki/Blade_element_momentum_theory}{Wikipedia article} on \textit{Blade element momentum theory} and/or chapter 6 of the ME 515 textbook. As you read and come across unfamiliar terms (see hint below), look them up and include them in an appendix in your report.  As part of the definitions, include images and equations to add clarity where applicable.
 	\begin{itemize}
-    		\item \href{https://dl2.boxcloud.com/d/1/b1!_lom972XNub0HBof1p6FP6KGBb_4tdyvhy5Kb7zl3ld8RIwqlXJndIfGWS2uuEH8qQKhu4oSjIUuztdO0lewCVo__3JyzkW7BMtoCmXh-mj-FgFbpgFQGjKY1W1Mi2mNdgHi1OThVWCKpbtWpwvhD5oeeiOktPg5vSWtl9S3w6SwA0cx8m7S76J2AdIDnGehinA4wTExMuozauk_dMGIhvVKjRlXqEesfp8dYdMxLx7dUtaaqhgh2QEIj4qHnSiHBnvEXL73tQm6d409fRUzb0eZ81cqabFEw_Lt2lPqgRaQnBSlt0NtFB0uZX1roFW3gpcIyBQEMkRwnqQy4r8FLWk5JG-DmTJKsdY4yc_CgUIsKUGN3B4XSU2u1eDqeFKwtj_euudjv3XHq3JyjAUNI2Bd0887Py2wZrgnNA62RtsAvJQAgfvb3Rjj01yinXrZO3Sh7vgzhFNvm08RTtGVAJ8dKhMjJ_gTpcV2Xo3xp18u-9bJvhrJJO3kBgVXswyYu4UHhhSWwaY3J6kABAf1nsNIHybIi6Tc6o2vXdFGyaoFPmTSgxOu9oXHbfksSLolNLNbVi3LMoLAtxSUULaASUe4pqcF1UL9VsKbTXAhU3QkMxAm5dvNxgMgjmgw1e_K6kFfnsODFtAtTIxMwH3Ycxqs7hhWh8DjR3SJCvnk045UFSyhFL439ngh0O7DtI7kZPx84c-aIMT7vAd2eKOii-YnLFOMYNtU9yLQLVhkVDIrOcneMZqU78IACJvLD3yvaA4D72rnWw78Yx7oH0975bxcKK3XmaD3mnqcwVKKZp9Eb1s0dwVsZ48MIG5KfMG_NQglf4OYsRHxsNSy1CzDI9W2YQwenv_Hi0urX0RkpggfXaoLTRqclLxSssphDgi-z02KKcj6TLMqZ-JjoqSecKYNMSa0btiXrtMBfZkIfVSWEAPzkfv2WcJKbxSDE4ny2wxDyG07AcX3DvXOC7HI6J7GCWCaDpRlb6_aY8bfFrQtDN0oETsksJb6IzPa6MWVWln5kV8UQxM9NNHDXS4luZTXFJqUPeNWzTjTKfuuigfKEmy3p9PRHKvLMHt9EhEaVywSxAHer02V_XlCa6ZyLbFGgfreDnUwvS72sr-F0V73y_gLDGd9aSNe0kadPSmanZwXmtv3TJRMudduzOC-PQISkY2Jk_3l-ZfMzAPTpD7-Uojlj-gDCiXyxpjncuEQXgtKlA2LhABZ0_oGFIIeAxG_ZMrdpK3s39XrONytYijpSqrkJRx3bF3gPU2WaLrFvpC2shsDwqIIw1uIwBO7fxjnepjnqqb2F0NvOFOddbYSefYou00FbGXpONMRmaE0ZpUs-KhE97kdOCcnnMfsz7N5q7GgqUuX8MzNR7Phtg18q6GXXnozAMFE9Yg8yz53204qd7w./download}{ME 515 Textbook : Chapter 6}
-    		\item \href{https://www.google.com/}{Google}
-    		\item \href{https://docs.julialang.org/en/v1/}{Julia Documentation}
+		\item[-] You may consider, rather than including an appendix in your papers, producing a dictionary of terms for yourself using the wiki feature on github.
 	\end{itemize}
-	\end{multicols}
-	
-	
-	
+	\item Complete the \href{https://flow.byu.edu/CCBlade.jl/stable/tutorial/}{Quick Start tutorial} in the CCBlade.jl documentation. 
+	Also complete the \textit{Airfoil Data} section under \href{https://flow.byu.edu/CCBlade.jl/stable/howto/#Airfoil-Data}{Guided Examples}. 
+	Take notes on which functions you'll need for the rest of the assignment and how to use them (i.e. write some pseudo code).
+	\begin{itemize}
+		\item[-] You may also consider completing the \href{https://flow.byu.edu/CCBlade.jl/stable/howto/#Wind-Turbine-Operation}{Wind Turbine Operation} or \href{https://flow.byu.edu/CCBlade.jl/stable/howto/#Helicopter-Operation}{Helicopter Operation} sections under Guided Examples if that pertains to your project. 
+	\end{itemize} 
+	\item Analyze a rotor of your choice:
+	\begin{enumerate}
+		\item The APC 10x7 \textit{Propeller}. Consider the effect of advance ratio ($J$) on: the coefficient of thrust ($C_T$), the coefficient of torque ($C_Q$), the coefficient of power ($C_P$), and efficiency ($\eta$).  Compare to experimental data found on the \href{https://m-selig.ae.illinois.edu/props/propDB.html}{UIUC propeller database.} Consider the affect of at least the radius, chord distribution, and twist distribution on relevant model outputs. \\
+		\textbf{- or -}
+		\item The UAE 20 kW \textit{Wind Turbine}. Consider the effect of tip speed ratio ($\lambda$) on: the coefficient of thrust ($C_T$) and coefficient of power ($C_P$).
+		Consider the affect of at least the radius, chord distribution, and twist distribution on relevant model outputs.
+		Also find the normal and tangential loading along the length of the blade. Compare this loading to experimental data available from your graduate student mentor.   %Todo: Add experimental data to this repository. 
+	\end{enumerate}
+		\item Write a report (paper) on your methods, results, and takeaways. You should include introduction and discussion material on what you learned in steps 1-3, giving special attention to the methods and results from step 3. Your report should:
+	\begin{itemize}
+		\item Contain all the elements required for Paper 1.
+		\item Use the provided \href{https://github.com/byuflowlab/undergrad-onboarding/tree/497R/497R/latex_templates/paper2_asme}{Paper 2 \LaTeX~Template}.
+		\item Include high quality figures (based on feedback from your first paper).
+	\end{itemize}
+	\item Submit your code and paper (.tex and .pdf files) via a pull request for your assignment branch on github. In this assignment we expect a higher level of coding. We will specifically be look for the following: 
+	\begin{itemize}
+		\item Most of your code should be written in functions, with a small script to call your functions. Functions are faster and more modular that writing everything in scripts.  Every function should have a \href{https://docs.julialang.org/en/v1/manual/documentation/#Writing-Documentation}{docstring} explaining the purpose, inputs, and outputs. 
+		\item All of your code should be well commented. This doesn't mean that every line must have a comment, but sufficient comments throughout are required. Comments should make the intent of the code explicit, as well as provide a road map. Any complicated line of code should be commented. 
+	\end{itemize}
+\end{enumerate}
+
+\bigskip
+
+\paragraph{Hint:} Here are some common terms that you may want to include in your appendix dictionary. You should also include other terms you come across that are unfamiliar.
+
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Coefficient of Power, $C_P$
+		\item Coefficient of Thrust, $C_T$
+		\item Advance ratio, $J$, or Tip Speed Ratio, $\lambda$
+		\item Hub and Tip Radius
+		\item Chord distribution
+		\item Twist distribution
+		\item Rotor Solidity
+		\item Blade Element Momentum Theory
+	\end{itemize}
+\end{multicols}
+
+
+\section{Useful Resources}
+\begin{itemize}
+   		\item \href{https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf}{ME 515 Textbook : Chapter 6}
+   		\item \href{https://www.google.com/}{Google}
+   		\item \href{https://docs.julialang.org/en/v1/}{Julia Documentation}
+\end{itemize}
 	
 	
 	

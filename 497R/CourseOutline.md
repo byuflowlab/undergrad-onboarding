@@ -1,7 +1,7 @@
 - All
     - theoretical accuracy
     - Basic grammar
-    - 
+    -
 
 0) Revisions (1 week)
     - IMRAD, includes figure
@@ -18,11 +18,11 @@
     - Revisions available.
     - Functions
     - Code comments
-    - runfile
 
 3) Paper three (3 weeks + 1 week)
-    - Bibliography & citations. 
+    - Bibliography & citations.
     - Review & revision
+    - runfile
 
 4) Thesis (2 weeks)
     - Prose
