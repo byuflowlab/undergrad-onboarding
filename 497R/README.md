@@ -21,6 +21,8 @@ ME EN 497R can take multiple tracks depending on student interests.  Currently, 
 The following outline of assignment requirements/outcomes for auxiliary research skills used in the FLOW Lab, regardless of the specific track chosen.
 It should also be noted that these are cumulative, so the requirements of earlier assignments are assumed to be required for later assignments.
 
+---
+
 ### Introductory Project Revision Assignment (1 Week)
 
 #### Writing
@@ -30,6 +32,8 @@ It should also be noted that these are cumulative, so the requirements of earlie
 
 #### Code
  - Code runs and produces expected results.
+
+---
 
 ### Paper 1 (4 Weeks)
 
@@ -44,6 +48,9 @@ It should also be noted that these are cumulative, so the requirements of earlie
  - Git issues are employed.
  - Submission takes the form of a github Pull Request.
 
+
+---
+
 ### Paper 2 (4 Weeks)
 
 #### Writing
@@ -53,6 +60,9 @@ It should also be noted that these are cumulative, so the requirements of earlie
  - Code is contained almost exclusively in functions.
  - Every function has a docstring
 
+---
+
+
 ### Paper 3 (3 Weeks)
 
 #### Writing
@@ -61,10 +71,16 @@ It should also be noted that these are cumulative, so the requirements of earlie
 #### Code
  - Runfile scripts are comprehensive and allow graduate student mentor to obtain results included in paper 3 without modification or adjustment.
 
+---
+
+
 ### Paper 3 Review (1 Week)
 
 #### Writing
  - A Diff document is produced to clearly show revisions from formal review process.
+
+---
+
 
 ### Thesis (2 Weeks)
 
@@ -73,6 +89,9 @@ It should also be noted that these are cumulative, so the requirements of earlie
 
 #### Code
  - Code is clear and able to be read and utilized easily by others.
+
+---
+
 
 ### Thesis Defense (Finals Week)
 
