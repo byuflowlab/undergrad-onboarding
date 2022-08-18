@@ -1,6 +1,6 @@
-# Airfoil Optimization 
+# Airfoil Optimization Track
 
-The idea behind this project is to allow students to delve more into 2D airfoil dynamics and optimize an airfoil. 
+The idea behind this project is to allow students to delve more into 2D airfoil dynamics and optimize an airfoil.
 
 - Paper 1
     - XFoil assignment, as in rotor_design
@@ -9,4 +9,4 @@ The idea behind this project is to allow students to delve more into 2D airfoil 
     - Surrogate model, or further XFoil assignment
 
 - Paper 3
-    - Airfoil optimization 
+    - Airfoil optimization
