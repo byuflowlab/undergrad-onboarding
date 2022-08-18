@@ -3,10 +3,10 @@
 
 ## Currently Available
 
-### [Airframe Design Track](airframe_design.md)
+### [Airframe Design](airframe_design.md)
 Learn about wing aerodynamics and design a basic wing+tail.
 
-### [Rotor Design Track](rotor_design.md)
+### [Rotor Design](rotor_design.md)
 Learn about rotor aerodynamics and design a basic propeller or turbine.
 
 
