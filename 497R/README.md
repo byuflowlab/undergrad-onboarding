@@ -14,4 +14,4 @@ In the FLOW Lab, under the direction of Dr. Ning, we have somewhat formalized th
 
 ## Project Tracks
 
-ME EN 497R can take multiple tracks depending on student interests.  Currently, we have 2 major tracks available.  You can find descriptions of these tracks [here](./track_descriptions)
+ME EN 497R can take multiple tracks depending on student interests.  Currently, we have 2 major tracks available: Airframe Design, and Rotor Design.  You can find descriptions of these tracks [here](./track_descriptions)
