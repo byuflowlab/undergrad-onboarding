@@ -1,0 +1,230 @@
+% ------------------ miscellaneous------------
+%%tikz
+\RequirePackage{pgf,tikz}
+\usetikzlibrary{arrows.meta, patterns}
+
+%PGFPlotXs Preamble from Julia Plots.jl
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{polar}
+\usepgfplotslibrary{smithchart}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{dateplot}
+\usepgfplotslibrary{ternary}
+\usetikzlibrary{backgrounds}
+\usepgfplotslibrary{patchplots}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{%
+	layers/standard/.define layer set={%
+		background,axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground%
+	}{grid style= {/pgfplots/on layer=axis grid},%
+		tick style= {/pgfplots/on layer=axis ticks},%
+		axis line style= {/pgfplots/on layer=axis lines},%
+		label style= {/pgfplots/on layer=axis descriptions},%
+		legend style= {/pgfplots/on layer=axis descriptions},%
+		title style= {/pgfplots/on layer=axis descriptions},%
+		colorbar style= {/pgfplots/on layer=axis descriptions},%
+		ticklabel style= {/pgfplots/on layer=axis tick labels},%
+		axis background@ style={/pgfplots/on layer=axis background},%
+		3d box foreground style={/pgfplots/on layer=axis foreground},%
+	},
+}
+
+
+\RequirePackage{nicefrac}
+\RequirePackage{cancel}
+
+
+\definecolor{byutan}{HTML}{C5AF7D}
+\definecolor{plotsblue}{HTML}{002E5D}
+\definecolor{plotsgray}{HTML}{808080}
+\definecolor{plotsred}{HTML}{9b0000}
+\definecolor{plotsgreen}{HTML}{A2E3A2}
+
+
+%\RequirePackage{marginfix}
+%\let\evensidemargin\oddsidemargin
+%\reversemarginpar
+% ----------------------------------------
+
+
+
+% -------- custom title page -------------
+% This title page follows immediately after the title page required by BYU Grad Studies.
+% This title page can be customized as the student desires, but should include the title,
+% student name, department, degree, and the BYU Engineering logo.
+\RequirePackage{pagecolor}
+\RequirePackage{afterpage}
+\newcommand{\mycustomtitlepage}{%
+	\pagestyle{empty}
+	\newgeometry{margin=.5in}
+	\newpagecolor{navy}\afterpage{\restorepagecolor}
+	\begin{Spacing}{2.2}
+		\noindent\raggedleft
+		{\color{white}\Huge\sffamily\itshape\@customtitle} \\
+%		\vspace{\fill}
+	\end{Spacing}
+	\begin{Spacing}{1.4}
+		{\color{white}\bfseries\Large
+		\noindent
+		\@author \\
+		\@department \\
+		\@degree} \\
+		\vspace{\fill}
+		\begin{figure}[htbp]
+			\includegraphics[width=3.5in]{frontmatter/figures/college_logo}
+		\end{figure}
+	\end{Spacing}
+\restoregeometry
+}
+% ----------------------------------------
+
+
+
+% --------------- Part Page Format ---------------
+\renewcommand*\part{%
+	\cleardoublepage
+	\thispagestyle{empty}
+	\if@twocolumn
+	\onecolumn
+	\@tempswatrue
+	\else
+	\@tempswafalse
+	\fi
+	\null\vfil
+	\secdef\@part\@spart}
+\renewcommand*{\thepart}{\Roman{part}}
+\renewcommand*{\partnamefont}{\normalfont\LARGE\sffamily\bfseries\colorchaptitle}
+\renewcommand*{\partnumfont}{\normalfont\LARGE\sffamily\bfseries\colorchaptitle}
+\renewcommand*{\parttitlefont}{\normalfont\LARGE\sffamily\itshape\colorchaptitle}
+
+\newcommand{\sectionquote}{\@empty}
+\newcommand*{\@printsectionquote}[1]{{\color{mediumgray}#1}}
+
+\renewcommand*{\afterpartskip}{\vskip 20pt plus 0.7fil \@printsectionquote{\sectionquote}  \newpage}
+% ----------------------------------------
+
+
+
+% ---------------- Assumption Box --------------------
+% Limits and Justification formats
+\newcommand{\limit}{\noindent {\bfseries\color{royal}Limitations: }}
+\newcommand{\why}{\noindent {\bfseries\color{royal}Justification: }}
+
+
+% Box frames
+\RequirePackage[framemethod=TikZ]{mdframed}
+\mdfsetup{}%skipabove=\topskip,skipbelow=\topskip}
+
+\newcounter{assumption}[chapter]
+\setcounter{assumption}{0}
+\makeatletter
+\newenvironment{assumption}%
+{%
+	\refstepcounter{assumption}
+	\renewcommand{\label}[1]{\ltx@label{{##1}}}
+	\mdfsetup{%
+		frametitle={%
+			\tikz[
+				baseline=(current bounding box.east),
+				outer sep=0pt,
+			]
+			\node[
+				anchor=east,
+				rectangle,
+				rounded corners=0.1cm,
+				fill=royal,
+				text=white,
+			]
+			{Assumption~\thechapter.\theassumption};
+		}
+	}
+%
+	\mdfsetup{
+		roundcorner=5pt,
+		innertopmargin=1pt,
+		innerbottommargin=10pt,
+		linecolor=royal,%
+		linewidth=0.5pt,%
+		topline=true,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax,%
+	}
+	\begin{mdframed}[]\relax%
+	}%
+	{\end{mdframed}}
+\makeatother
+
+\crefname{assumption}{assumption}{assumptions}
+\Crefname{assumption}{Assumption}{Assumptions}
+\labelformat{assumption}{\color{royal}\thechapter.#1}
+
+% ----------------------------------------------------
+
+
+% ---------------- Summary Box --------------------
+\newcounter{summary}[chapter]
+\newenvironment{summary}[1]%
+{%
+	\refstepcounter{summary}
+	\ifstrempty{#1}%
+	{%
+		\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,rounded corners=0.1cm,fill=byutan]
+				{\strut \textcolor{white}{Summary~\thechapter.\thesummary} };}}
+	}%
+	{%
+		\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,rounded corners=0.1cm,fill=byutan]
+				{\strut \color{white}{Summary~\thechapter.\thesummary: #1} };}}%
+	}%
+	\mdfsetup{
+		roundcorner=5pt,
+		innertopmargin=1pt,
+		innerbottommargin=10pt,
+		linecolor=byutan,%
+		linewidth=0.5pt,
+		topline=true,
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax,}
+	\begin{mdframed}[]\relax%
+	}%
+	{\end{mdframed}}
+
+\crefname{summary}{Summary}{Summaries}
+\Crefname{summary}{Summary}{Summaries}
+\labelformat{summary}{\thechapter.#1}
+
+% ----------------------------------------------------
+
+
+
+% -------------------- Equation Box --------------------
+
+\usepackage{empheq}
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\eqbox}[1][]{%
+	nobeforeafter, math upper, tcbox raise base,
+	enhanced, colframe=royal,
+	colback=navy!3, 
+	boxrule=0.5pt,
+	#1}
+
+% -------------------------------------------------------
+
+
+% ------------- Misc Cleveref Formatting ----------------
+\crefname{figure}{figure}{figures}
+\Crefname{figure}{Figure}{Figures}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\labelformat{figure}{\color{royal}\sffamily#1}
+
+\crefname{section}{section}{sections}
+\Crefname{section}{Section}{Sections}
+\labelformat{section}{\color{royal}\sffamily#1}
+\labelformat{subsection}{\color{royal}\sffamily#1}
+\labelformat{subsubsection}{\color{royal}\sffamily#1}

@@ -1,0 +1,83 @@
+%%Potetially useful macros.
+%\def\proof{\noindent{\it Proof: }}
+%\def\QED{\mbox{\rule[0pt]{1.5ex}{1.5ex}}}
+%\def\endproof{\hspace*{\fill}~\QED\par\endtrivlist\unskip}
+
+%\newcommand{\abs}[1]{\left|#1\right|}
+%\newcommand{\defeq}{\stackrel{\triangle}{=}}
+%\newcommand{\re}{\mathbb{R}}
+% real numbers
+%\newcommand{\OMIT}[1]{{}}
+% omit sections of text
+
+%\newcommand{\superscript}[1]{\ensuremath{^\textrm{#1}}}
+%\newcommand{\subscript}[1]{\ensuremath{_\textrm{#1}}}
+%
+
+%partial derivatives
+\newcommand{\pd}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}} % partial derivative
+
+%non-italic math letters
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\e}{\mathrm{e}}
+%\newcommand{\i}{\mathrm{i}}
+
+%decrease overset height
+\makeatletter
+\newcommand{\oset}[3][0ex]{%
+	\mathrel{\mathop{#3}\limits^{
+			\vbox to#1{\kern-0.5\ex@
+				\hbox{$\scriptstyle#2$}\vss}}}}
+\makeatother
+
+%Vector arrow over variable
+\newcommand{\vect}[1]{%
+	\oset{\rightharpoonup}{#1}}
+
+%expand fractions to full display size
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+
+
+%Norm
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+%Bezier word formatting
+\newcommand{\beziername}{B\'{e}zier }
+
+\let\underbrace\LaTeXunderbrace
+\let\overbrace\LaTeXoverbrace
+
+
+%Cauchy Integral
+\def\Xint#1{\mathchoice
+	{\XXint\displaystyle\textstyle{#1}}%
+	{\XXint\textstyle\scriptstyle{#1}}%
+	{\XXint\scriptstyle\scriptscriptstyle{#1}}%
+	{\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+	\!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+		\vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\def\ddashint{\Xint=}
+\def\dashint{\Xint-}
+
+
+%Multi-row in matricies
+\usepackage{multirow}
+
+
+%-TODO notes
+\definecolor{notesblue}{HTML}{6A7AB8}
+\definecolor{notesorange}{HTML}{B8946A}
+\definecolor{notesred}{HTML}{B86A6A}
+\definecolor{notesgreen}{HTML}{72B86A}
+\definecolor{notespurple}{HTML}{A36AB8}
+
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+
+\newcommandx{\question}[2][1=]{\todo[linecolor=notesblue,backgroundcolor=notesblue!25,bordercolor=notesblue,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=notesorange,backgroundcolor=notesorange!25,bordercolor=notesorange,#1]{#2}}
+\newcommandx{\note}[2][1=]{\todo[linecolor=notesgreen,backgroundcolor=notesgreen!25,bordercolor=notesgreen,#1]{#2}}
+\newcommandx{\toadd}[2][1=]{\todo[linecolor=notespurple,backgroundcolor=notespurple!25,bordercolor=notespurple,#1]{#2}}
+\newcommandx{\toremove}[2][1=]{\todo[linecolor=notesred,backgroundcolor=notesred!25,bordercolor=notesred,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
