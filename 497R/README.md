@@ -74,3 +74,8 @@ It should also be noted that these are cumulative, so the requirements of earlie
 #### Code
  - Code is clear and able to be read and utilized easily by others.
 
+### Thesis Defense (1 Week)
+
+#### Presentation
+ - Quality slides and figures are used.
+ - Content is presented clearly and confidently.
