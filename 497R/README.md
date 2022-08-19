@@ -14,7 +14,7 @@ We have formalized the structuer while allowing a great deal of student-lead lea
 
 ## Project Tracks
 
-ME EN 497R can take multiple tracks depending on student interests.  You can find descriptions of these tracks [here](./track_descriptions)
+ME EN 497R can take multiple tracks depending on student interests.  All tacks will give you some experience with aerodynamics, optimization, code development, and technical writing, but with different applications. You can find descriptions of these tracks [here](./track_descriptions)
 
 ## Course Outline (16 Weeks Total)
 
