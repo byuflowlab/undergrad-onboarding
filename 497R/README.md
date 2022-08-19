@@ -1,10 +1,10 @@
 # ME EN 497R FLOW Lab
 
 ## Overview
-ME EN 497R is a research course that may be applied toward the technical elective requirement for the Mechanical Engineering program (and occasionally other programs, e.g. Applied Physics).
+ME EN 497R is a research course that may be applied toward the technical elective requirement for the Mechanical Engineering program (other coursre numbers are used in Physics, Math, etc.).
 The overall goal of the 497R course is to give undergraduates research experiences typically reserved for graduate students, albeit in an format accessible to the abilities and time constraints of an undergraduate student.
-In the FLOW Lab, under the direction of Dr. Ning, we have somewhat formalized this course while also allowing a great deal of student-lead learning.
-497R is a challenging course that requires self-motivation and we have high expectations of the students who choose to take this course.
+We have formalized the structuer while allowing a great deal of student-lead learning.
+497R is a challenging course that requires self-motivation.
 
 ## Prequisites
 
@@ -14,12 +14,12 @@ In the FLOW Lab, under the direction of Dr. Ning, we have somewhat formalized th
 
 ## Project Tracks
 
-ME EN 497R can take multiple tracks depending on student interests.  Currently, we have 2 major tracks available: Airframe Design, and Rotor Design.  You can find descriptions of these tracks [here](./track_descriptions)
+ME EN 497R can take multiple tracks depending on student interests.  You can find descriptions of these tracks [here](./track_descriptions)
 
 ## Course Outline (16 Weeks Total)
 
 The following outline of assignment requirements/outcomes for auxiliary research skills used in the FLOW Lab, regardless of the specific track chosen.
-It should also be noted that these are cumulative, so the requirements of earlier assignments are assumed to be required for later assignments.
+It should also be noted that these are cumulative, so the requirements of earlier assignments are assumed to be required for later assignments.  These assignments are meant to be a miniature version of the process followed by graduate students.
 
 ---
 
