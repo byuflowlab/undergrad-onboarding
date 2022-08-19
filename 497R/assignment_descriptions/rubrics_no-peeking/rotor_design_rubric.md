@@ -6,16 +6,16 @@
     - (15 points) Writing Skills
         - (6 points) Previous skills
             - (1 point) Correct grammar usage.
-		    - (4 point) Quality figures
+            - (4 point) Quality figures
                 - (1 point) Figures are included where necessary.
                 - (1 point) Figures is referenced in text.
                 - (1 point) Figure caption is meaningful.
                 - (1 point) Figure is easy to understand and looks nice. Figure has legend where necessary.
-		    - (1 point) Is in the IMRAD format (organized well).
+            - (1 point) Is in the IMRAD format (organized well).
         - (3 points) Prose
-        - (6 points) Revision
-            - (3 points) Student obtained comments from a graduate student (who is not their mentor).
-            - (3 points) Student applied feedback from said grad student. s
+        - (6 points) Bibliography/Citations
+            - (3 points) At least 3 references are cited in the text
+            - (3 points) All the cited reference show up, and are correctly formatted in, a Bibliography.
 
     - (9 points) Objective Function
         - (3 points) Determine what the most effective design variables are.

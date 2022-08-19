@@ -60,8 +60,3 @@
     - (8 points) Code comments
         - (4 points) All of the code is commented.
         - (4 points) Comments are clear
-
-    <!-- - (4 points) Runfile -->
-        <!-- - (1 points) A single run file to run experiments, and generate plots. -->
-        <!-- - (1 points) Functions are included in other files. -->
-        <!-- - (2 points) Code is well organized. -->
