@@ -1,7 +1,7 @@
 # ME EN 497R FLOW Lab
 
 ## Overview
-ME EN 497R is a research course that may be applied toward the technical elective requirement for the Mechanical Engineering program (other coursre numbers are used in Physics, Math, etc.).
+ME EN 497R is a research course that may be applied toward the technical elective requirement for the Mechanical Engineering program (other course numbers are used in Physics, Math, etc.).
 The overall goal of the 497R course is to give undergraduates research experiences typically reserved for graduate students, albeit in an format accessible to the abilities and time constraints of an undergraduate student.
 We have formalized the structuer while allowing a great deal of student-lead learning.
 497R is a challenging course that requires self-motivation.
