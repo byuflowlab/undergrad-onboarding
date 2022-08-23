@@ -4,10 +4,9 @@
 
 - (16 points) Respond to feedback
     - (5 points) Report Writing
-        - (1 point) Correct grammar usage
-        - (1 point) IMRAD Format/Good organization
+        - (1 point) Generally correct grammar usage
         - (1 point) Includes figures
-        - (2 point) Responded to all comments. 
+        - (3 point) Responded to all comments. 
 
     - (11 points) Content
         - (1 points) Vortex Equations

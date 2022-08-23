@@ -5,12 +5,12 @@
 - (35 points) Exploration Report
     - (10 points) Writing Skills
         - (1 point) Correct grammar usage.
-        - (7 point) Quality figures
-            - (3 point) Figures are included where necessary.
+        - (6 point) Quality figures
+            - (2 point) Figures are included where necessary.
             - (1 point) Figures are referenced in text.
             - (1 point) Figure captions are meaningful.
             - (2 point) Figure is easy to understand and looks nice. Figure has legend where necessary.
-        - (1 point) Is in the IMRAD format (organized well).
+        - (2 points) Additional terms added to dictionary
         - (1 point) The document is aesthetically pleasing
 
 

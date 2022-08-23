@@ -1,4 +1,4 @@
-# Rotor Design Assignment Rubric
+# Airframe Design Assignment Rubric
 
 **Total Points 60**
 

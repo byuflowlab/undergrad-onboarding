@@ -7,16 +7,13 @@ Here is the breakdown for the points.  Note that the breakdown follows a tree di
 **Total Assignment - 60 points**
 
 - (35 points) Exploration Report
-    - (5 points) Writing Skills
-        - (1 point) Provided template is used.
-        - (1 point) Is in the IMRAD format (organized well).
-        - (1 point) Has a good title and author information block.
+    - (3 points) Writing Skills
         - (1 point) Correct grammar usage.
-        - (1 point) Includes figures.
+        - (2 point) Includes figures.
 
-    - (5 points) Appendix Dictionary
-        - (1 point) Dictionary is included.
-        - (1 point) Dictionary is well though out. Effort is clearly demonstrated.
+    - (7 points) Appendix Dictionary
+        - (2 point) Dictionary is included.
+        - (2 point) Dictionary is well though out. Effort is clearly demonstrated.
         - (1 point) Figures are included as necessary.
         - (1 point) Equations are included as necessary.
         - (1 point) Recommended words are included.
