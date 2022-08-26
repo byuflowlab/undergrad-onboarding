@@ -74,18 +74,11 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ---
 
 
-### Homework 3 Review (1 Week)
-
-#### Writing
- - A Diff document is produced to clearly show revisions from formal review process.
-
----
-
-
-### Final Report (2 Weeks)
+### Final Report and Review (3 Weeks)
 
 #### Writing
  - Prose is appropriate for an excellent technical document, and is clear and accurate.
+ -  **Review:** A Diff document is produced to clearly show revisions from formal review process.
 
 #### Code
  - Code is clear and able to be read and utilized easily by others.
