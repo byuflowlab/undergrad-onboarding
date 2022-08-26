@@ -35,7 +35,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
 
 ---
 
-### Paper 1 (4 Weeks)
+### Homework 1 (4 Weeks)
 
 #### Writing
  - Formatting is correct (the provided template is used).
@@ -51,7 +51,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
 
 ---
 
-### Paper 2 (4 Weeks)
+### Homework 2 (4 Weeks)
 
 #### Writing
  - High quality figures are used and correctly referenced.
@@ -63,7 +63,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ---
 
 
-### Paper 3 (3 Weeks)
+### Homework 3 (3 Weeks)
 
 #### Writing
  - Correctly formatted (automated) bibliography is present with in-text citations.
@@ -74,7 +74,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ---
 
 
-### Paper 3 Review (1 Week)
+### Homework 3 Review (1 Week)
 
 #### Writing
  - A Diff document is produced to clearly show revisions from formal review process.
@@ -82,7 +82,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ---
 
 
-### Thesis (2 Weeks)
+### Final Report (2 Weeks)
 
 #### Writing
  - Prose is appropriate for an excellent technical document, and is clear and accurate.
@@ -93,7 +93,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ---
 
 
-### Thesis Defense (Finals Week)
+### Final Presentation (Finals Week)
 
 #### Presentation
  - Quality slides and figures are used.
