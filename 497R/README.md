@@ -29,6 +29,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
  - IMRaD format is utilized.
  - Accuracy of content (is the theory correctly understood).
  - Correct basic grammar usage.
+ - Beginning level discussion
 
 #### Code
  - Code runs and produces expected results.
@@ -38,10 +39,10 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ### Homework 1 (4 Weeks)
 
 #### Writing
- - Formatting is correct (the provided template is used).
- - Contents of preamble (packages and commands) are well commented.
- - A descriptive title is used.
- - Author information is present and accurate.
+ - Basic writing skills
+ - Basic terminology
+ - Theoretical Accuracy
+ - Novice level discussion.
 
 #### Code
  - A git branch is used.
@@ -55,6 +56,7 @@ It should also be noted that these are cumulative, so the requirements of earlie
 
 #### Writing
  - High quality figures are used and correctly referenced.
+ - Intermediate level discussion. 
 
 #### Code
  - Code is contained almost exclusively in functions.
@@ -66,10 +68,11 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ### Homework 3 (3 Weeks)
 
 #### Writing
- - Correctly formatted (automated) bibliography is present with in-text citations.
+ - Deeper level discussion. 
 
 #### Code
- - Runfile scripts are comprehensive and allow graduate student mentor to obtain results included in paper 3 without modification or adjustment.
+ - Runfile scripts are comprehensive and allow graduate student mentor to obtain results included in HW 3 without modification or adjustment.
+ - Code style has improved. 
 
 ---
 
@@ -77,8 +80,12 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ### Final Report and Review (3 Weeks)
 
 #### Writing
- - Prose is appropriate for an excellent technical document, and is clear and accurate.
- -  **Review:** A Diff document is produced to clearly show revisions from formal review process.
+- Correct formatting
+- Correct citations
+- A deeper understanding of LaTeX. 
+- Better aesthetic. 
+- Prose is appropriate for an excellent technical document, and is clear and accurate.
+-  **Review:** A Diff document is produced to clearly show revisions from formal review process.
 
 #### Code
  - Code is clear and able to be read and utilized easily by others.

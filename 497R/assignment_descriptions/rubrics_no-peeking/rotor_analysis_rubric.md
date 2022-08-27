@@ -41,13 +41,10 @@
 
 
 - (25 points) Research Skills
-    - (7 points) Previous skills
-        - (1 point) Preamble comments are present.
-        - (1 point) Comments are correct.
-        - (1 point) Comments are pretty and concise.
+    - (5 points) Previous skills
         - (1 point) Used a branch.
         - (1 point) Used issues properly.
-        - (1 point) Used a pull request.
+        - (2 point) Used a pull request.
         - (1 point) Code was submitted.
 
     - (10 points) Functions
@@ -57,6 +54,6 @@
         - (2 points) Functions are modular (repeated tasks are made into functions).
         - (1 points) Functions balance being insanely long and running around a ton. (Functions shouldn't be a script in a function. Niether should every line be a function)
 
-    - (8 points) Code comments
-        - (4 points) All of the code is commented.
-        - (4 points) Comments are clear
+    - (10 points) Code comments
+        - (5 points) All of the code is commented.
+        - (5 points) Comments are clear

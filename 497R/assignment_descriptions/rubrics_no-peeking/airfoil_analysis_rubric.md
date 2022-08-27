@@ -6,24 +6,24 @@ Here is the breakdown for the points.  Note that the breakdown follows a tree di
 
 **Total Assignment - 60 points**
 
-- (35 points) Exploration Report
+- (40 points) Exploration Report
     - (3 points) Writing Skills
         - (1 point) Correct grammar usage.
         - (2 point) Includes figures.
 
-    - (7 points) Appendix Dictionary
-        - (2 point) Dictionary is included.
-        - (2 point) Dictionary is well though out. Effort is clearly demonstrated.
+    - (10 points) Appendix Dictionary
+        - (4 point) Dictionary is included.
+        - (3 point) Dictionary is well though out. Effort is clearly demonstrated.
         - (1 point) Figures are included as necessary.
         - (1 point) Equations are included as necessary.
         - (1 point) Recommended words are included.
 
-    - (10 points) Explores effect of angle of attack on lift, drag, and moment.
-        - (7 points) Discusses major characteristics of airfoil polar.
+    - (12 points) Explores effect of angle of attack on lift, drag, and moment.
+        - (9 points) Discusses major characteristics of airfoil polar.
             - (2 points) Talks about lift, drag, and moment
             - (1 points) Talks about how lift, drag, and moment are all just functions of alpha... $C_L(\alpha)$, $C_D(\alpha)$, and $C_M(\alpha)$. ... All of these values are inter-related to the angle of attack of the airfoil.
-            - (2 points) Talks about major trends, such as stall, zero-lift angle of attack.
-            - (2 points) Theoretically correct
+            - (3 points) Talks about major trends, such as stall, zero-lift angle of attack.
+            - (3 points) Theoretically correct
         - (3 points) Includes a figure for lift, drag, and moment (1 point each)
 
     - (3 points) Airfoil Polar Comparison
@@ -47,11 +47,7 @@ Here is the breakdown for the points.  Note that the breakdown follows a tree di
         - (2 points) Discusses the relationship between camber and L/D, zero lift angle of attack, etc.
 
 
-- (25 points) Research Skills
-    - (5 points) Template preamble comments.
-        - (1 point) Preamble comments are present.
-        - (3 points) Comments are correct.
-        - (1 point) Comments are pretty and concise.
+- (20 points) Research Skills
 
     - (5 points) Used a branch.
 
