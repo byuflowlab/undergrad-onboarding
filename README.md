@@ -10,7 +10,7 @@ We strongly encourage you, especially if you haven't yet taken any coding/numeri
 
 At the end of the project, you should have the following deliverables to submit to your assigned graduate student mentor for review:
 
-1. **CODE:** Implement the leapfrogging vortices and plot the resulting trajectories. Make sure your plots are clear and easily understood.  You are welcome to prototype in any programming language you want, but your final submission needs to be in Julia. If you are unfamiliar with Julia, we've put together some [beginner coding activites](JuliaCodingActivities/julia.md) that should be helpful.
+1. **CODE:** Implement the leapfrogging vortices and plot the resulting trajectories. Make sure your plots are clear and easily understood.  You are welcome to prototype in any programming language you want, but your final submission needs to be in Julia. If you are unfamiliar with Julia, we've put together some [**beginner coding activites**](JuliaCodingActivities/julia.md) that should be helpful.
 2. **IMAGE:** You should produce a plot (similar to the one at the end of the assignment description) showing your outputs.
 4. **BONUS (not required):** A static image of leapfrogging vortices isn't as fun.  See if you can create an animation so that you can actually watch the movement in time.  You might also like to draw a line between the vortex pairs to better visualize them as a connected ring.
 
