@@ -21,6 +21,6 @@ If you'd like to start the project, this link will take you to the project descr
 [![project](click_here.gif)](leapfrog/leapfrog.pdf)
 
 
-<p align="center" href="https://github.com/byuflowlab/undergrad-onboarding/blob/master/leapfrog/leapfrog.pdf">
+<a align="center" href="https://github.com/byuflowlab/undergrad-onboarding/blob/master/leapfrog/leapfrog.pdf">
   <img src="https://github.com/byuflowlab/undergrad-onboarding/blob/choptheintro/click_here.gif" alt="project"/>
-</p>
+</a>
