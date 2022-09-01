@@ -18,8 +18,7 @@ At the end of the project, you should have the following deliverables to submit 
 
 If you'd like to start the project, this link will take you to the project description.
 
-[![project](click_here.gif)](leapfrog/leapfrog.pdf)
-
+<!-- [![project](click_here.gif)](leapfrog/leapfrog.pdf) -->
 
 <p align="center">
   <a href="https://github.com/byuflowlab/undergrad-onboarding/blob/master/leapfrog/leapfrog.pdf">
