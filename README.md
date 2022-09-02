@@ -25,3 +25,5 @@ If you'd like to start the project, this link will take you to the project descr
     <img src="https://github.com/byuflowlab/undergrad-onboarding/blob/master/click_here.gif" alt="project"/>
   </a>
 </p>
+
+![leapfrog](https://github.com/byuflowlab/undergrad-onboarding/blob/master/leapfrog.gif)
