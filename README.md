@@ -1,6 +1,10 @@
 # FLOW Lab Undergraduate Onboarding: Introductory Project Overview
 
-This is an introductory mini-project (like a homework problem) designed to introduce you to the basics of the kind of scientific computing we do in the FLOW Lab.  A student with prior experience in programming can likely complete this task within a week or two, whereas a freshmen may need a semester or two to learn some or all of these concepts.
+This is an introductory mini-project, like a homework problem,  designed to introduce you to the type of scientific computing we do in the FLOW Lab and to the Julia programming language. A student with prior experience in programming can likely complete this task within a week or two, whereas a freshmen may need a semester or two to go through programming tutorials and learn some of the concepts.
+
+As a preview here's an animation of the simulation you'll complete (except that yours will be in two-dimensions).
+
+![leapfrog](https://github.com/byuflowlab/undergrad-onboarding/blob/master/leapfrog.gif)
 
 ## What you have to do to complete the project:
 
@@ -18,12 +22,8 @@ At the end of the project, you should have the following deliverables to submit 
 
 If you'd like to start the project, this link will take you to the project description.
 
-<!-- [![project](click_here.gif)](leapfrog/leapfrog.pdf) -->
-
 <p align="center">
   <a href="https://github.com/byuflowlab/undergrad-onboarding/blob/master/leapfrog/leapfrog.pdf">
     <img src="https://github.com/byuflowlab/undergrad-onboarding/blob/master/click_here.gif" alt="project"/>
   </a>
 </p>
-
-![leapfrog](https://github.com/byuflowlab/undergrad-onboarding/blob/master/leapfrog.gif)
