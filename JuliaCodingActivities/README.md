@@ -6,7 +6,8 @@ For the following tutorials, we will primarily be using the [Julia Documentation
 
 If you would like a crash-course in Julia, you may consider [this YouTube series](https://www.youtube.com/playlist?list=PLhQ2JMBcfAsi_3g2AFJ6B84d8c5jw5kXp) or [this free course](https://juliaacademy.com/p/julia-programming-for-nervous-beginners).
 
-If you would like some more advanced exercises in Julia, you may look at [some of these](https://exercism.org/tracks/julia/exercises)
+If you would like some more advanced exercises in Julia, you may look at [some of these](https://exercism.org/tracks/julia/exercises).
+
 In addition, there is a [free MIT course](https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2020/pages/syllabus/) on julia that may be of interest to those looking for an in depth understanding of how to use Julia in practical numerical methods.
 
 To help introduce the Julia language, we are going to do some basic airfoil generation and plotting.
