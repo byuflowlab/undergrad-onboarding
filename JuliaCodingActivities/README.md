@@ -4,6 +4,11 @@ First things first. You need to get Julia. You can get the current version from 
 
 For the following tutorials, we will primarily be using the [Julia Documentation](https://docs.julialang.org/en/v1/) and [Introducing Julia](https://en.wikibooks.org/wiki/Introducing_Julia). Some other quick references for Julia syntax are [Learn X in Y, where X=Julia](https://learnxinyminutes.com/docs/julia/), and [Julia by Example](https://juliabyexample.helpmanual.io/).
 
+If you would like a crash-course in Julia, you may consider [this YouTube series](https://www.youtube.com/playlist?list=PLhQ2JMBcfAsi_3g2AFJ6B84d8c5jw5kXp) or [this free course](https://juliaacademy.com/p/julia-programming-for-nervous-beginners).
+
+If you would like some more advanced exercises in Julia, you may look at [some of these](https://exercism.org/tracks/julia/exercises)
+In addition, there is a [free MIT course](https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2020/pages/syllabus/) on julia that may be of interest to those looking for an in depth understanding of how to use Julia in practical numerical methods.
+
 To help introduce the Julia language, we are going to do some basic airfoil generation and plotting.
 <!-- , very similar to a homework problem from the aerodynamics class, ME EN 515. The activities here will help you develop the necessary skills to complete your own [Panel Method](latex/panelmethod.pdf). -->
 
