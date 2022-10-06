@@ -1,0 +1,104 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Formal Review \& Revision Assignment}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      BACKGROUND      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Background}
+
+Up to this point, you have received grading/feedback from your graduate student mentor on completed assignments and have been given the opportunity to revise your submission to get more points. For your 3rd paper, you will be required to go through a more formal review and revision process.  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      ASSIGNMENT      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Assignment}
+
+
+
+Upon submission of your 3rd paper assignment (or ideally before you submit it), you should reach out to an additional graduate student in the FLOW Lab and ask for them to review your paper (just the paper, not the code).
+
+\begin{enumerate}
+	\item Upon receiving feedback from your graduate student mentor and the other graduate student, start a new branch on your repository. Name it something relevant to the project. 
+	\item Compile the feedback you received and complete revisions on your paper.
+	\item Produce a ``Diff'' document that highlights the changes you made between drafts.
+	\item Also include a basic written document describing what feedback you applied and what changes you made based on specific feedback items.
+\end{enumerate}
+	
+
+\bigskip
+
+\paragraph{Hints:}
+
+\begin{itemize}
+	\item To create your ``Diff'' document, you can either utilize multiple branches, or commits to save the versions of your prospectus.
+	You can then use a \LaTeX~diff tool (e.g. \href{https://texblog.org/2018/08/14/track-changes-with-latexdiff/}{latexdiff}) to highlight the changes you have made to your document.
+	\item Diff files and git merges of \LaTeX~files are somewhat easier if you only put one sentence per line.
+	Remember a single newline will continue the paragraph in \LaTeX, while a double return will initiate a new paragraph.
+\end{itemize}
+
+
+
+
+	
+	
+\end{document}

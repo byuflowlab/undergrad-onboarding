@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Airfoil Analysis Assignment}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      BACKGROUND      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Background}
+
+Airfoils are the cross sections of wings and rotors, so airfoil performance directly affects the performance of any lifting object.
+A simple way to analyze airfoils is by using a \textit{panel method}. 
+For this assignment, you will be utilizing a code produced by Mark Drela, a professor at MIT, called XFOIL.  Rather than the original Fortran, you will use a Julia version written by students in the FLOWLab called \href{https://github.com/byuflowlab/Xfoil.jl}{Xfoil.jl}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      ASSIGNMENT      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Assignment}
+
+Start a new local branch and push it to your github repository. Name it something relevant to the project. Create github issues for at least steps 3-6. You should use these issues to write down questions you have about those steps of the assignment for reference in your weekly meeting with your graduate student mentor. Close each issue you create with a comment as you finish each step. 
+
+\begin{enumerate}
+	\item Read  through the chapter 2 in the ME EN 515 Text (linked below), specifically sections 5 and 6.  As you read and come across unfamiliar terms ()see hint below), look them up and include them in an appendix in your report.  As part of the definitions, include images and equations to add clarity where applicable.
+	\begin{itemize}
+		\item[-] You may consider, rather than including an appendix in your papers, producing a dictionary of terms for yourself using the wiki feature on github.
+	\end{itemize}
+	\item Complete the examples given in the \href{https://flow.byu.edu/Xfoil.jl/stable/}{Xfoil.jl documentation}. Take notes on which functions you'll need for the rest of the assignment and how to use them (i.e. write some pseudo code). 
+	\item Explore the effect of airfoil angle of attack on airfoil lift, drag, and moment.
+	\item Compare data collected from XFoil to published data (experimental or other). 
+	\item Explore the effect of Reynolds number on airfoil lift, drag, and moment.
+	\item Explore the effect of airfoil thickness and camber on airfoil lift to drag ratio and lift curve slope behavior.
+	\item Write a short write on your methods, results, and takeaways. You should include introduction and discussion material on what you learned in steps 1-6, giving special attention to the methods and results from steps 3-6. 
+	\item Submit your code and paper (.tex and .pdf files) via a pull request for your assignment branch on github.
+\end{enumerate}
+
+\bigskip
+
+\paragraph{Hint:} Here are some common terms that you may want to include in your appendix dictionary. You should also include other terms you come across that are unfamiliar.
+
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Coefficient of Drag (2D), $c_d$
+		\item Coefficient of Lift (2D), $c_l$
+		\item Coefficient of Moment (2D), $c_m$
+		\item Angle of Attack, $\alpha$
+		\item Airfoil Polar
+		\item Lift Curve Slope
+		\item Stall
+		\item Airfoil Chord, $c$
+		\item Airfoil Camber
+		\item Airfoil Thickness
+		\item Freestream Velocity, $V_\infty$
+		\item Reynolds Number, $Re$
+		\item Mach Number, $M$
+	\end{itemize}
+\end{multicols}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      RESOURCES       %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\section{Useful Resources}
+
+\begin{itemize}
+ 	\item \href{https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf}{ME 515 Textbook : Chapter 2 Sections 5 \& 6}
+ 	\item \href{http://web.mit.edu/drela/Public/web/xfoil/xfoil_doc.txt}{Original XFoil Documentation}
+  	\item \href{https://flow.byu.edu/Xfoil.jl/stable/}{Xfoil.jl Documentation}
+ 	\item \href{https://www.google.com/}{Google}
+	\item \href{https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages}{Adding wiki pages to your repository.}
+\end{itemize}
+
+
+\end{document}
