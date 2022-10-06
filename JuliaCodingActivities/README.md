@@ -10,7 +10,7 @@ If you would like some more advanced exercises in Julia, you may look at [some o
 
 In addition, there is a [free MIT course](https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2020/pages/syllabus/) on julia that may be of interest to those looking for an in depth understanding of how to use Julia in practical numerical methods.
 
-To help introduce the Julia language, we are going to do some basic airfoil generation and plotting.
+As a bare minimum introduction to the Julia language, we are going to do some basic airfoil generation and plotting.
 <!-- , very similar to a homework problem from the aerodynamics class, ME EN 515. The activities here will help you develop the necessary skills to complete your own [Panel Method](latex/panelmethod.pdf). -->
 
 (Note: The activities are .pdf files that can be downloaded so you don't have to be online to access them. Also note that the hyperlinks do _not_ work in the github preview, so you will need to download them if you want the hyper links to function properly.)
