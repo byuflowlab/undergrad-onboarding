@@ -36,7 +36,7 @@ left = 1.0in]{geometry}
 %Fancy Header Content
 \fancyhead[L]{ME EN 497R}
 \fancyhead[C]{}
-\fancyhead[R]{Airframe Design Assignment}
+\fancyhead[R]{Airframe Aerodyanmic Design Assignment}
 %Fancy Footer Content
 \fancyfoot[L,C]{} %make bottom left and center empty
 \fancyfoot[R]{\thepage}
@@ -58,7 +58,51 @@ left = 1.0in]{geometry}
 %BEGIN Document Environment
 \begin{document}
 	
-\Huge UNDER CONSTRUCTION
-	
-	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      BACKGROUND      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Background}
+
+Now that you've become comfortable with the VLM, it's time to explore the design space.
+That means we want to better understand how changing different defining geometric and mechanical characteristics (called design variables) of the wing and tail to see how they affect the outputs of the model. 
+Finally, we will design a better airframe. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      ASSIGNMENT      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Assignment}
+Start a new branch on your repository. Name it something relevant to the project. Create and issue for at least step 3. Close any issues you create with a comment as you finish each step. 
+
+\begin{enumerate}
+	\item Read chapter 1 of the \href{http://flowlab.groups.et.byu.net/mdobook.pdf}{Engineering Design Optimization}. 
+	\item Using the model you analyzed in your previous assignment, determine what the most effective design variables for this model are. Determine what conditions you should analyze. Determine a good objective function.
+	\item Design an airframe following these criteria: 
+	\begin{itemize}
+		\item Increase your objective value.
+		\item The airframe must be able to lift 0.5 kilograms with a wingspan no greater than 1.5 meters. 
+		\item The airframe must be statically and dynamically stable. 
+	\end{itemize}
+	\item[] (\textit{optional}) You may consider conducting a basic optimization using an out of the box optimizer such as \href{https://github.com/JuliaNLSolvers/Optim.jl}{optim.jl}. 
+	\item Write a short write-up on your methods, results, and takeaways. You should include introduction and discussion material on what you learned in steps 1-3, giving special attention to the methods and results from step 3. 
+	\item Submit your code and paper (.tex and .pdf files) via a pull request for your assignment branch on github. In this assignment we expect a higher level of coding. We will specifically be look for the following: 
+	\begin{itemize}
+		\item At this point you should be using scripts for run files.  That is, nearly all of your code will be contained in functions, and you should create run files that will automatically run analyses and post process your results (e.g. plot things).  As part of your submission, you should include a run file that, without any adjustment, your graduate student mentor should be able to run and get all the outputs for your paper (or at least specific sections of your paper).
+		\item At this point you may also strongly consider implementing \href{https://docs.julialang.org/en/v1/manual/types/#Composite-Types}{parametric composite types} into your code if it would be helpful for your code organization. 
+	\end{itemize}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      RESOURCES       %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Useful Resources}
+\begin{itemize}
+	\item \href{http://flowlab.groups.et.byu.net/mdobook.pdf}{Engineering Design Optimization : Chapter 1}
+	\item \href{https://www.google.com/}{Google}
+\end{itemize}	
+
 \end{document}
