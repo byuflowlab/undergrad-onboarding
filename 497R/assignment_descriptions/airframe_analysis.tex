@@ -75,14 +75,27 @@ left = 1.0in]{geometry}
 Start a new branch on your repository. Name it something relevant to the project. Create github issues for at least steps 3-5. You should use these issues to write down questions you have about those steps of the assignment for reference in your weekly meeting with your graduate student mentor. Close each issue you create with a comment as you finish each step. 
 
 \begin{enumerate}
-	\item Read  through the chapter 4 in the ME EN 515 Text (linked below).  As you read and come across unfamiliar terms (see hint below), look them up and include them in an appendix in your report.  As part of the definitions, include images and equations to add clarity where applicable.
+	\item Read  through the chapter 4 in the ME EN 515 Text (linked below) and chapter 5 in the ME EN 415 Text (linked below).  As you read and come across unfamiliar terms (see hint below), look them up and include them in an appendix in your report.  As part of the definitions, include images and equations to add clarity where applicable.
 	\begin{itemize}
 		\item[-] You may consider, rather than including an appendix in your papers, producing a dictionary of terms for yourself using the wiki feature on github.
 	\end{itemize}
 	\item Complete the \href{https://flow.byu.edu/VortexLattice.jl/stable/guide/}{Getting Started} and \href{https://flow.byu.edu/VortexLattice.jl/stable/examples/#Steady-State-Analysis-of-a-Wing}{3 Steady State Examples} in the \href{https://flow.byu.edu/VortexLattice.jl/stable/}{VortexLattice.jl documentation} Take notes on which functions you'll need for the rest of the assignment and how to use them (i.e. write some pseudo code). 
-	\item Explore and discuss the effects of wing aspect ratio vs wing efficiency. 
-	\item Explore the effects of tail volume ratio on the stability derivatives of an airframe. Be sure to discuss desirable signs for stability derivatives.
+	\begin{itemize}
+		\item Note that you can simply use the geometry in these examples for several parts of this assignment.
+	\end{itemize}
+	\item Explore and discuss the effects of wing lift distribution vs wing efficiency. There are several ways to accomplish this, but here's one way you might start:
+	\begin{enumerate}
+		\item Write a function that takes in the root chord and span of a wing as well as a number of sections used to define the wing.
+		\item Have the function use the root chord and span numbers to define an ellipse.
+		\item Use the number of sections to divide up the wing span.
+		\item Have the function return the values of the leading edge locations and chord lengths at each of the sections so that your wing geometry approximates an ellipse.
+		\item Compare the efficiency of wings generated with only a few sections to those generated with many sections. 
+	\end{enumerate}
+	\item Explore the effects of vertical and horizontal tail volume ratios on the important stability derivatives of an airframe. Be sure to discuss desirable signs for stability derivatives. (see chapter 5 in the ME EN 415 textbook, specifically the static stability section.)
 	\item Explore the effects on angle of attack on the lift coefficient. Discuss the limitations of the VLM and explain which of your results are wrong due to those limitations.
+	\begin{itemize}
+		\item It may be informative to think about how the VLM results differ from the results you got on the airfoil analysis assignment.
+	\end{itemize}
 	\item Write a short write-up on your methods, results, and takeaways. You should include introduction and discussion material on what you learned in steps 1-5, giving special attention to the methods and results from steps 3-5. 
 		\item Submit your code and paper (.tex and .pdf files) via a pull request for your assignment branch on github. In this assignment we expect a higher level of coding. We will specifically be look for the following: 
 	\begin{itemize}
@@ -122,6 +135,7 @@ Start a new branch on your repository. Name it something relevant to the project
 
 \begin{itemize}
 	\item \href{https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf}{ME EN 515 Book (chapter 4 specifically)}
+	\item \href{http://flowlab.groups.et.byu.net/me415/flight.pdf}{ME EN 515 Book (chapter 5 specifically)}
 	\item \href{https://flow.byu.edu/VortexLattice.jl/stable/}{VortexLattice.jl Documentation}
 	\item \href{https://letmegooglethat.com/?q=what+is+the+vertical+tail+volume+ratio+formula}{Google}
 	\item \href{https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages}{Adding wiki pages to your repository.}
