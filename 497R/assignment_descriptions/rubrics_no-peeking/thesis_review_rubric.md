@@ -1,13 +1,13 @@
-# Paper 3 Review Assignment Rubric
+# Final Paper Review Assignment Rubric
 
-**Total Assignment - 10 Points*
-
-
- - (2 points) Review
-    - (2 points) Student obtained and compiled comments from their graduate student mentor AND a graduate student (who is not their mentor)
+**Total Assignment - 25 Points*
 
 
- - (8 points) Revision
-    - (2 points) Student applied feedback
-    - (3 points) Student provided an explanatory document detailing their response/actions based on provided feedback.
-    - (3 points) Student generated a Diff document showing changes made.
+ - (5 points) Review
+    - (5 points) Student obtained and compiled comments from their graduate student mentor AND a graduate student (who is not their mentor)
+
+
+ - (20 points) Revision
+    - (4 points) Student applied feedback
+    - (8 points) Student provided an explanatory document detailing their response/actions based on provided feedback.
+    - (8 points) Student generated a Diff document showing changes made.
