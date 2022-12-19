@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Design Optimization Assignment 3: Final Report}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\subsectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+\section{Part I: Draft and Review}
+
+This assignment is comprised of two parts, the first of which is to produce a complete draft and submit it for formal review by graduate students in the FLOW lab other than your assigned mentor.
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Research Skills      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Research Skills: Draft and Review}
+	
+Complete the following:
+\begin{enumerate}[label=\alph*.]
+	\item Ask 2 graduate students in the FLOW Lab, who are not your graduate student mentor, to review your penultimate draft of your final report.
+	\item Write a brief document (bullets are good) compiling the feedback as well as describing your actions to address the feedback (or why you didn't).
+	\item Create a ``Diff'' document comparing your penultimate and final drafts of your final report.
+\end{enumerate}
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Technical Tasks      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Technical Tasks: Improved Optimization}
+
+You again will have seen or received feedback on potential areas of improvement for your optimization.
+So again, complete the following:
+
+\begin{enumerate}[label=\alph*.]
+	\item Identify at least 3 (but likely more) areas of improvement for your optimization.
+	\item Address each of your identified areas of improvement.
+\end{enumerate}
+
+
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Writing Tasks      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Writing Tasks: Results, Conclusion, and Abstract}
+
+Complete the following writing tasks:
+
+\begin{enumerate}[label=\alph*.]
+	\item Complete a full draft of your results section, including well-designed plots and thoughtful discussion.  
+	\item With the main content of your paper completed, write the conclusion and abstract sections of your paper.
+\end{enumerate}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Final Submission      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Part II: Final Submission}
+
+Your final submission should be a complete and polished final draft of your semester final technical report.
+It should include all the improvements made up to this point as well as improvements based on the feedback you received in the first part of this assignment.
+You will be graded on completeness and quality of your final report.
+	
+	
+	
+\end{document}
