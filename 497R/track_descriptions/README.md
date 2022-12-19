@@ -4,10 +4,10 @@
 ## Currently Available
 
 ### [Airframe Design](airframe_design.md)
-Learn about wing aerodynamics and design a basic wing+tail.
+Learn about wing aerodynamics and optimize a basic wing + tail.
 
 ### [Rotor Design](rotor_design.md)
-Learn about rotor aerodynamics and design a basic propeller or turbine.
+Learn about rotor aerodynamics and optimize a basic propeller or turbine.
 
 
 ## Under Construction
@@ -15,16 +15,16 @@ Learn about rotor aerodynamics and design a basic propeller or turbine.
 ### [Windfarm Design](windfarm_design.md)
 Learn about wind turbine wakes and design a basic wind farm.
 
+### [Airfoil Design](airframe_design.md)
+Learn about wing and rotor section aerodynamics and perform aerodynamic shape optimization of airfoils.
 
-## Ideas for Advanced Projects
 
-### [Airfoil Optimization](airfoil_optimization.md)
-Learn about airfoil aerodynamics and optimize an airfoil design.
+<!-- ## Ideas for Advanced Projects -->
 
-### [Airfoil Experimentation](airfoil_experimentation.md)
-Learn about airfoil aerodynamics and perform experimentation using the small wind tunnel.
-### [Propeller Experimentation](propeller_experimentation.md)
-Learn about propeller aerodynamics and perform experimentation using the large wind tunnel.
+<!-- ### [Airfoil Experimentation](airfoil_experimentation.md) -->
+<!-- Learn about airfoil aerodynamics and perform experimentation using the small wind tunnel. -->
+<!-- ### [Propeller Experimentation](propeller_experimentation.md) -->
+<!-- Learn about propeller aerodynamics and perform experimentation using the large wind tunnel. -->
 
-### [Glider Design/Build](glider_db.md)
-Learn to use XFLR5 and build a basic glider.
+<!-- ### [Glider Design/Build](glider_db.md) -->
+<!-- Learn to use XFLR5 and build a basic glider. -->
