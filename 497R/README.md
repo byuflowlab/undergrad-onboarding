@@ -8,9 +8,7 @@ We have formalized the structuer while allowing a great deal of student-lead lea
 
 ## Prequisites
 
- - The Julia language, including using packages, functions, loops, doctstrings, comments, etc.
- - LaTeX, including basic document creation, section headers, including figures, etc.
- - Creating a github repository and using git for basic add, commit, pull, and push commands.
+ - A basic handle of the Julia language, including using packages, functions, loops, doctstrings, comments, etc.  All of which is covered in the [Introductory Project](../) available in this repository.
 
 ## Project Tracks
 
@@ -23,78 +21,53 @@ It should also be noted that these are cumulative, so the requirements of earlie
 
 ---
 
-### Introductory Project Revision Assignment (1 Week)
-
-#### Writing
- - IMRaD format is utilized.
- - Accuracy of content (is the theory correctly understood).
- - Correct basic grammar usage.
- - Beginning level discussion
-
-#### Code
- - Code runs and produces expected results.
+### Theory Readings and Test (3 weeks)
+- Complete assigned readings according to your chosen project track
+- Take exam on reading material
 
 ---
 
-### Homework 1 (4 Weeks)
-
-#### Writing
- - Basic writing skills
- - Basic terminology
- - Theoretical Accuracy
- - Novice level discussion.
-
-#### Code
- - A git branch is used.
- - Git issues are employed.
- - Submission takes the form of a github Pull Request.
-
+### Theory Exploration (3 weeks)
+- Complete exploratory studies based on the the exam questions to gain and/or deepen understanding of theory concepts
+- Introduction to LaTeX
 
 ---
 
-### Homework 2 (4 Weeks)
-
-#### Writing
- - High quality figures are used and correctly referenced.
- - Intermediate level discussion. 
-
-#### Code
- - Code is contained almost exclusively in functions.
- - Every function has a docstring
-
----
-
-
-### Homework 3 (3 Weeks)
-
-#### Writing
- - Deeper level discussion. 
-
-#### Code
- - Runfile scripts are comprehensive and allow graduate student mentor to obtain results included in HW 3 without modification or adjustment.
- - Code style has improved. 
+### Application Part 1 (3 Weeks)
+- Put together a design optimization prescribed by your project track
+- Writing
+  - Intro
+  - Basic Methods (optimization problem and basic approach)
+  - Figures for preliminary results
+- Introduction to Version Control:
+  - Create Repository
+  - Add, Commit, Push
 
 ---
 
-
-### Final Report and Review (3 Weeks)
-
-#### Writing
-- Correct formatting
-- Correct citations
-- A deeper understanding of LaTeX. 
-- Better aesthetic. 
-- Prose is appropriate for an excellent technical document, and is clear and accurate.
--  **Review:** A Diff document is produced to clearly show revisions from formal review process.
-
-#### Code
- - Code is clear and able to be read and utilized easily by others.
+### Application Part 2 (3 Weeks)
+- Update your design optimization based on feedback received on part 1.
+- Writing:
+  - Fleshed out methods
+  - preliminary written results
+- Version Control:
+  - Branch, issues, pull request
 
 ---
 
+### Penultimate Draft, Review, and Final Submission (3 Weeks)
+- Update design optimization again.
+- Writing:
+  - Finish penultimate draft of final (semester) technical report
+  - Get reviews
+  - Revise, and submit final draft.
+- LaTeX:
+  - Produce a Diff document showing revisions
+
+---
 
 ### Final Presentation (Finals Week)
 
 #### Presentation
- - Quality slides and figures are used.
- - Content is presented clearly and confidently.
+- Quality slides and figures are used.
+- Content is presented clearly and confidently.
