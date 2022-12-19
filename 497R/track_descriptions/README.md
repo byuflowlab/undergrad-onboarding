@@ -9,7 +9,7 @@ The links below lead to more detailed descriptions and expected outcomes for eac
 
 ## Currently Available
 
-### [Airframe Design](airframe_design.md)
+### [Airframe Aerodynamic Design](airframe_design.md)
 Learn about wing aerodynamics and optimize a basic wing + tail.
 
 ### [Rotor Design](rotor_design.md)
