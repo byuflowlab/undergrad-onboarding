@@ -1,5 +1,11 @@
 # ME EN 497R Track Descriptions
 
+Note that all tracks follow the same framework:
+1. Readings and Exam on topics related to the chose track
+1. An exploratory Assignment based on the tested topics
+1. A 3-stage Application Project
+
+The links below lead to more detailed descriptions and expected outcomes for each of the design tracks.
 
 ## Currently Available
 
@@ -15,7 +21,7 @@ Learn about rotor aerodynamics and optimize a basic propeller or turbine.
 ### [Windfarm Design](windfarm_design.md)
 Learn about wind turbine wakes and design a basic wind farm.
 
-### [Airfoil Design](airframe_design.md)
+### [Airfoil Design](airfoil_design.md)
 Learn about wing and rotor section aerodynamics and perform aerodynamic shape optimization of airfoils.
 
 
