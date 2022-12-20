@@ -41,7 +41,7 @@ These are not required for the exam, but you may want to complete some or all of
 - Forces and Moments
   - Fundamental Forces
   - Lift
-    - lift distributions
+    - Lift distributions
   - Drag
     - 3 types of drag
     - Strip theory
@@ -51,7 +51,7 @@ These are not required for the exam, but you may want to complete some or all of
 - Non-dimensional numbers
   - Reynolds
   - Mach
-    - important mach numbers
+    - Important Mach numbers
   - Lift, Drag, Moment Coefficients
 - Lift and Drag Polars
   - Lift curve slope
@@ -63,8 +63,8 @@ These are not required for the exam, but you may want to complete some or all of
 - Stability
   - Static stability
     - Stability derivatives
-  - dynamic stability
-    - eigen values/modes
+  - Dynamic stability
+    - Eigen values/modes
   - Tails
 - VLM capabilities and limitations
 - Optimization
