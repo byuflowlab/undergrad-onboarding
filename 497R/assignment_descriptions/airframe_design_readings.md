@@ -4,6 +4,7 @@ The theory exam for the Airframe Design track will come from the following readi
 
 - [Flight Vehicle Design Book](http://flowlab.groups.et.byu.net/me415/flight.pdf)
   - Chapter 2: Fundamentals (13 pages)
+  - Chapter 3: Drag (28 pages)
   - Chapter 4: Wing Design (7 pages)
   - Chapter 5: Stability (18 pages)
 - [Compuational Aeronautics](https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf)
@@ -18,7 +19,6 @@ These are not required for the exam, but you may want to complete some or all of
 
 - [Flight Vehicle Design Book](http://flowlab.groups.et.byu.net/me415/flight.pdf)
   - Chapter 7: Performance (uses some concepts from Chapter 6: propulsion)
-  - Chapter 3: Drag
   - Chatper 8: Structures
 
 - [Engineering Design Optimization](http://flowlab.groups.et.byu.net/mdobook.pdf)
