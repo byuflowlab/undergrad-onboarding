@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,twocolumn]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+%Graphics
+\usepackage{graphicx} % Needed to insert images into the document
+\graphicspath{{figures/}} % Sets the default location of pictures
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{Theory Exploration}
+\fancyhead[R]{Student Name} %PUT YOUER NAME HERE
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+
+% Customize formatting for section headers
+\renewcommand{\thesection}{Problem \arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\alph{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\alph{subsection}.\roman{subsubsection}}
+
+% Remove indents and add space between paragraphs
+\usepackage[parfill]{parskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                              PROBLEM 1                             %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{} %You can add a title if you want, otherwise it will simply say Problem #
+\label{sec:probleml}
+
+\textit{Copy and paste problem description here.}
+
+\subsection{} %You can add a title if you want, otherwise it will simply say a]
+\label{ssec:p1a}
+
+\subsubsection{} %you probably want a title here to clarify what the subdivision is for
+\label{sssec:p1ai}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                              EXAMPLES                              %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{EXAMPLES}
+\label{sec:examples}
+
+\textit{This section is for \LaTeX{} environment examples you will probably need to use.}
+
+\subsection{How to create Sections and Subsections}
+
+Simply use the section and subsection commands, as in this example document. With \LaTeX{}, all the formatting and numbering is handled automatically according to the template you've chosen.
+
+\subsection{How to include Figures}
+
+First you need to make sure that you know where your figure file is located. Then use the \verb|\includegraphics| command to include it in your document. Use the figure environment and the caption command to add a number and a caption to your figure. See the code for \cref{fig:draft} in this section for an example.
+
+Note that your figure will automatically be placed in the most appropriate place for it, given the surrounding text and taking into account other figures or tables that may be close by. You can find out more about adding images to your documents in \href{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}{this guide}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.25\textwidth]{draft}
+	\caption{This is an example figure.}
+	\label{fig:draft}
+\end{figure}
+
+\subsection{How to add Tables}
+
+Use the \verb|table| and \verb|tabular| environments for basic tables---see \cref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}. 
+
+\begin{table}[h!]
+	\centering
+	\caption{An example table.}
+	\label{tab:widgets}
+	\begin{tabular}{l|r}
+		Item & Quantity \\\hline
+		Widgets & 42 \\
+		Gadgets & 13
+	\end{tabular}
+\end{table}
+
+
+\subsection{How to add Lists}
+
+You can make lists with automatic numbering using the \verb|ennumerate| environment
+
+\begin{enumerate}
+	\item Like this,
+	\item and like this.
+\end{enumerate}
+
+You can use the \verb|itemize| environment for bulleted lists
+
+\begin{itemize}
+	\item Like this,
+	\item and like this.
+\end{itemize}
+
+\subsection{How to write Mathematics}
+
+\LaTeX{} is great at typesetting mathematics.Here is an inline equation: \(e = mc^2\).
+
+Here is a display mode equation: \[e^{i \pi} + 1 = 0.\]
+
+Here is a referenceable equation (see \cref{eqn:example}):
+
+\begin{equation}
+	\label{eqn:example}
+	\sin^2(\theta) + \cos^2(\theta) = 1.
+\end{equation}
+
+There are many math symbols, for example, \cref{eqn:example2}:
+
+\begin{equation}
+	\label{eqn:example2}
+	\sum_{k=0}^\infty a^k = \frac{1}{1-a}, \mathrm{~~for~~} |a| < 1.
+\end{equation}
+
+You'll probably want to use a \href{https://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf}{``cheat sheet''} to help you learn symbols as you go.
+
+
+\end{document}
