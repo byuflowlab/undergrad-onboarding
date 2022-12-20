@@ -44,9 +44,9 @@ These are not required for the exam, but you may want to complete some or all of
     - lift distributions
   - Drag
     - 3 types of drag
-    - strip theory
-    - induced drag
-    - far field induced drag
+    - Strip theory
+    - Induced drag
+    - Far field induced drag
   - Moment
 - Non-dimensional numbers
   - Reynolds
