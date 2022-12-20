@@ -20,6 +20,8 @@ Learn how to analyze and design a rotor of your choice (a propeller, wind-turbin
 If you're interested in this track, check out these websites for more information: 
 - [Random Website: BEM](https://healthresearchfunding.org/blade-element-momentum-theory-explained/) (Fairly simple)
 
+- [Aerodynamics4Students](http://www.aerodynamics4students.com/propulsion/blade-element-propeller-theory.php) (Moderately simple)
+
 - [Wikipedia: BEM](https://en.wikipedia.org/wiki/Blade_element_momentum_theory) (A little more technical)
 
 
