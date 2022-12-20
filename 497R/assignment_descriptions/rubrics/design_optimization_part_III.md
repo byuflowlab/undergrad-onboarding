@@ -30,7 +30,7 @@
 
 ## Final Submission [60 points]
 
-## Prose [51]
+## Content [51]
 - [3] Grammar/Spelling
 - [3] Abstract
   - (1) Complete (see template)
