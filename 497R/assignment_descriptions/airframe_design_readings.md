@@ -24,3 +24,50 @@ These are not required for the exam, but you may want to complete some or all of
 - [Engineering Design Optimization](http://flowlab.groups.et.byu.net/mdobook.pdf)
   - Chapter 5: Constrained Gradient-based Optimization
   - or other chapters depending on your optimization approach.
+
+
+## Exam Topics
+- Wing Geometry
+  - Chord
+    - Mean Geometric
+    - Mean Aerodynamic
+  - Span
+  - Wing Area
+  - Sweep
+  - Twist
+  - Dihedral
+  - Taper Ratio
+  - Aspect Ratio
+- Forces and Moments
+  - Fundamental Forces
+  - Lift
+    - lift distributions
+  - Drag
+    - 3 types of drag
+    - strip theory
+    - induced drag
+    - far field induced drag
+  - Moment
+- Non-dimensional numbers
+  - Reynolds
+  - Mach
+    - important mach numbers
+  - Lift, Drag, Moment Coefficients
+- Lift and Drag Polars
+  - Lift curve slope
+  - Zero-lift angle of attack
+  - Stall
+  - Critical section theory
+- Performance
+  - Stall speed
+- Stability
+  - Static stability
+    - Stability derivatives
+  - dynamic stability
+    - eigen values/modes
+  - Tails
+- VLM capabilities and limitations
+- Optimization
+  - Design Variables
+  - Objectives
+  - Constraints
