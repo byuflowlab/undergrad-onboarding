@@ -13,7 +13,7 @@ You will not be able to see the test questions or answers between takes.
 The higher of the two scores will be used for your grade.
 
 For any questions that you missed,
-you may get back 3/4 of the points by correctly and completely answering the associated question(s) in the (Theory Exploration)[] assignment.
+you may get back 3/4 of the points by correctly and completely answering the associated question(s) in the [Theory Exploration]() assignment.
 
 The structure of the test will be mostly short answer,
 matching,
