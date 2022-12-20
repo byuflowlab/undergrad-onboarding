@@ -1,10 +1,9 @@
 # Coding
 
-It might be a good idea to have a lecture on coding. They'll be getting a lot on their own, but it might be worthwhile. 
+It might be a good idea to have a lecture on coding. They'll be getting a lot on their own, but it might be worthwhile.
 
 
-Content: 
-___
+Content:
 - Code organization
   - Directory structure
   - File structure
@@ -15,7 +14,7 @@ ___
 
 - Good practice
   - Testing architecture
-  - Follow the naming practices (I forget what this is called). 
+  - Follow the naming practices (style guide)
 
 - Julia specific
   - Structs
