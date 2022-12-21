@@ -21,15 +21,27 @@ It should also be noted that these are cumulative, so the requirements of earlie
 
 ---
 
-### Theory Readings and Test (3 weeks)
-- Complete assigned readings according to your chosen project track
-- Take exam on reading material
+### Theory Reading and Exploration Part 1 (2 weeks)
+- Complete assigned readings based on your chosen track.
+- Complete exploratory studies based on your chosen track.
+- Introduction to LaTeX
 
 ---
 
-### Theory Exploration (3 weeks)
-- Complete exploratory studies based on the the exam questions to gain and/or deepen understanding of theory concepts
-- Introduction to LaTeX
+### Theory Reading and Exploration Part 2 (2 weeks)
+- Complete assigned readings based on your chosen track.
+- Complete exploratory studies based on your chosen track.
+
+---
+
+### Theory Reading and Exploration Part 3 (2 weeks)
+- Complete assigned readings based on your chosen track.
+- Complete exploratory studies based on your chosen track.
+
+---
+
+### Theory Exam
+- Take exam on reading and exploration material
 
 ---
 
@@ -67,7 +79,5 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ---
 
 ### Final Presentation (Finals Week)
-
-#### Presentation
 - Quality slides and figures are used.
 - Content is presented clearly and confidently.
