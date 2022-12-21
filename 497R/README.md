@@ -22,19 +22,33 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ---
 
 ### Theory Reading and Exploration Part 1 (2 weeks)
+
+#### Micro Lecture:
+- Coding Review
+
+#### Assignments
 - Complete assigned readings based on your chosen track.
 - Complete exploratory studies based on your chosen track.
-- Introduction to LaTeX
 
 ---
 
 ### Theory Reading and Exploration Part 2 (2 weeks)
+
+#### Micro Lecture:
+- Introduction to LaTeX
+
+#### Assignments
 - Complete assigned readings based on your chosen track.
 - Complete exploratory studies based on your chosen track.
 
 ---
 
 ### Theory Reading and Exploration Part 3 (2 weeks)
+
+#### Micro Lecture:
+- Introduction to bibtex
+
+#### Assignments
 - Complete assigned readings based on your chosen track.
 - Complete exploratory studies based on your chosen track.
 
@@ -46,28 +60,41 @@ It should also be noted that these are cumulative, so the requirements of earlie
 ---
 
 ### Application Part 1 (3 Weeks)
+
+#### Micro Lecture:
+- Introduction to Version Control:
+  - Create Repository
+  - Add, Commit, Push
+
+#### Assignments
 - Put together a design optimization prescribed by your project track
 - Writing
   - Intro
   - Basic Methods (optimization problem and basic approach)
   - Figures for preliminary results
-- Introduction to Version Control:
-  - Create Repository
-  - Add, Commit, Push
 
 ---
 
 ### Application Part 2 (3 Weeks)
+
+#### Micro Lecture:
+- Version Control part 2:
+  - Branch, issues, pull request
+
+#### Assignments
 - Update your design optimization based on feedback received on part 1.
 - Writing:
   - Fleshed out methods
   - preliminary written results
-- Version Control:
-  - Branch, issues, pull request
 
 ---
 
 ### Penultimate Draft, Review, and Final Submission (3 Weeks)
+
+#### Micro Lecture:
+- Introduction to Presenting
+
+#### Assignments
 - Update design optimization again.
 - Writing:
   - Finish penultimate draft of final (semester) technical report
