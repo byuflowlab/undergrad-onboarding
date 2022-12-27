@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,twocolumn]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+%\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Airframe Design Theory Exploration: Part III}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+
+% Customize formatting for section headers
+\renewcommand{\thesection}{Problem \arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\alph{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                               Reading                              %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Relevant Reading}
+\label{sec:reading}
+
+\begin{itemize}
+	\item \href{http://flowlab.groups.et.byu.net/me415/flight.pdf}{Flight Vehicle Design Book}
+	\begin{itemize}
+		\item Chapter 5: Stability (18 pages)
+	\end{itemize}
+	\item \href{http://flowlab.groups.et.byu.net/mdobook.pdf}{Engineering Design Optimization} 
+	\begin{itemize}
+		\item Chapter 1: Introduction (32 pages)
+	\end{itemize}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                             Vocabulary                             %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vocabulary}
+\label{sec:vocab}
+
+Explain the following terms; making sure to use sufficient detail, including any math or helpful figures.
+In some cases, these terms are simple one sentence definitions, in others, you should include several paragraphs to explain them fully.
+
+
+\paragraph{Stability}
+\begin{itemize}
+	\item Static Stability
+	\begin{itemize}
+		\item Aerodynamic Center
+		\item Center of Gravity
+		\item Static Margin
+		\item Stability Derivatives
+		\item Roll
+		\item Pitch
+		\item Yaw
+		\item Side Slip Angle
+	\end{itemize}
+	\item Dynamic Stability
+	\begin{itemize}
+		\item Stability Modes
+		\item Eigen Values
+	\end{itemize}
+	\item Tails
+	\begin{itemize}
+		\item Tail Volume Ratios
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Optimization}
+\begin{itemize}
+	\item Design Variables
+	\item Objective
+	\item Constraints
+\end{itemize}
+
+\newpage
+
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                               Explore                              %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exploration}
+\label{sec:exploration}
+
+Complete the following exploration.
+
+\subsection{Prerequisites}
+\label{ssec:prereqs}
+
+\begin{enumerate}[label=\roman*.]
+	\item Obtain, and become familiar with, the following tools auxiliary to VortexLattice.jl including:
+	\begin{itemize}
+		\item The eigen value code
+	\end{itemize}
+\end{enumerate}
+
+
+
+\subsection{Stability}
+
+\begin{enumerate}[label=\roman*.]
+	\item Explore how the Vertical and Horizontal Tail Volume Ratios affect the static and dynamic stability of an airframe.
+	\item Explore how wing sweep and dihedral affect the static and dynamic stability of an airframe.
+	\item In preparation for you next assignments, use what you found in the previous to steps to create an airframe (wing + tail) design that is stable.
+\end{enumerate}
+
+
+
+\end{document}

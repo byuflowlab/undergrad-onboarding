@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,twocolumn]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+%\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Airframe Design Theory Exploration: Part I}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+
+% Customize formatting for section headers
+\renewcommand{\thesection}{Problem \arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\alph{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                               Reading                              %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Relevant Reading}
+\label{sec:reading}
+
+\begin{itemize}
+	\item \href{http://flowlab.groups.et.byu.net/me415/flight.pdf}{Flight Vehicle Design Book}
+	\begin{itemize}
+		\item Chapter 2: Fundamentals (13 pages)
+		\item Chapter 3: Drag (28 pages)
+	\end{itemize}
+
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                             Vocabulary                             %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vocabulary}
+\label{sec:vocab}
+
+Explain the following terms; making sure to use sufficient detail, including any math or helpful figures.
+In some cases, these terms are simple one sentence definitions, in others, you should include several paragraphs to explain them fully.
+
+\paragraph{Wing Geometry Terms}
+\begin{itemize}
+	\item Wing Area
+	\item Chord
+	\begin{itemize}
+		\item Mean Geometric Chord
+		\item Mean Aerodynamic Chord
+	\end{itemize}
+	\item Taper Ratio
+	\item Span
+	\item Aspect Ratio
+	\item Sweep
+	\item Dihedral
+	\item Twist
+	\item Washout
+\end{itemize}
+
+\paragraph{Forces and Moments}
+\begin{itemize}
+	\item Lift
+	\item Drag
+	\begin{itemize}
+		\item Induced Drag
+		\item Parasitic Drag
+		\begin{itemize}
+			\item Skin Friction Drag
+			\item Pressure Drag
+		\end{itemize}
+		\item Compressibility Drag
+	\end{itemize}
+	\item Pitching Moment
+	\item Lift and Drag Polars
+	\begin{itemize}
+		\item Angle of Attack
+		\item Zero Lift angle of attack
+		\item Lift Curve Slope
+		\item Stall
+	\end{itemize}
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                               Explore                              %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exploration}
+\label{sec:exploration}
+
+Complete the following exploration.
+
+\subsection{Prerequisites}
+\label{ssec:prereqs}
+
+\begin{enumerate}[label=\roman*.]
+	\item \href{https://flow.byu.edu/VortexLattice.jl/stable/#Installation}{Install VortexLattice.jl} and complete the \href{https://flow.byu.edu/VortexLattice.jl/stable/guide/}{Getting Started Guide} as well as the \href{https://flow.byu.edu/VortexLattice.jl/stable/examples/#Steady-State-Analysis-of-a-Wing-and-Tail}{Steady State Wing and Tail Example}.
+	\item Obtain, and become familiar with, the following tools auxiliary to VortexLattice.jl including:
+	\begin{itemize}
+		\item The airfoil analysis code
+		\item The strip theory and far-field drag codes
+	\end{itemize}
+\end{enumerate}
+
+
+\subsection{Forces, Moments, and Polars}
+
+\begin{enumerate}[label=\roman*.]
+	\item Create the following plots using the example wing from the previous problem:
+	\begin{itemize}
+		\item Lift vs Angle of Attack
+		\item Induced Drag (near and far field) vs Angle of Attack
+		\item Moment vs Angle of Attack
+		\item Lift vs Drag
+		\item Lift/Drag vs Angle of Attack
+	\end{itemize}
+	\item Explain why an external drag model is required to capture stall.
+	\item Identify the lift curve slope in your lift vs angle of attack plot, and compare it to the lift curve slope from thin airfoil theory (\(2\pi\)).
+\end{enumerate}
+
+
+
+
+
+\end{document}

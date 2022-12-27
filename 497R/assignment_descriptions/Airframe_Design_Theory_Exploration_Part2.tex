@@ -1,0 +1,153 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,twocolumn]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+%\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Airframe Design Theory Exploration: Part II}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+
+% Customize formatting for section headers
+\renewcommand{\thesection}{Problem \arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\alph{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                               Reading                              %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Relevant Reading}
+\label{sec:reading}
+
+\begin{itemize}
+	\item \href{http://flowlab.groups.et.byu.net/me415/flight.pdf}{Flight Vehicle Design Book}
+	\begin{itemize}
+		\item Chapter 4: Wing Design (7 pages)
+	\end{itemize}
+	\item \href{https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf}{Compuational Aeronautics}
+	\begin{itemize}
+		\item Chapter 4: Finite Wing (33 pages)
+	\end{itemize}
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                             Vocabulary                             %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vocabulary}
+\label{sec:vocab}
+
+Explain the following terms; making sure to use sufficient detail, including any math or helpful figures.
+In some cases, these terms are simple one sentence definitions, in others, you should include several paragraphs to explain them fully.
+
+\paragraph{Non-dimensional Numbers}
+\begin{itemize}
+	\item Reynolds Number
+	\item Mach Number
+	\item Coefficients
+	\begin{itemize}
+		\item Lift Coefficient
+		\item Drag Coefficient
+		\item Moment Coefficient
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Airframe Analysis}
+\begin{itemize}
+	\item Vortex Lattice Method
+	\item Strip Theory
+	\item Critical Section Theory
+\end{itemize}
+
+\paragraph{Airframe Performance}
+\begin{itemize}
+	\item Lift Distribution
+	\item Stall Speed
+\end{itemize}
+
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                               Explore                              %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exploration}
+\label{sec:exploration}
+
+Complete the following exploration.
+
+\subsection{Prerequisites}
+\label{ssec:prereqs}
+
+\begin{enumerate}[label=\roman*.]
+	\item Obtain, and become familiar with, the following tools auxiliary to VortexLattice.jl including:
+	\begin{itemize}
+		\item The critical section theory code
+		\item The wing efficiency code
+	\end{itemize}
+\end{enumerate}
+
+
+
+\subsection{Lift Distributions and Wing Efficiency}
+
+\begin{enumerate}[label=\roman*.]
+	\item Create a plot comparing the lift distributions of a constant chord, tapered chord, and elliptic wing with no twist and with the same wing area.  Also plot the ideal elliptic distribution for comparison.
+	\item Discuss the differences you see in your plot.  Which planform design is the most efficient? Why?
+\end{enumerate}
+
+
+
+
+\end{document}
