@@ -36,7 +36,7 @@ left = 1.0in]{geometry}
 %Fancy Header Content
 \fancyhead[L]{ME EN 497R}
 \fancyhead[C]{}
-\fancyhead[R]{Rotor Design Theory Exploration: Part I}
+\fancyhead[R]{Rotor Design Theory Exploration: Part III}
 %Fancy Footer Content
 \fancyfoot[L,C]{} %make bottom left and center empty
 \fancyfoot[R]{\thepage}
@@ -53,9 +53,9 @@ left = 1.0in]{geometry}
 
 %BEGIN Document Environment
 \begin{document}
-
-
-
+	
+	
+	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                    %
 %                               Reading                              %
@@ -65,14 +65,11 @@ left = 1.0in]{geometry}
 \label{sec:reading}
 
 \begin{itemize}
-	\item \href{http://flowlab.groups.et.byu.net/me415/flight.pdf}{Flight Vehicle Design Book}
+	\item \href{http://flowlab.groups.et.byu.net/mdobook.pdf}{Engineering Design Optimization} 
 	\begin{itemize}
-		\item Chapter 2: Fundamentals (13 pages)
-		\item Chapter 6.3: Propellers (4 pages)
+		\item Chapter 1: Introduction (32 pages)
 	\end{itemize}
-
 \end{itemize}
-
 
 
 
@@ -81,57 +78,30 @@ left = 1.0in]{geometry}
 %                             Vocabulary                             %
 %                                                                    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Vocabulary}
 \label{sec:vocab}
 
 Explain the following terms; making sure to use sufficient detail, including any math or helpful figures.
 In some cases, these terms are simple one sentence definitions, in others, you should include several paragraphs to explain them fully.
 
-\paragraph{Airfoil Geometry Terms}
+
+\paragraph{}
 \begin{itemize}
-	\item Chord
-	\item Thickness
-	\item Camber
-	\item Leading Edge
-	\item Leading Edge Radius
-	\item Trailing Edge
-	\item Trailing Edge Wedge Angle
+	\item
 \end{itemize}
 
-\paragraph{Non-dimensional Numbers}
+\paragraph{Optimization}
 \begin{itemize}
-	\item Reynolds Number
-	\item Mach Number
+	\item Design Variables
+	\item Objective
+	\item Constraints
 \end{itemize}
 
-
-\paragraph{Forces and Moments}
-\begin{itemize}
-	\item Lift
-	\item Drag
-	\begin{itemize}
-		\item Induced Drag
-		\item Parasitic Drag
-		\begin{itemize}
-			\item Skin Friction Drag
-			\item Pressure Drag
-		\end{itemize}
-		\item Compressibility Drag
-	\end{itemize}
-	\item Pitching Moment
-	\item Lift and Drag Polars
-	\begin{itemize}
-		\item Angle of Attack
-		\item Zero Lift angle of attack
-		\item Lift Curve Slope
-		\item Stall
-	\end{itemize}
-\end{itemize}
+\newpage
 
 
 
-
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                    %
 %                               Explore                              %
@@ -146,25 +116,16 @@ Complete the following exploration.
 \label{ssec:prereqs}
 
 \begin{enumerate}[label=\roman*.]
-	\item \href{https://flow.byu.edu/Xfoil.jl/stable/#Installation}{Install Xfoil.jl} and complete the \href{https://flow.byu.edu/Xfoil.jl/stable/guide/}{Example Usage Guide}.
+	\item Follow the \href{https://flow.byu.edu/CCBlade.jl/stable/howto/#Airfoil-Data}{Guided Example} to learn the airfoil correction tools in CCBlade.jl
 \end{enumerate}
 
 
-\subsection{Forces, Moments, and Polars}
+
+\subsection{}
 
 \begin{enumerate}[label=\roman*.]
-	\item Create the following plots using the example airfoil from the previous problem:
-	\begin{itemize}
-		\item Lift vs Angle of Attack
-		\item Induced Drag (near and far field) vs Angle of Attack
-		\item Moment vs Angle of Attack
-		\item Lift vs Drag
-		\item Lift/Drag vs Angle of Attack
-	\end{itemize}
-	\item Identify the lift curve slope in your lift vs angle of attack plot, and compare it to the lift curve slope from thin airfoil theory (\(2\pi\)).
+	\item 
 \end{enumerate}
-
-
 
 
 

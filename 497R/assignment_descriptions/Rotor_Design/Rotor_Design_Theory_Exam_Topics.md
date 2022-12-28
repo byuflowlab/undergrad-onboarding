@@ -3,7 +3,7 @@
 The theory exam for the Rotor Design track will come from the following readings:
 
 - [Flight Vehicle Design](http://flowlab.groups.et.byu.net/me415/flight.pdf)
-  - Chapter 2: Fundamentals (17 pages)
+  - Chapter 2: Fundamentals (13 pages)
 
 - [Computational Aerodynamics](https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf)
   - Chapter 1, Section 6: Dynamic Similarity (5 pages)
