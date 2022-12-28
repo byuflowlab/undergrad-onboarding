@@ -1,4 +1,6 @@
-## Course Readings
+# Rotor Design Track Reading List
+
+The theory exam for the Rotor Design track will come from the following readings:
 
 - [Flight Vehicle Design](http://flowlab.groups.et.byu.net/me415/flight.pdf)
   - Chapter 2: Fundamentals (17 pages)
@@ -16,7 +18,7 @@
   - or other chapters depending on your optimization approach.
 
 ## Test Concepts
-A deeper list of the concepts covered in the theory test for rotor analysis. 
+A deeper list of the concepts covered in the theory test for rotor analysis.
 
 - Blade-Element Momentum (BEM) theory basics
   - Airfoil fundamentals
