@@ -7,22 +7,22 @@ This track covers theory related to wing and tail aerodynamics, flight performan
 
 ## Track Specific Assignments
 
-1. [Theory Exploration Assignment I](../assignment_descriptions/Airframe_Design_Theory_Exploration_Part1.pdf)
+1. [Theory Exploration Assignment I](../assignment_descriptions/Airframe_Design/Airframe_Design_Theory_Exploration_Part1.pdf)
   - Learn about the basics of Aerodyanmics
   - Perform initial analysis of a wing + tail
-1. [Theory Exploration Assignment II](../assignment_descriptions/Airframe_Design_Theory_Exploration_Part2.pdf)
+2. [Theory Exploration Assignment II](../assignment_descriptions/Airframe_Design/Airframe_Design_Theory_Exploration_Part2.pdf)
   - Learn about basics of wing performance
   - Analyze wing efficiency
-1. [Theory Exploration Assignment III](../assignment_descriptions/Airframe_Design_Theory_Exploration_Part3.pdf)
+3. [Theory Exploration Assignment III](../assignment_descriptions/Airframe_Design/Airframe_Design_Theory_Exploration_Part3.pdf)
   - Learn about aircraft stability
   - Learn very basics of optimization
   - Analyze the stability of an airframe
 
 ## Design Optimization Assignments
 
-1. [Design Optimization Part I](../assignment_descriptions/Design_Optimization_Part_I.pdf)
-1. [Design Optimization Part II](../assignment_descriptions/Design_Optimization_Part_II.pdf)
-1. [Design Optimization Part III](../assignment_descriptions/Design_Optimization_Part_III.pdf)
+1. [Design Optimization Part I](../assignment_descriptions/Optimization/Design_Optimization_Part_I.pdf)
+1. [Design Optimization Part II](../assignment_descriptions/Optimization/Design_Optimization_Part_II.pdf)
+1. [Design Optimization Part III](../assignment_descriptions/Optimization/Design_Optimization_Part_III.pdf)
 
 ## Track-specific Expected Outcomes
 
