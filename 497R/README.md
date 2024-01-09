@@ -14,7 +14,8 @@ We have formalized the structuer while allowing a great deal of student-lead lea
 
 ## Project Tracks
 
-ME EN 497R can take multiple tracks depending on student interests.  All tacks will give you some experience with aerodynamics, optimization, code development, and technical writing, but with different applications. You can find descriptions of these tracks [here](./track_descriptions)
+ME EN 497R can take multiple tracks depending on student interests.  All tacks will give you some experience with aerodynamics, optimization, code development, and technical writing, but with different applications. The following tracks are available and descriptions can be found [here](./track_descriptions)
+[<kbd> <br> Airframe Design <br> </kbd>](track_descriptions/airframe_design.md) [<kbd> <br> Rotor Design <br> </kbd>](track_descriptions/rotor-design.md)
 
 ## Course Outline (16 Weeks Total)
 
