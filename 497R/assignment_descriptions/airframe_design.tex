@@ -78,15 +78,16 @@ Start a new branch on your repository. Name it something relevant to the project
 
 \begin{enumerate}
 	\item Read chapter 1 of the \href{http://flowlab.groups.et.byu.net/mdobook.pdf}{Engineering Design Optimization}. 
-	\item Using the model you analyzed in your previous assignment, determine what the most effective design variables for this model are. Determine what conditions you should analyze. Determine a good objective function.
-	\item Design an airframe following these criteria: 
-	\begin{itemize}
-		\item Increase your objective value.
-		\item The airframe must be able to lift 0.5 kilograms with a wingspan no greater than 1.5 meters. 
-		\item The airframe must be statically and dynamically stable. 
-	\end{itemize}
-	\item[] (\textit{optional}) You may consider conducting a basic optimization using an out of the box optimizer such as \href{https://github.com/JuliaNLSolvers/Optim.jl}{optim.jl}. 
-	\item Write a short write-up on your methods, results, and takeaways. You should include introduction and discussion material on what you learned in steps 1-3, giving special attention to the methods and results from step 3. 
+	\item You will now perform a wing optimization using both VLM and a standard optimization package like \href{https://github.com/byuflowlab/SNOW.jl}{SNOW.jl} or \href{https://github.com/JuliaNLSolvers/Optim.jl}{optim.jl}.
+	
+	You are required to design a wing of span 8.0 m, oriented at a pitch angle of $5^\circ$ and capable of carrying 1.7 N of weight when flying at a speed of 1 m/s. Optimize the chord distribution of this untwisted wing so that it generates minimum induced drag. When creating the wing geometry, ensure that the quarter chord sections are all aligned and have zero sweep.
+	
+	\item[] Hint: If the optimal chord distributions that you obtain comes out looking jagged, you may need to add an additional `monotonicity' constraint that forces the chord sections to always decrease towards the wing tip. In Julia and most programming languages, the \verb*|diff()| function is useful for this purpose.
+	
+	\item Compare the optimal chord distribution that you have obtained to the wing of the famous World War II aircraft, the \href{https://en.wikipedia.org/wiki/Supermarine_Spitfire}{Supermarine Spitfire}.
+	
+	\item Write a short write-up on your methods, results, and takeaways. You should include introduction and discussion material on what you learned in steps 1-3, giving special attention to the methods and results from step 2.
+		
 	\item Submit your code and paper (.tex and .pdf files) via a pull request for your assignment branch on github. In this assignment we expect a higher level of coding. We will specifically be look for the following: 
 	\begin{itemize}
 		\item At this point you should be using scripts for run files.  That is, nearly all of your code will be contained in functions, and you should create run files that will automatically run analyses and post process your results (e.g. plot things).  As part of your submission, you should include a run file that, without any adjustment, your graduate student mentor should be able to run and get all the outputs for your paper (or at least specific sections of your paper).
@@ -103,6 +104,9 @@ Start a new branch on your repository. Name it something relevant to the project
 \begin{itemize}
 	\item \href{http://flowlab.groups.et.byu.net/mdobook.pdf}{Engineering Design Optimization : Chapter 1}
 	\item \href{https://www.google.com/}{Google}
-\end{itemize}	
+\end{itemize}
+
+\section{Appendix}
+An alternative but similar problem to Step 2 is to provide the pitch angle as a decision variable in the optimization problem in addition to the chord distribution. In that case, the wing planform area has to be constrained for the optimization to converge to similar results.
 
 \end{document}
