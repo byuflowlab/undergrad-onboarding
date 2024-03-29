@@ -74,21 +74,25 @@ Finally, we will design a better airframe.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Assignment}
-Start a new branch on your repository. Name it something relevant to the project. Create and issue for at least step 3. Close any issues you create with a comment as you finish each step. 
+Start a new branch on your repository. Name it something relevant to the project. Create an issue for at least step 3. Close any issues you create with a comment as you finish each step. 
 
 \begin{enumerate}
 	\item Read chapter 1 of the \href{http://flowlab.groups.et.byu.net/mdobook.pdf}{Engineering Design Optimization}. 
 	\item You will now perform a wing optimization using both VLM and a standard optimization package like \href{https://github.com/byuflowlab/SNOW.jl}{SNOW.jl} or \href{https://github.com/JuliaNLSolvers/Optim.jl}{optim.jl}.
 	
-	You are required to design a wing of span 8.0 m, oriented at a pitch angle of $5^\circ$ and capable of carrying 1.7 N of weight when flying at a speed of 1 m/s. Optimize the chord distribution of this untwisted wing so that it generates minimum induced drag. When creating the wing geometry, ensure that the quarter chord sections are all aligned and have zero sweep.
+	You are required to design a wing of span 8.0 m, oriented at a pitch angle of $5^\circ$ and capable of carrying 1.7 N of weight when flying at a speed of 1 m/s. Optimize the chord distribution of this untwisted wing so that it generates minimum (dimensional) induced drag. When creating the wing geometry, ensure that the quarter chord of all sections are aligned and have zero sweep.
 	
-	\item[] Hint: If the optimal chord distributions that you obtain comes out looking jagged, you may need to add an additional `monotonicity' constraint that forces the chord sections to always decrease towards the wing tip. In Julia and most programming languages, the \verb*|diff()| function is useful for this purpose.
+	\item[] Hint: If the optimal chord distributions that you obtain comes out looking jagged, you may need to add an additional `monotonicity' constraint that forces the chord sections to always decrease towards the wing tip. In Julia and most programming languages, the \verb*|diff()| function which computes the difference between consecutive elements is useful for this purpose.
+	
+	\item[] Alternatives: The appendix below has similar optimization problems for practice.
 	
 	\item Compare the optimal chord distribution that you have obtained to the wing of the famous World War II aircraft, the \href{https://en.wikipedia.org/wiki/Supermarine_Spitfire}{Supermarine Spitfire}.
 	
+	Now that we have a perfectly working code, let's try to break it! Increase the number of spanwise sections and observe the solutions provided by the optimizer. What happens if we change the lift constraint to 10 or 100 times the current one? How does varying the tolerance of the optimizer affect solutions?
+	
 	\item Write a short write-up on your methods, results, and takeaways. You should include introduction and discussion material on what you learned in steps 1-3, giving special attention to the methods and results from step 2.
 		
-	\item Submit your code and paper (.tex and .pdf files) via a pull request for your assignment branch on github. In this assignment we expect a higher level of coding. We will specifically be look for the following: 
+	\item Submit your code and paper (.tex and .pdf files) via a pull request for your assignment branch on github. In this assignment, we expect a higher level of coding and will specifically look for the following: 
 	\begin{itemize}
 		\item At this point you should be using scripts for run files.  That is, nearly all of your code will be contained in functions, and you should create run files that will automatically run analyses and post process your results (e.g. plot things).  As part of your submission, you should include a run file that, without any adjustment, your graduate student mentor should be able to run and get all the outputs for your paper (or at least specific sections of your paper).
 		\item At this point you may also strongly consider implementing \href{https://docs.julialang.org/en/v1/manual/types/#Composite-Types}{parametric composite types} into your code if it would be helpful for your code organization. 
@@ -107,6 +111,11 @@ Start a new branch on your repository. Name it something relevant to the project
 \end{itemize}
 
 \section{Appendix}
-An alternative but similar problem to Step 2 is to provide the pitch angle as a decision variable in the optimization problem in addition to the chord distribution. In that case, the wing planform area has to be constrained for the optimization to converge to similar results.
+Alternative optimization problems:
+\begin{enumerate}
+	\item Provide the pitch angle as a decision variable in the optimization problem in addition to the chord distribution. When doing so, the wing planform area has to be constrained, in addition to the lift for the optimization to converge to similar results.
+	
+	\item Instead of optimizing for the chord distribution one can also optimize for the twist distribution along the span. Consider a rectangular wing with constant span and chord (say 8.0 m and 1.0 m). Optimize the twist distribution ensuring that the lift generated is a constant (say 1.7 N). Plot the lift distribution.
+\end{enumerate}
 
 \end{document}
