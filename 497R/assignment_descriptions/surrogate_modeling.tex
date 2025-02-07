@@ -1,0 +1,132 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Surrogate Modeling Assignment}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      BACKGROUND      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Background}
+A large portion of engineering is modeling physical systems. 
+Often, these physical systems are complex and our models are incomplete, inaccurate, or computationally expensive.
+In this assignment, you will learn about modeling physical systems and how surrogate models can be used to approximate complex systems.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      ASSIGNMENT      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Assignment}
+
+Start a new local branch and push it to your GitHub repository. Name it something relevant to the project. Create GitHub issues for at least steps 3-6. You should use these issues to write down questions you have about those steps of the assignment for reference in your weekly meeting with your graduate student mentor. Close each issue you create with a comment as you finish each step.
+
+
+\begin{enumerate}
+	\item \textbf{Learn about different modeling techniques}: Read the following 4 articles. 1) \href{https://civilengineeringx.com/structural-analysis/analytical-models/}{Analytical Models}, 2) \href{https://en.wikipedia.org/wiki/Computational_model}{Computational models}, 3) \href{https://www.cremeglobal.com/explaining-empirical-and-mechanistic-models/}{Empirical models}, 4) \href{https://en.wikipedia.org/wiki/Surrogate_model}{Surrogate models}.  Find an example of each kind of model.  Consider the pros and cons. Write a short summary of your findings. Things you might consider: why would you use one model over another? What are the limitations of each model? What are the strengths of each model? Are there instances where you cannot use a certain approach? How do each of these approaches generalize?  If you find these readings interesting you may consider reading Wagner's \textit{The Unreasonable Effectiveness of Mathematics}, George Box's \textit{Science and Statistics}, or Crutchfield's \textit{The dreams of theory}. As you read and come across unfamiliar terms, look them up and include them in an appendix in your report.  As part of the definitions, include images and equations to add clarity where applicable.  Additionally, minimally include the following terms in your appendix:
+	\begin{multicols}{3}
+		\begin{itemize}
+			\item Analytical model
+			\item Empirical model
+			\item Computational model
+			\item Surrogate model
+			\item Interpolation
+			\item Extrapolation
+			\item Regression
+			\item Polynomial Regression
+			\item Radial Basis Function
+			\item Kriging
+			\item Neural Network
+		\end{itemize}
+	\end{multicols}
+ 
+	\item \textbf{Implement a Kriging surrogate model}. Use XFoil to generate data. Choose at least two of the following parameters to vary: airfoil thickness, airfoil camber, Reynolds number, Mach number, or $N_{crit}$. Use the surrogate model to predict the lift and drag coefficients for a range of angles of attack. Between the two parameters and the angle of attack, your model will have at least three dimensions. If you're using Julia, try \href{https://docs.sciml.ai/Surrogates/stable/kriging/}{Surrogate.jl}. If you're using Python, try the \href{https://smt.readthedocs.io/en/latest/_src_docs/surrogate_models/gpr/krg.html}{Surrogate Modeling Toolbox}. Hint: try starting with one dimension and a small number of data points. Gradually increase the number of data points, then the number of dimensions. 
+	\item \textbf{Familiarize yourself with the surrogate model} \href{https://github.com/peterdsharpe/NeuralFoil}{NeuralFoil}. Take notes on which functions you'll need for the rest of the assignment and how to use them. Provide several plots similar to the ones in the airfoil analysis assignment to show how the surrogate model works. Can you find a region where NeuralFoil does not perform well? 
+	\item \textbf{Compare the results of the Kriging surrogate model, NeuralFoil, and Xfoil}. What are the differences/similarites between the three? Quantify error. What are the strengths and weaknesses of each? What things are you able to do with one that you can't do with the others? What do you notice about each model? How smooth are the results? Are there any unique trends? Why do they behave the way they do? How do these results change or inform what you have learned about modeling in steps 1 and 2?
+	\item \textbf{Write a short write-up on your methods, results, and takeaways}. 
+	\item \textbf{Submit your code and paper} (.tex and .pdf files) via a pull request for your assignment branch on github.
+	\item Stretch goals:
+	\begin{itemize}
+		\item Use other surrogate modeling techniques (RDF, polynomial regression, etc) and compare them to your other models.
+		\item Create your own neural network. You can either use your own data (which you'll probably need much more data) or request data from your graduate student mentor.
+	\end{itemize}
+\end{enumerate}
+
+% \bigskip
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      RESOURCES       %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+% \section{Useful Resources}
+
+% \begin{itemize}
+%  	\item \href{https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf}{ME 515 Textbook : Chapter 2 Sections 5 \& 6}
+%  	\item \href{http://web.mit.edu/drela/Public/web/xfoil/xfoil_doc.txt}{Original XFoil Documentation}
+%   	\item \href{https://flow.byu.edu/Xfoil.jl/stable/}{Xfoil.jl Documentation}
+%  	\item \href{https://www.google.com/}{Google}
+% 	\item \href{https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages}{Adding wiki pages to your repository.}
+% \end{itemize}
+
+
+\end{document}

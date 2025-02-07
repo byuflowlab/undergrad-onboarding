@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Surrogate Modeling Assignment}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      BACKGROUND      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Background}
+A large portion of engineering is modeling physical systems. 
+Often, these physical systems are complex and our models are incomplete, inaccurate, or computationally expensive.
+In this assignment, you will learn about modeling physical systems and how surrogate models can be used to approximate complex systems.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      ASSIGNMENT      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Assignment}
+
+Start a new local branch and push it to your github repository. Name it something relevant to the project. Create github issues for at least steps 3-6. You should use these issues to write down questions you have about those steps of the assignment for reference in your weekly meeting with your graduate student mentor. Close each issue you create with a comment as you finish each step.
+
+
+\begin{enumerate}
+	\item Read through the chapter 2 in the ME EN 515 Text (linked below), specifically sections 5 and 6.  As you read and come across unfamiliar terms, look them up and include them in an appendix in your report.  As part of the definitions, include images and equations to add clarity where applicable.  Additionally, include the following terms in your appendix:
+	\begin{multicols}{3}
+		\begin{itemize}
+			\item Analytical model
+			\item Empirical model
+			\item Computational model
+			\item Surrogate model
+			\item Interpolation
+			\item Extrapolation
+			\item Neural Network
+			% \item Parameterization
+			% \item CST
+		\end{itemize}
+	\end{multicols}
+	% \item Learn about different airfoil parameterization methods. Write a brief summary of the different methods you find and include a list of the methods in your appendix (Perhaps consider visiting this \href{https://arc.aiaa.org/doi/10.2514/1.J054943#:~:text=A%20comprehensive%20review%20of%20aerofoil%20shape%20parameterization%20methods,be%20used%20for%20aerodynamic%20shape%20optimization%20is%20presented.}{literature review}). Learn to use either CST implementation in \href{https://github.com/byuflowlab/FLOWFoil.jl/blob/e92190300308a52ed3d4f83f62dc366ca1ed8d40/src/AirfoilTools/parameterizations/cst.jl}{FLOWFoil.jl}, the \href{https://cst-modeling3d.readthedocs.io/en/latest/source/example/airfoil.html}{CST Modeling} (Python) package, or the \href{https://github.com/peterdsharpe/AeroSandbox/blob/master/tutorial/06%20-%20Aerodynamics/02%20-%20AeroSandbox%202D%20Aerodynamics%20Tools/02%20-%20NeuralFoil%20Optimization.ipynb}{aerosandbox} (Python) package. You will be using a Python package for portion of this assignment, so you may consider doing everything in Python. Julia has capabilities to call \href{https://github.com/JuliaPy/PythonCall.jl}{Python functions}, so you could also consider using Julia for the entire assignment. %I think I might move this over to the optimization assignment. 
+	\item Learn about different surrogate modeling techniques. Write a brief summary of the different methods you find and include a list of the methods in your appendix.
+	\item Familiarize yourself with the surrogate model \href{https://github.com/peterdsharpe/NeuralFoil}{NeuralFoil}. Take notes on which functions you'll need for the rest of the assignment and how to use them (i.e. write some pseudo code). Provide several plots similar to the ones in the airfoil analysis assignment to show how the surrogate model works.
+	\item Write a short write on your methods, results, and takeaways. You should include introduction and discussion material on what you learned in steps 1-6, giving special attention to the methods and results from steps 3-6. 
+	\item Submit your code and paper (.tex and .pdf files) via a pull request for your assignment branch on github.
+	\item Stretch goals:
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{enumerate}
+
+\bigskip
+
+\paragraph{Hint:} Here are some common terms that you may want to include in your appendix dictionary. You should also include other terms you come across that are unfamiliar.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      RESOURCES       %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\section{Useful Resources}
+
+\begin{itemize}
+ 	\item \href{https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf}{ME 515 Textbook : Chapter 2 Sections 5 \& 6}
+ 	\item \href{http://web.mit.edu/drela/Public/web/xfoil/xfoil_doc.txt}{Original XFoil Documentation}
+  	\item \href{https://flow.byu.edu/Xfoil.jl/stable/}{Xfoil.jl Documentation}
+ 	\item \href{https://www.google.com/}{Google}
+	\item \href{https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages}{Adding wiki pages to your repository.}
+\end{itemize}
+
+
+\end{document}
