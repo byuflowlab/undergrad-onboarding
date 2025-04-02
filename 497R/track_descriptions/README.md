@@ -15,7 +15,7 @@ Learn about rotor aerodynamics and design a basic propeller or turbine.
 ### [Windfarm Design](windfarm_design.md)
 Learn about wind turbine wakes and design a basic wind farm.
 
-### [Surrogate Modeling](./surrogate_modeling.pdf)
+### [Surrogate Modeling](../assignment_descriptions/surrogate_modeling.pdf)
 Learn about surrogate modeling techniques, including deep learning approaches. 
 
 
