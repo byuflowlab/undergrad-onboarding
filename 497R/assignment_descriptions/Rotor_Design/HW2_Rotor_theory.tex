@@ -36,7 +36,7 @@ left = 1.0in]{geometry}
 %Fancy Header Content
 \fancyhead[L]{ME EN 497R}
 \fancyhead[C]{}
-\fancyhead[R]{Rotor Design Theory Exploration: Part III}
+\fancyhead[R]{Rotor Design Theory Exploration: Part II}
 %Fancy Footer Content
 \fancyfoot[L,C]{} %make bottom left and center empty
 \fancyfoot[R]{\thepage}
@@ -65,11 +65,13 @@ left = 1.0in]{geometry}
 \label{sec:reading}
 
 \begin{itemize}
-	\item \href{http://flowlab.groups.et.byu.net/mdobook.pdf}{Engineering Design Optimization} 
+	\item \href{https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf}{Compuational Aeronautics}
 	\begin{itemize}
-		\item Chapter 1: Introduction (32 pages)
+		\item Chapter 6: Propellers and Turbines (23 pages) \\
+		NOTE: Read 6.3 OR 6.4 depending on your application.
 	\end{itemize}
 \end{itemize}
+
 
 
 
@@ -85,23 +87,42 @@ Explain the following terms; making sure to use sufficient detail, including any
 In some cases, these terms are simple one sentence definitions, in others, you should include several paragraphs to explain them fully.
 
 
-\paragraph{}
+
+\paragraph{Rotor Analysis}
 \begin{itemize}
-	\item
+	\item Blade Element Momentum Theory
+	\begin{itemize}
+		\item Conservation of Linear Momentum
+		\item Conservation of Angular Momentum
+		\item Blade Element
+		\item Inflow Angle vs angle of attack vs twist vs pitch
+	\end{itemize}
+	\item Blade Loading
+	\item Root Bending Moment
 \end{itemize}
 
-\paragraph{Optimization}
+\paragraph{Rotor Performance}
 \begin{itemize}
-	\item Design Variables
-	\item Objective
-	\item Constraints
+	\item Thrust Coefficient
+	\item Power Coefficient
+	\item Torque Coefficient
+	\item Rotor Efficiency
 \end{itemize}
 
-\newpage
-
 
 
 \newpage
+\section{Theory}
+\label{sec:theory}
+
+\begin{enumerate}[label=\roman*.]
+	\item List the assumptions of BEMT. How do they affect the accuracy of the method.
+	\item What are the main limitations of BEMT? Is there anything that they are dependent on that determines the accuracy of the method? Are there any cases where BEMT is not applicable?
+	\item Describe the physical meaning of the axial and tangential induction factors. How do they influence the local flow around a blade element? 
+	\item Why is it necessary to couple blade element theory with momentum theory in BEMT? What would be missing if you only used one of the two?
+\end{enumerate}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                    %
 %                               Explore                              %
@@ -111,21 +132,16 @@ In some cases, these terms are simple one sentence definitions, in others, you s
 \label{sec:exploration}
 
 Complete the following exploration.
-
-\subsection{Prerequisites}
-\label{ssec:prereqs}
-
 \begin{enumerate}[label=\roman*.]
-	\item Follow the \href{https://flow.byu.edu/CCBlade.jl/stable/howto/#Airfoil-Data}{Guided Example} to learn the airfoil correction tools in CCBlade.jl
+	\item Find experimental data for a rotor of your choice. This could be a propeller, wind turbine, or helicopter rotor. If the data is not in a form that can be used directly, you may need to digitize it using a tool like \href{https://automeris.io/WebPlotDigitizer/}{WebPlotDigitizer}.
+	\item Implement the rotor in CCBlade.jl and compare the results to the experimental data. 
+	\item Determine the error between the experimental data and the CCBlade.jl results. What might cause the source of this error? How could you improve the accuracy of your results?
 \end{enumerate}
 
 
 
-\subsection{}
 
-\begin{enumerate}[label=\roman*.]
-	\item 
-\end{enumerate}
+
 
 
 

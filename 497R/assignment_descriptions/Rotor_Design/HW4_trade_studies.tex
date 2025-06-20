@@ -39,11 +39,11 @@ left = 1.0in]{geometry}
 %Fancy Header Content
 \fancyfoot[L]{ME EN 497R}
 \fancyfoot[C]{}
-\fancyfoot[R]{Airframe Design - Optimization: Part I}
+\fancyfoot[R]{Rotor Design - Optimization: Part I}
 %Fancy Footer Content
 % \fancyfoot[L,C]{} %make bottom left and center empty
 % \fancyfoot[R]{\thepage}
-\title{Airframe Design - Optimization: Part I}
+\title{Rotor Design - Optimization: Part I}
 \date{}
 
 %Center section headings
@@ -64,7 +64,7 @@ left = 1.0in]{geometry}
 \begin{document}
 	
 \maketitle
-\vspace{-2cm}
+\vspace{-3.0cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%      Research Skills      %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,12 +89,9 @@ In order to do so, complete the following:
 \section{Technical Tasks: Preliminary Optimization}
 
 \begin{enumerate}[label=\alph*.]
-    \item Pick an application of interest you would like to explore.
-    \item Considering the content of your theory exploration assignment, choose a design objective.
-    \item Determine the set of design variables you would like to optimize, as well as the set of parameters you will keep constant for your optimization.
-    \item With your graduate student mentor, discuss your design objective and obtain two initial constraints to use for this assignment.
-    \item Using the provided template, put together code to run your optimization problem. 
-   	\item Begin at least 3 trade studies exploring the design space for your chosen optimization.  At least one of these must be done using optimization.
+    \item Consider the maximum power solution from your last assignment. Create an objective function that seeks this solution using the chord distribution as design variables. You will need to write out your optimization problem in mathematical form. 
+    \item Implement this objective function. Sweep the design variables to verify the correct behavior of the objective function. Provide plots of the objective function as a function of the design variables.
+    \item Calculate the jacobian of your objective function. What is this jacobian telling you about your objective function? How does the optimizer use this information? What is the condition number of the jacobian? What does this tell you about the jacobian?
 \end{enumerate}
 	
 	

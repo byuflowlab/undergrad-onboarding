@@ -36,7 +36,7 @@ left = 1.0in]{geometry}
 %Fancy Header Content
 \fancyhead[L]{ME EN 497R}
 \fancyhead[C]{}
-\fancyhead[R]{Rotor Design Theory Exploration: Part II}
+\fancyhead[R]{Rotor Design Theory Exploration: Part I}
 %Fancy Footer Content
 \fancyfoot[L,C]{} %make bottom left and center empty
 \fancyfoot[R]{\thepage}
@@ -53,9 +53,9 @@ left = 1.0in]{geometry}
 
 %BEGIN Document Environment
 \begin{document}
-	
-	
-	
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                    %
 %                               Reading                              %
@@ -65,11 +65,12 @@ left = 1.0in]{geometry}
 \label{sec:reading}
 
 \begin{itemize}
-	\item \href{https://byu.box.com/shared/static/ywfayozbj3sr2ot6b32u8nqk5brqvurt.pdf}{Compuational Aeronautics}
+	\item \href{http://flowlab.groups.et.byu.net/me415/flight.pdf}{Flight Vehicle Design Book}
 	\begin{itemize}
-		\item Chapter 6: Propellers and Turbines (23 pages) \\
-		NOTE: Read 6.3 OR 6.4 depending on your application.
+		\item Chapter 2: Fundamentals (13 pages)
+		\item Chapter 6.3: Propellers (4 pages)
 	\end{itemize}
+
 \end{itemize}
 
 
@@ -80,11 +81,19 @@ left = 1.0in]{geometry}
 %                             Vocabulary                             %
 %                                                                    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Vocabulary}
 \label{sec:vocab}
 
 Explain the following terms; making sure to use sufficient detail, including any math or helpful figures.
 In some cases, these terms are simple one sentence definitions, in others, you should include several paragraphs to explain them fully.
+
+\paragraph{Airfoil Geometry Terms}
+\begin{itemize}
+	\item Chord
+	\item Leading Edge
+	\item Trailing Edge
+\end{itemize}
 
 \paragraph{Rotor Geometry}
 \begin{itemize}
@@ -92,35 +101,37 @@ In some cases, these terms are simple one sentence definitions, in others, you s
 	\item Tip Radius
 	\item Twist
 	\item Pitch
-	\item 
+	\item Precone
+	\item Sweep
 \end{itemize}
 
-\paragraph{Rotor Analysis}
+\paragraph{Non-dimensional Numbers}
 \begin{itemize}
-	\item Blade Element Momentum Theory
+	\item Reynolds Number
+	\item Mach Number
+	\item Advance ratio
+	\item Tip Speed Ratio
+	\item Solidity
+\end{itemize}
+
+
+\paragraph{Forces and Moments}
+\begin{itemize}
+	\item Lift
+	\item Drag
+	\item Pitching Moment
+	\item Lift and Drag Polars
 	\begin{itemize}
-		\item Conservation of Linear Momentum
-		\item Conservation of Angular Momentum
-		\item Blade Element
-		\item Inflow Angle vs angle of attack vs twist vs pitch
-		\item Assumptions of BEMT
-		\item Limitations of BEMT
+		\item Angle of Attack
+		\item Zero Lift angle of attack
+		\item Lift Curve Slope
+		\item Stall
 	\end{itemize}
-	\item Blade Loading
-	\item Root Bending Moment
-\end{itemize}
-
-\paragraph{Rotor Performance}
-\begin{itemize}
-	\item Thrust Coefficient
-	\item Power Coefficient
-	\item Torque Coefficient
-	\item Rotor Efficiency
 \end{itemize}
 
 
 
-\newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                    %
 %                               Explore                              %
@@ -140,14 +151,17 @@ Complete the following exploration.
 \end{enumerate}
 
 
-
 \subsection{Load Distributions and Rotor Efficiency}
 
+Blade Element Momentum Theory (BEMT) allows for the analysis of propellers. wind turbines, and helicopter blades. 
+Choose one that interests you and implement it in CCBlade.jl.
+
 \begin{enumerate}[label=\roman*.]
+	\item Plot the section loads (normal and tangential loads) vs radius. Analyze and explain the shape of the load distribution. Why does the loading increase? Why are there decreases? 
 	\item Compare the thrust, torque, and root bending moment vs varying rotor tip radius.
 	\item Compare the thrust, torque, and root bending moment vs varying the rotor section chord length.
-	\item Discuss your results and make especial note of cases that are physically unfeasible, or not fully captured by the BEMT.
 \end{enumerate}
+
 
 
 
