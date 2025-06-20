@@ -2,7 +2,7 @@
 %%%%%     PREAMBLE     %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[11pt,twocolumn]{article}
+\documentclass[11pt]{article}
 
 %Define Margins using Geometry Package
 \usepackage[top=1.0in,
@@ -30,16 +30,21 @@ left = 1.0in]{geometry}
 \usepackage{multicol} %Allow for two columns in the middle of a paper. 
 
 
+\usepackage{titling}
+\setlength{\droptitle}{-2.5cm}
+
 %Set up fancy header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 %Fancy Header Content
-\fancyhead[L]{ME EN 497R}
-\fancyhead[C]{}
-\fancyhead[R]{Airframe Design Theory Exploration: Part III}
+\fancyfoot[L]{ME EN 497R}
+\fancyfoot[C]{}
+\fancyfoot[R]{Airframe Design Theory Exploration: Part III}
 %Fancy Footer Content
-\fancyfoot[L,C]{} %make bottom left and center empty
-\fancyfoot[R]{\thepage}
+% \fancyfoot[L,C]{} %make bottom left and center empty
+% \fancyfoot[R]{\thepage}
+\title{Airframe Design Optimization: Part III}
+\date{}
 
 
 % Customize formatting for section headers
@@ -54,7 +59,8 @@ left = 1.0in]{geometry}
 %BEGIN Document Environment
 \begin{document}
 	
-	
+\maketitle
+\vspace{-2cm}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                    %
@@ -139,10 +145,7 @@ Complete the following exploration.
 \label{ssec:prereqs}
 
 \begin{enumerate}[label=\roman*.]
-	\item Obtain, and become familiar with, the following tools auxiliary to VortexLattice.jl including:
-	\begin{itemize}
-		\item The eigen value code
-	\end{itemize}
+	\item Review the Getting started guide for VortexLattice.jl, specifically how to obtain stability derivatives. 
 \end{enumerate}
 
 

@@ -258,3 +258,6 @@ TSWLatexianTemp*
 .DS_Store
 *.key
 *.idraw
+
+#Example environments
+497R/assignment_descriptions/*.toml

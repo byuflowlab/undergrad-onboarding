@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyhead[L]{ME EN 497R}
+\fancyhead[C]{}
+\fancyhead[R]{Design Optimization Assignment 2}
+%Fancy Footer Content
+\fancyfoot[L,C]{} %make bottom left and center empty
+\fancyfoot[R]{\thepage}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Research Skills      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research Skills: Version Control}
+
+As part of this assignment, you will be expected to further develop introductory skills in version control.
+In order to do so, complete the following:
+\begin{enumerate}[label=\alph*.]
+	\item Create at least 3 github issues (which should be based on the feedback you received in the previous assignment).
+	\item Create a branch for this assignment.
+	\item Add, Commit, and Push your assignment submission to your github repository.
+	\item Open a pull request as a part of your submission for this assignment.
+\end{enumerate}
+
+	
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Technical Tasks      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Tasks: Improved Optimization}
+	
+Based on your experience completing the previous assignment, in combination with the feedback you received, you should have identified several areas in which you might improve your optimization.
+The overall goal for the technical tasks of this assignment are to make improvements according to that experience/feedback.
+For this assignment, your technical deliverables are:
+
+\begin{enumerate}[label=\alph*.]
+	\item Identify at least 3 (but likely more) areas of improvement for your optimization.
+	\item Address each of your identified areas of improvement.
+\end{enumerate}
+	
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Writing Tasks      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Writing Tasks: Methodology and Results}
+
+As you now have a better handle on what you're doing, it would be best to flesh out the details of your methodology as well as formally outline the results section of your final report draft.
+For this assignment, complete the following writing tasks:
+
+\begin{enumerate}[label=\alph*.]
+	\item Complete a full draft of your methodology section, including all of the information required to reproduce your work.  
+	\item Outline the results section of your report, including placeholders for figures and cues for discussion content to include.
+\end{enumerate}
+	
+	
+\end{document}

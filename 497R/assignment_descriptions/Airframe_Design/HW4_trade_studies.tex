@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+\usepackage{titling}
+\setlength{\droptitle}{-2.5cm}
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyfoot[L]{ME EN 497R}
+\fancyfoot[C]{}
+\fancyfoot[R]{Airframe Design - Optimization: Part I}
+%Fancy Footer Content
+% \fancyfoot[L,C]{} %make bottom left and center empty
+% \fancyfoot[R]{\thepage}
+\title{Airframe Design - Optimization: Part I}
+\date{}
+
+%Center section headings
+\usepackage{sectsty}
+\sectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+\maketitle
+\vspace{-3.0cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Research Skills      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research Skills: Version Control}
+
+As part of this assignment, you will be expected to develop introductory skills in version control.
+In order to do so, complete the following:
+\begin{enumerate}[label=\alph*.]
+	\item \href{https://github.com/}{Register for a free Github account.}
+	\item  \href{https://docs.github.com/en/get-started/quickstart/hello-world}{Complete this basic git tutorial.}
+	\item Add, Commit, and Push your assignment submission to your github repository as part of your submission for this assignment.
+\end{enumerate}
+	
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Technical Tasks      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Tasks: Preliminary Optimization}
+
+\begin{enumerate}[label=\alph*.]
+    \item Consider the elliptic lift distribution from your last assignment. Create an objective function that seeks this lift distribution using the chord distribution as design variables. You will need to write out your optimization problem in mathematical form. 
+    \item Implement this objective function. Sweep the design variables to verify the correct behavior of the objective function. Provide plots of the objective function as a function of the design variables.
+    \item Calculate the jacobian of your objective function. What is this jacobian telling you about your objective function? How does the optimizer use this information? What is the condition number of the jacobian? What does this tell you about the jacobian?
+\end{enumerate}
+	
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Writing Tasks      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Writing Tasks: Introduction and Methodology}
+
+As you begin these design optimization assignments, you will need to make sure you have clear goals and plans.
+One of the best ways to organize your thoughts is to write a first draft of the introduction to your final technical report, as well as outline your proposed methodology.
+Therefore, your main written deliverables (using the provided template) for this assignment are:
+
+\begin{enumerate}[label=\alph*.]
+	\item Write a first draft of the introduction section of your final report.
+	\item Outline your methodology section including the following specific items:
+	\begin{itemize}
+		\item Both a word and mathematical description of your optimization problem.
+		\item Descriptions and ranges for your design variables.
+		\item Descriptions and ranges for your design constraints.
+		\item A table including the parameters you plan to hold constant, along with values and units for those parameters.
+	\end{itemize}
+	\item Draft plots and brief descriptions of your preliminary results.
+\end{enumerate}
+
+	
+	
+\end{document}

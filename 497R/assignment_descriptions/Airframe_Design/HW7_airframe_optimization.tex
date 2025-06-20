@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+\def\labelitemi{--}
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+
+\usepackage{titling}
+\setlength{\droptitle}{-2.5cm}
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyfoot[L]{ME EN 497R}
+\fancyfoot[C]{}
+\fancyfoot[R]{Airframe Design - Optimization: Part IV}
+%Fancy Footer Content
+% \fancyfoot[L,C]{} %make bottom left and center empty
+% \fancyfoot[R]{\thepage}
+\title{Airframe Design - Optimization: Part IV}
+\date{}
+
+%Center section headings
+\usepackage{sectsty}
+\subsectionfont{\centering}
+%Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+	
+\maketitle
+\vspace{-2cm}
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Technical Tasks      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Tasks: Improved Optimization}
+
+You again will have seen or received feedback on potential areas of improvement for your optimization.
+
+\begin{enumerate}[label=\alph*.]
+	\item With your graduate student mentor, identify at least one more area in which you can improve your optimization. Some more ideas include adding stall from 2d airfoil analysis or critical section theory, or including some stability factor into your design like limiting the pitching moment.
+\end{enumerate}
+
+
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Writing Tasks      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Writing Tasks: Results, Conclusion, and Abstract}
+
+Complete the following writing tasks:
+
+\begin{enumerate}[label=\alph*.]
+	\item Complete a full draft of your results section, including well-designed plots and thoughtful discussion.  
+	\item With the main content of your paper completed, write the conclusion and abstract sections of your paper.
+\end{enumerate}
+
+
+	
+	
+	
+\end{document}

@@ -1,0 +1,190 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+
+%Define Margins using Geometry Package
+\usepackage[top=1.0in,
+bottom=1.0in,
+right=1.0in,
+left = 1.0in]{geometry}
+
+
+%math
+\usepackage{mathtools}
+
+
+%Set up links and internal references
+\usepackage[colorlinks=true,linkcolor=blue, urlcolor=blue]{hyperref} %hide the ugly red boxes
+\usepackage[noabbrev]{cleveref} %don't abbreviate ``figure'', etc.
+\usepackage{url} %for urls
+
+%Remove natural indentation for itemize and enumerate environments
+\usepackage{enumitem} %package to control itemize/enumerate behavior
+\setlist[itemize]{leftmargin=*} %for itemize
+\setlist[enumerate]{leftmargin=*} %for enumerate
+%Swap out the itemize symbol for an N-dash rather than a bullet (does not require enumitem package)
+%\def\labelitemi{--}
+
+
+\usepackage{multicol} %Allow for two columns in the middle of a paper. 
+
+\usepackage{titling}
+\setlength{\droptitle}{-2.5cm}
+
+%Set up fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy Header Content
+\fancyfoot[L]{ME EN 497R}
+\fancyfoot[C]{}
+\fancyfoot[R]{Airframe Design Theory Exploration: Part I}
+%Fancy Footer Content
+% \fancyfoot[L,C]{} %make bottom left and center empty
+% \fancyfoot[R]{\thepage}
+\title{Airframe Design Theory Exploration: Part I}
+\date{}
+
+% Customize formatting for section headers
+\renewcommand{\thesection}{Problem \arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\alph{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     END PREAMBLE     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%BEGIN Document Environment
+\begin{document}
+
+\maketitle
+\vspace{-2cm}
+
+
+In this assignment, you will explore the basic concepts of airframe design, including wing geometry, forces and moments, and the use of VortexLattice.jl to analyze these concepts. In order to accomplish this, you will also need to read about the fundamentals of flight vehicle design and drag. You might not have done a lot of text book reading in the past, but learning to learn from textbooks is a valuable skill that will serve you well in your career. It is critical to developing your ability to learn new things on your own, and to develop a deep understanding of the subject matter. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                               Reading                              %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Relevant Reading}
+\label{sec:reading}
+
+\begin{itemize}
+	\item \href{http://flowlab.groups.et.byu.net/me415/flight.pdf}{Flight Vehicle Design Book}
+	\begin{itemize}
+		\item Chapter 2: Fundamentals (13 pages)
+		\item Chapter 3: Drag (28 pages)
+	\end{itemize}
+
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                             Vocabulary                             %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vocabulary}
+\label{sec:vocab}
+
+Explain the following terms; making sure to use sufficient detail, including any math or helpful figures.
+In some cases, these terms are simple one sentence definitions, in others, you should include several paragraphs to explain them fully.
+
+\paragraph{Wing Geometry Terms}
+\begin{itemize}
+	\item Wing Area
+	\item Chord
+	\begin{itemize}
+		\item Mean Geometric Chord
+		\item Mean Aerodynamic Chord
+	\end{itemize}
+	\item Taper Ratio
+	\item Span
+	\item Aspect Ratio
+	\item Sweep
+	\item Dihedral
+	\item Twist
+	\item Washout
+\end{itemize}
+
+\paragraph{Forces and Moments}
+\begin{itemize}
+	\item Lift
+	\item Drag
+	\begin{itemize}
+		\item Induced Drag
+		\item Parasitic Drag
+		\begin{itemize}
+			\item Skin Friction Drag
+			\item Pressure Drag
+		\end{itemize}
+		\item Compressibility Drag
+	\end{itemize}
+	\item Pitching Moment
+	\item Lift and Drag Polars
+	\begin{itemize}
+		\item Angle of Attack
+		\item Zero Lift angle of attack
+		\item Lift Curve Slope
+		\item Stall
+	\end{itemize}
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%                               Explore                              %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exploration}
+\label{sec:exploration}
+
+Complete the following exploration. Present your exploration in a way that is easy to read and understand. Use figures, tables, and equations as needed to clearly communicate your findings. You'll notice that in these earlier assignments have more sub-questions in the exploration portion of the assignment to help get you started. As the semester progresses, the exploration section will become more open-ended, and you will be expected to provide the digging questions yourself.
+
+\subsection{Prerequisites}
+\label{ssec:prereqs}
+
+\begin{enumerate}[label=\roman*.]
+	\item \href{https://flow.byu.edu/VortexLattice.jl/stable/#Installation}{Install VortexLattice.jl}
+	\item Run and annotate the \href{https://flow.byu.edu/VortexLattice.jl/stable/guide/}{Getting Started Guide}. Your annotations should describe the purpose of each block of code, what is going in, and what is coming out. 
+	\begin{itemize}
+		\item Note: The documentation doesn't explain this well: the X direction is free-stream direction, the Y direction is the span-wise direction (out the starboard wing), and the Z direction is the vertical direction (up).
+	\end{itemize}
+\end{enumerate}
+
+
+\subsection{Investigate the Force and Moment Polars.}
+
+\begin{enumerate}[label=\roman*.]
+	\item Create the following plots using the example wing from the previous problem:
+	\begin{enumerate}
+		\item Lift vs Angle of Attack
+		\item Induced Drag (near and far field) vs Angle of Attack
+		\item Moment vs Angle of Attack
+		\item Lift vs Drag
+		\item Lift/Drag vs Angle of Attack
+	\end{enumerate}
+	\item Identify the lift curve slope in your lift vs angle of attack plot, and compare it to the lift curve slope from thin airfoil theory (\(2\pi\)).
+	\begin{enumerate}
+		\item What is the error between the two values?
+		\item What is the cause of this error? Is there theoretical reason why these should be different? How could you decrease this error? 
+	\end{enumerate}
+	\item Consider your lift vs angle of attack plot, is this what you expect it to look like? Why? If not, what things are missing? Why would they be missing? How does it compare to experimental/real-word data?
+	\item What other trends do you see in the plots? What do you think is causing these trends? What do they tell you about the wing? What do they tell you about the model? 
+\end{enumerate}
+
+
+
+
+
+\end{document}
